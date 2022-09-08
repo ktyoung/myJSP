@@ -37,6 +37,7 @@ public class CalcServlet extends HttpServlet {
 			pw.print("<a href='/pro06/calc'>환율계산기");
 			return;
 		}
+		
 		pw.print("<html><title>환율계산기</title>");
 		pw.print("<font size=5>환율 계산기</font><br>");
 		pw.print("<form name='frmCalc' method='get' action='/pro06/calc' />   ");
