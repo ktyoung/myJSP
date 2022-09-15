@@ -1,4 +1,4 @@
-package sec03.exam01;
+package sec04.exam01;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,19 +9,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-// @WebServlet("/second")
+@WebServlet("/second")
 public class SecondServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8;");
 		PrintWriter out = response.getWriter();
 		
+		String address = (String) request.getAttribute("address");
 		out.println("<html><body>");
-		String name=request.getParameter("name");
-		out.println("이름 : " + name);
+		out.println("주소 : " + address);
 		out.println("<br>");
-		out.println("RequestDispatcher 클래스의 forword() 메서드를 이용한 dispatch 실습");
+		out.println("setAttribute 속성으로 긴 이름을 가진 변수 출력하기");
 		out.println("</html></body>");	
 	}
 }
