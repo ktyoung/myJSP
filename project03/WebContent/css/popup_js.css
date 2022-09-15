@@ -1,0 +1,25 @@
+﻿*{margin : 0; padding : 0;}
+ul, li{list-style : none;}
+body{font-family: '맑은 고딕', '돋움', Arial, sans-serif;}
+.fl{float : left;}
+.fr{float : right;}
+
+.popup{width : 500px; height : 670px; background : #ffffff; color : #333333;}
+.popupTitle{width : 450px; display : block; margin : 0 auto; border-bottom : 2px solid #0068b5; margin : 20px;}
+.popupTitle>p{font-size : 24px; font-weight : bold; margin-bottom : 20px;}
+
+.popupText{width : 450px; display : block; margin : 0 auto; position : relative;}
+.popupText>p{font-size : 18px; font-weight : bold; color : #0068b5; margin-left : 20px;}
+.popupText>p:before{background : url(../images/jsPopup.png) no-repeat; top: 10px; left: 1px; width: 13px; height: 8px; position : absolute; display : block; content : '';}
+
+.popupText>.popupTextInner{width : 450px; background : #f8f8f8; position : relative;}
+.popupText>.popupTextInner>ul>li{margin : 10px 40px; color : #0068b5; display : block;}
+.popupText>.popupTextInner>ul>li:before{background : url(../images/jsPopup.png) no-repeat left -12px; position : absolute; left: 1px; width: 8px; height: 8px; display : block; content : ''; margin-left : 20px; margin-top : 8px;}
+.popupText>.popupTextInner>ul>li>span{font-size : 14px; color : #333333;}
+
+.jsCookie{display:block; margin-right:30px; font-size:16px; margin-top:19px; cursor:pointer;}
+.jsCookie>input{display:block; margin-top:5px; margin-right:5px; width:15px; height:15px; cursor:pointer;}
+
+
+button{float : right; border : none; padding : 10px 20px; margin : 10px; background : #1634a2; color : #ffffff; cursor : pointer; margin-right : 25px;}
+button:hover{background-color : #4381C1;}
