@@ -1,4 +1,4 @@
-package sec01.exam01;
+package sec01.exam02;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,19 +9,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-// @WebServlet("/second")
-public class SecondServlet extends HttpServlet {
+@WebServlet("/first")
+public class FirstServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8;");
 		PrintWriter out = response.getWriter();
-		
-		out.println("<html><body>");
-		out.println("sendRedirect를 이용한 redirect 실습");
-		out.println("</html></body>");
-		
-		
+		response.addHeader("Refresh","1;url=second");
+		out.print("1초 후 페이지 이동");
 	}
 	
 }

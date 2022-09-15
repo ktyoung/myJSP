@@ -1,4 +1,4 @@
-package sec01.exam01;
+package sec01.exam02;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-// @WebServlet("/second")
+@WebServlet("/second")
 public class SecondServlet extends HttpServlet {
 
 	@Override
@@ -18,10 +18,7 @@ public class SecondServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		out.println("<html><body>");
-		out.println("sendRedirect를 이용한 redirect 실습");
-		out.println("</html></body>");
-		
-		
+		out.println("addHeader를 이용한 Refresh 실습");
+		out.println("</html></body>");	
 	}
-	
 }
