@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import sec04.exam03.MemberDAO;
 import sec04.exam03.MemberVO;
 
-@WebServlet("/member")
+// @WebServlet("/member")
 public class MemberServlet extends HttpServlet{
 
 	@Override

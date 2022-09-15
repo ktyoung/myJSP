@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import sec04.exam03.MemberVO;
 
-@WebServlet("/viewMembers")
+// @WebServlet("/viewMembers")
 public class ViewServlet extends HttpServlet {
 
 	@Override
