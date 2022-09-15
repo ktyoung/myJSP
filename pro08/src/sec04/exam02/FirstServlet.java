@@ -1,4 +1,4 @@
-package sec04.exam01;
+package sec04.exam02;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.RepaintManager;
 
-// @WebServlet("/first")
+@WebServlet("/first")
 public class FirstServlet extends HttpServlet {
 
 	@Override
@@ -21,6 +21,7 @@ public class FirstServlet extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8;");
 
 		request.setAttribute("address","서울시 성북구");
-		response.sendRedirect("second");
+		RequestDispatcher dispatch = request.getRequestDispatcher("second");
+		dispatch.forward(request, response);
 	}
 }
