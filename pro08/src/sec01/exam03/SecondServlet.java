@@ -18,7 +18,7 @@ public class SecondServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		out.println("<html><body>");
-		out.println("location의  href를 이용한 실습");
+		out.println("location의  href 속성을 이용한 실습");
 		out.println("</html></body>");	
 	}
 }
