@@ -1,4 +1,4 @@
-package login;
+package signInTest;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/login99")
-public class loginServlet5 extends HttpServlet {
+@WebServlet("/aylogin")
+public class Login extends HttpServlet {
 	
 	@Override
 	public void init() throws ServletException {
@@ -34,11 +34,11 @@ public class loginServlet5 extends HttpServlet {
 			data += "아이디 : " + id;
 			data += "<br>";
 			data += "비밀번호 : " + pw;
-			data += "<br>";
+			data += "<br><br>";
+			data += "<a href='/project03/'>메인 페이지로 이동</a>";
 			data += "</html>";
 			data += "</body>";
 		out.print(data);
-		out.print("<a href='/project03/index.html'>만안구청 홈페이지로 이동</a>");
 	}
 
 	@Override

@@ -13,11 +13,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import sec04.exam03.MemberVO;
 
-// @WebServlet("/viewMembers")
+@WebServlet("/viewMembers")
 public class ViewServlet extends HttpServlet {
 
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out=response.getWriter();

@@ -1,4 +1,4 @@
-package sec04.exam03;
+package signInTest;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,10 +14,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import sec04.exam03.MemberDAO;
-import sec04.exam03.MemberVO;
+import signInTest.MemberDAO;
+import signInTest.MemberVO;
 
-@WebServlet("/member")
+@WebServlet("/checkMember")
 public class MemberServlet extends HttpServlet{
 
 	@Override
@@ -30,10 +30,9 @@ public class MemberServlet extends HttpServlet{
 		doHandle(request, response);
 	}
 	
-	private void doHandle(HttpServletRequest request,HttpServletResponse response)  throws ServletException, IOException {
+	protected void doHandle(HttpServletRequest request,HttpServletResponse response)  throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
-		PrintWriter out=response.getWriter();
 		
 		MemberDAO dao=new MemberDAO();
 		List membersList = dao.listMembers();

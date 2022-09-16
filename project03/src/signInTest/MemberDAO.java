@@ -1,4 +1,4 @@
-package signIn;
+package signInTest;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -32,7 +32,7 @@ public class MemberDAO {
 			con = dataFactory.getConnection();
 			String query = "SELECT * FROM t_member ";
 			System.out.println("prepareStatememt: " + query);
-
+			
 			pstmt = con.prepareStatement(query);
 			ResultSet rs = pstmt.executeQuery();			
 			while (rs.next()) {
@@ -76,7 +76,7 @@ public class MemberDAO {
 			pstmt.setString(3, name);
 			pstmt.setString(4, email);	
 			pstmt.executeUpdate();
-			pstmt.close();			
+			pstmt.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
