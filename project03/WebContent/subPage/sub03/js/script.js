@@ -79,7 +79,7 @@
 	});
 	
 	// 가이드 텍스트
-	$('#userId').each(function(){
+/* 	$('#userId').each(function(){
 	var guideText = this.defaultValue;
 	var element = $(this);
 	
@@ -118,7 +118,7 @@
 		if(element.val() === guideText) {
 			element.addClass('gray');
 		}
-	});
+	}); */
 	
 	// 푸터 SNS 로고
 	// 롤오버

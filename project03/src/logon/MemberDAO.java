@@ -1,4 +1,4 @@
-package signInTest;
+package logon;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -10,6 +10,7 @@ import java.util.List;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
+import javax.sql.RowSet;
 
 public class MemberDAO {
 	private Connection con;
@@ -26,13 +27,13 @@ public class MemberDAO {
         }
     }	
 	
-	public List<MemberVO> listMembers() {
-		List<MemberVO> list = new ArrayList<MemberVO>();
+	public List listMembers() {
+		List list = new ArrayList();
 		try {
 			con = dataFactory.getConnection();
 			String query = "SELECT * FROM t_member ";
 			System.out.println("prepareStatememt: " + query);
-			
+
 			pstmt = con.prepareStatement(query);
 			ResultSet rs = pstmt.executeQuery();			
 			while (rs.next()) {
@@ -76,7 +77,7 @@ public class MemberDAO {
 			pstmt.setString(3, name);
 			pstmt.setString(4, email);	
 			pstmt.executeUpdate();
-			pstmt.close();
+			pstmt.close();			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -93,4 +94,25 @@ public class MemberDAO {
 			e.printStackTrace();
 		}
 	}	
+	
+	public boolean isExisted(MemberVO memberVO) {
+		boolean result = false;
+		String id = memberVO.getId();
+		String pwd = memberVO.getPwd();
+		try {
+			con = dataFactory.getConnection();
+			String query = "SELECT DECODE(COUNT(*), 1, 'true', 'false') AS RESULT FROM t_member";
+			query += " WHERE id=? AND pwd=?";
+			pstmt = con.prepareStatement(query);
+			pstmt.setString(1, id);
+			pstmt.setString(2, pwd);
+			ResultSet rs = pstmt.executeQuery();
+			rs.next();
+			result = Boolean.parseBoolean(rs.getString("result"));
+			System.out.println("result = " + result);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
 }

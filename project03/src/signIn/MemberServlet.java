@@ -1,4 +1,4 @@
-package signInTest;
+package signIn;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import signInTest.MemberDAO;
-import signInTest.MemberVO;
+import signIn.MemberDAO;
+import signIn.MemberVO;
 
 @WebServlet("/checkMember")
 public class MemberServlet extends HttpServlet{

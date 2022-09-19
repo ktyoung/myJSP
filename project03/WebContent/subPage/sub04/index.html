@@ -19,11 +19,11 @@
 	<script src="js/signScript.js"></script>
 	<script>
 		function fn_sendMember(){
-		   var frmMember=document.frmMember;
-		   var id=frmMember.id.value;
-		   var pwd=frmMember.pwd.value;
-		   var name=frmMember.name.value;
-		   var email=frmMember.email.value;
+		   var memberForm=document.memberForm;
+		   var id=memberForm.id.value;
+		   var pwd=memberForm.pass.value;
+		   var name=memberForm.name.value;
+		   var email=memberForm.email.value;
 		   if(id.length==0 || id=="") {
 			  alert("아이디는 필수입니다.");
 		   } else if(pwd.length==0 || pwd=="") {
@@ -33,9 +33,9 @@
 		   } else if(email.length==0 || email=="") {
 			  alert("이메일은 필수입니다.");
 		   } else {
-			  frmMember.method="POST";
-			  frmMember.action="/project03/checkMember";
-			  frmMember.submit();
+				memberForm.method="POST";
+				memberForm.action="/project03/checkMember";
+				memberForm.submit();
 		   } 
 		}
 	</script>
@@ -58,7 +58,7 @@
 				<ul class="gnbRight">
 					<li><a href="../sub01/index.html" tabIndex="8">LANGUAGE&nbsp;&or;</a></li>
 					<li>&nbsp;&middot;&nbsp;</li>
-					<li><a href="../sub02/index.html" tabIndex="7">회원가입</a></li>
+					<li><a href="index.html" tabIndex="7">회원가입</a></li>
 					<li>&nbsp;&middot;&nbsp;</li>
 					<li><a href="../sub03/index.html" tabIndex="6">로그인</a></li>
 				</ul>
@@ -176,17 +176,13 @@
 					</div>
 				</div>
 			</section>
-<script>
-	var userid = '';
-</script>
 			<section id="signInWrap">
 				<div class="signIn">
-					<div id="join_box" class="join_box">
-					<!-- <span class="signup_title">회원 가입</span> -->
-					<form name="member_form" method="post" action="index.html">
+					<div id="joinBox" class="joinBox">
+					<form name="memberForm" method="post" action="index.html">
 <script>
-	var check_id_var = 'false';
-	var current_check_id;
+	var checkIdVar = 'false';
+	var currentCheckId;
 </script>
 
 										
@@ -195,12 +191,12 @@
 							<div class="col2">
 								<label>
 									<input autocomplete="off" maxlength="11" type="text" name="id" />
-									<div class="id_image info_image"></div>
+									<div class="idImage infoImage"></div>
 								</label>
 							</div>
-							<div class="id_info_box">
-								<div class='id_info signup_info'></div>
-								<div class="id_check_text">아이디 확인중입니다.</div>	
+							<div class="idInfoBox">
+								<div class='idInfo signupInfo'></div>
+								<div class="idCheckText">아이디 확인중입니다.</div>	
 							</div>								
 						</div>
 						<div class="form password">
@@ -208,42 +204,43 @@
 							<div class="col2">
 								<label>
 									<input autocomplete="off" maxlength="15" type="password" name="pass">
-									<div class="pass_image info_image"></div>
+									<div class="passImage infoImage"></div>
 								</label>
 							</div>
-							<div class="password_info signup_info"></div>
+							<div class="passwordInfo signupInfo"></div>
 						</div>
-						<div class="form pass_confirm">
+						<div class="form passConfirm">
 							<div class="col1">비밀번호 확인</div>
 							<div class="col2">
 								<label>
-									<input autocomplete="off" maxlength="15" type="password" name="pass_confirm">
-									<div class="pass_confirm_image info_image"></div>
+									<input autocomplete="off" maxlength="15" type="password" name="passConfirm">
+									<div class="passConfirmImage infoImage"></div>
 								</label>
 							</div>
-							<div class="pass_confirm_info signup_info"></div>
+							<div class="passConfirmInfo signupInfo"></div>
 						</div>
 						<div class="form name">
 							<div class="col1">이름</div>
 							<div class="col2">
 								<input autocomplete="off" maxlength="5" type="text" name="name">
 							</div>
-							<div class="name_info signup_info"></div>
+							<div class="nameInfo signupInfo"></div>
 						</div>
 						<div class="form email">
 							<div class="col1">이메일</div>
 							<div class="col2 cf">
 								<input autocomplete="off" maxlength="35" type="text" name="email" class="fl">
 							</div>
-							<div class="email_info signup_info"></div>
+							<div class="emailInfo signupInfo"></div>
 						</div>
-						<div class="bottom_line"></div>
+						<div class="bottomLine"></div>
 						<div class="buttons cf">
-							<a class="reset_button fl" href="#" title="다시하기">다시하기</a>
-							<a class="save_button fl" href="#" title="가입하기">가입하기</a>							
+							<a class="resetButton fl" href="index.html" title="다시하기">다시하기</a>
+							<a class="saveButton fl" href="#" title="가입하기" onclick="fn_sendMember()">가입하기</a>						
 						</div>
+						<input type="hidden" name="command" value="addMember" />	
 					</form>
-				</div> <!-- join_box -->>
+				</div> <!-- joinBox -->
 				</div>
 			</section>
 		</div>

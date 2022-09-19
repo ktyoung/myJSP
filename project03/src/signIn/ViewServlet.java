@@ -1,4 +1,4 @@
-package signInTest;
+package signIn;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import signInTest.MemberVO;
+import signIn.MemberVO;
 
 @WebServlet("/viewMembers")
 public class ViewServlet extends HttpServlet {
@@ -37,7 +37,7 @@ public class ViewServlet extends HttpServlet {
 		
 		if(command!= null && command.equals("addMember")){
 			 String _id=request.getParameter("id");
-			 String _pwd=request.getParameter("pwd");
+			 String _pwd=request.getParameter("pass");
 			 String _name=request.getParameter("name");
 			 String _email=request.getParameter("email");
 			 
@@ -64,7 +64,7 @@ public class ViewServlet extends HttpServlet {
 	 		String email =memberVO.getEmail();
 	 		Date joinDate = memberVO.getJoinDate();	
 	 		out.print("<tr><td>"+id+"</td><td>"+pwd+"</td><td>"+name+"</td><td>"+email+"</td><td>"+joinDate+"</td>"
-	                    +"<td><a href='/project03/checkMember?command=delMember&id="+id+"'>삭제</a></td></tr>");	 		
+                    +"<td><form style='margin:0 auto;' action='/project03/checkMember?command=delMember&id="+id+"' method='POST'><input type='submit' value='삭제'></form></td></tr>");	 		
 		}
 		out.print("</table></body></html>");
 		out.print("<a href='/project03/subPage/sub04/index.html'>새 회원 등록하기</a>");

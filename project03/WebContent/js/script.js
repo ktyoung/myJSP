@@ -27,6 +27,11 @@
 			updateBalloonPostion(event.pageX, event.pageY);
 		});
 	});
+	
+	// 최상단 배너 닫기
+	$('.topClose').click(function(){
+		$('#topBannerWrap').css('display','none');
+	});
 
 	// 2 Depth
 	$('#menuTitle>ul>li.oneDepth1').each(function(){
@@ -362,6 +367,8 @@
 	}
 
 	// 슬라이드 배너 컨트롤 버튼
+	var pageNum = $('.currentPage').text();
+	
 	// 이전
 	$(".prev").on("click", function (e) {
 		e.preventDefault();
@@ -372,14 +379,20 @@
 		$(".imgBox .img").eq(imgOn).removeClass("on");
 		$(".imgBox .img").eq(imgOn).css({'opacity':'0'});
 		
-		imgOn = imgOn -1;
+		imgOn = imgOn - 1;
 		
 		if( imgOn < 0 ){
-			$(".imgBox .img").eq(imgLen -1).css("opacity", 1);
-			$(".imgBox .img").eq(imgLen -1).addClass("on");
-		}else{
+			imgOn = 11;
 			$(".imgBox .img").eq(imgOn).css("opacity", 1);
 			$(".imgBox .img").eq(imgOn).addClass("on");
+		} else {
+			$(".imgBox .img").eq(imgOn).css("opacity", 1);
+			$(".imgBox .img").eq(imgOn).addClass("on");
+		}
+		if( imgOn > 8 ) {
+			pageNum = $('.currentPage').text(imgOn+1);
+		} else {
+			pageNum = $('.currentPage').text('0'+(imgOn+1));
 		}
     });
 	// 다음
@@ -396,9 +409,15 @@
 		if( imgOn === imgLen ){
 			$(".imgBox .img").eq(0).css("opacity", 1);
 			$(".imgBox .img").eq(0).addClass("on");
-		}else{
+			imgOn = 0;
+		} else {
 			$(".imgBox .img").eq(imgOn).css("opacity", 1);
 			$(".imgBox .img").eq(imgOn).addClass("on");
+		}
+		if( imgOn > 8 ) {
+			pageNum = $('.currentPage').text(imgOn+1);
+		} else {
+			pageNum = $('.currentPage').text('0'+(imgOn+1));
 		}
     });
 	

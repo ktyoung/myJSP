@@ -14,6 +14,20 @@ a{text-decoration : none; color : #666666;}
 .cf:after{content : ''; display : block; clear : both;}
 
 /* Header */
+/* 최상단 배너 */
+#topBannerWrap{width : 100%; min-width : 1420px; height : 118px; display : block; margin : 0 auto; background : #5c90cb;}
+#topBannerWrap>#topBanner, .topBanner{width : 1420px; height : 100%; display : block; margin : 0 auto; position : relative; background : url(../images/topBanner.png) no-repeat; background-position : 50% 50%;}
+#topBannerWrap>#topBanner>.topBanner>.topLink{display : block; width : 100%; height : 100%;}
+#topBannerWrap>#topBanner>.topBanner>a>.textBox{text-align: center; display : block; width : 100%; height : 100%;}
+#topBannerWrap>#topBanner>.topBanner>a>.textBox>.title{font-size: 1.8em; font-weight: bold; text-decoration: none; color: #fff; text-shadow: 2px 2px 2px #00000036; text-align : center; padding-top: 24px; display : block;}
+#topBannerWrap>#topBanner>.topBanner>a>.textBox>.title>em{font-style : normal; color : #fffe8b;}
+#topBannerWrap>#topBanner>.topBanner>a>.textBox>.btn{background: #fff; width: 140px; margin: 13px auto 0; border-radius: 50px; color: #226299; padding: 2px 0 4px; border: none; text-align : center;}
+#topBannerWrap>#topBanner>.topBanner>a>.textBox>.btn:hover{text-decoration : underline;}
+#topBannerWrap>#topBanner>.topClose{position: absolute; right: 0; bottom: 5px; cursor : pointer; cursor : pointer; padding : 20px 20px 0px 20px;}
+#topBannerWrap>#topBanner>.topClose:hover{text-decoration : underline; text-decoration-color : #ffffff;}
+#topBannerWrap>#topBanner>.topClose>span.topCloseBtn{color : #333333; cursor : pointer;}
+#topBannerWrap>#topBanner>.topClose>button.topCloseBtn{border-radius: 100%; background: #226299; width: 20px; height: 20px; line-height: 1px; padding-left: 1px; color: #fff;}
+
 /* 글로벌 메뉴 왼쪽 */
 #header{width : 100%; min-width : 1420px; display : block; margin : 0 auto;}
 #header>#gnbWrap{width : 100%; display : block; margin : 0 auto;  border-bottom : 1px solid #ECECEC;}

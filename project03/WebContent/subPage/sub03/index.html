@@ -24,8 +24,13 @@
 			
 			if((userId.length==0 || userId=="") || (userPw.length==0 || userPw=="")) {
 				alert("아이디와 비밀번호는 필수입니다.");
-			} else {
-				alert("로그인 성공!");
+			} else if(userId === "admin") {
+				alert("관리자 권한으로 로그인합니다.");
+				loginForm.method = "post";
+				loginForm.action = "/project03/adminlogin";
+				loginForm.submit();
+			}
+			else {
 				loginForm.method = "post";
 				loginForm.action = "/project03/aylogin";
 				loginForm.submit();
@@ -189,11 +194,11 @@
 									<div class="userInfo">
 										<div class="inpArea">
 											<label for="userId"></label>
-											<input type="text" id="userId" name="userId" value="아이디"/>
+											<input type="text" id="userId" name="userId" value="admin" placeholder="아이디"/>
 										</div>
 										<div class="inpArea">
 											<label for="userPw"></label>
-											<input type="password" id="userPw" name="userPw" value="비밀번호"/>
+											<input type="password" id="userPw" name="userPw" value="admin1234" placeholder="비밀번호"/>
 										</div>
 									</div>
 									<input type="button" id="loginBtn" title="로그인" value="로그인" onClick="fn_validate()" class="btnLogin themeBtn"/>
