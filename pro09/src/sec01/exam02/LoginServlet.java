@@ -1,7 +1,8 @@
-package sec01.exam01;
+package sec01.exam02;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URLEncoder;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-// @WebServlet("/login")
+@WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 	@Override
 	public void init() throws ServletException {
@@ -39,6 +40,11 @@ public class LoginServlet extends HttpServlet {
 		data += "email : " + user_email;
 		data += "<br>";
 		data += "휴대전화 : " + user_hp;
+		data += "<br>";
+		
+		user_address = URLEncoder.encode(user_address,"utf-8");
+		data += "<a href='/pro09/second?user_id="+user_id+"&user_pw="+user_pw+"&user_address="+user_address+"'>두 번째 서블릿으로 보내기</a>";
+		
 		data += "</body></html>";
 		out.print(data);
 	}
@@ -47,6 +53,4 @@ public class LoginServlet extends HttpServlet {
 	public void destroy() {
 		System.out.println("destroy 메서드 호출");
 	}
-
-	
 }
