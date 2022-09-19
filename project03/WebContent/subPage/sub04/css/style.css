@@ -76,20 +76,43 @@ a{text-decoration : none; color : #666666;}
 	#container>#loginWrap>#loginBoard>#loginHeadWrap>#loginHead>.snsBtnArea{}
 	
 /* 회원가입 화면 */
-#signInWrap{width : 100%; height : 810px; display : block; clear : both;}
+/* #signInWrap{width : 100%; height : 810px; display : block; clear : both;}
 	.signIn{width : 1420px; height : 810px; display : block; margin : 0 auto; position : relative;}
 		.signInBox{width : 500px; height : 810px; display : block; margin : 0 auto; box-sizing : border-box; padding : 20px;}
 		.signInBox h2{display : block; text-align : center; font-size : 32px; color : #333333; border-bottom : 1px solid #dddddd; padding : 20px;}
-		.signInBox tr{clear : both; display : block; padding : 10px 0px;}
+		.signInBox tr{clear : both; display : block; margin : 30px 0px 50px 0px;}
+		.signInBox tr.last{clear : both; display : block; margin : 10px 0px 0px 0px;}
 		.signInBox td{display : block;}
 		.signInBox tr .signTitle{clear : both; width: 110px; margin-top: 4px; margin-bottom: 10px; font-weight: bold; display : block; color : #333333;}
 		.signInBox tr input{display : block; width : 456px; height : 50px; border : 1px solid #dddddd; box-sizing : border-box; font-size : 17px; padding : 10px; font-weight : normal; color : #333333; letter-spacing : 1.5px;}
 		.signInBox .divLine{display : block; border-bottom : 1px solid #dddddd; box-sizing : border-box; margin-top : 30px; margin-bottom : 30px;}
 		.signInBox input.signIn{border : 1px solid #dddddd; box-sizing : border-box; background : #2e58c6; width : 48%; height : 60px; float : left; display : block; padding : 10px 20px; color : #ffffff; border-radius : 5px; cursor : pointer; font-size : 17px;}
-		.signInBox input.reset{border : 1px solid #dddddd; box-sizing : border-box; background : #cccccc; width : 48%; height : 60px; float : right; display : block; padding : 10px 20px; color : #333333; border-radius : 5px; cursor : pointer; font-size : 17px;}
-
+		.signInBox input.reset{border : 1px solid #dddddd; box-sizing : border-box; background : #cccccc; width : 48%; height : 60px; float : right; display : block; padding : 10px 20px; color : #333333; border-radius : 5px; cursor : pointer; font-size : 17px;} */
+.join_box {width: 400px; margin: 0 auto;}
+.join_box .signup_title {display:block; font-size: 33px; color:#333333; margin-top: 40px; margin-bottom: 30px; width: 390px; height: 80px; line-height:80px; padding-left: 10px; border-bottom:1px solid #dcdcdc; border-bottom: solid 1px #dddddd;}
+.join_box .form input {width: 100%; height: 50px; line-height:50px; margin-bottom: 10px; border:1px solid #dadada; padding-left:10px; box-sizing:border-box;}
+.join_box input:focus {outline:none; border:1px solid #2d71c4;}
+.join_box .col1 {width: 110px; margin-top: 4px; margin-bottom:10px; font-weight:bold;}
+.join_box .col2 {width: 400px;}
+.join_box .id {margin-top: 20px;}
+.form>.col2 label {display:block; position:relative; width:100%; height:50px; margin-bottom: 10px;}
+.form>.col2 .info_image {position:absolute; right:10px; top:7.5px;}
+.id_image {width: 35px; height:35px; background: url(../images/login_id_icon.png) no-repeat 0 0; }
+.pass_image {width: 35px; height:35px; background: url(../images/m_icon_pw_step.png) no-repeat 0 0;}
+.pass_confirm_image {width: 35px; height:35px; background: url(../images/m_icon_pw_step.png) no-repeat -43px 0; top:0px;}
+.join_box .bottom_line {margin-top: 20px; margin-bottom:30px; border-bottom: solid 1px #cccccc;}
+.id_info_box {position:relative;}
+.signup_info {width: 100%; line-height:20px; color:red; margin-bottom:20px; background-color:#fdfdfd; font-size:15px; padding-left:10px;}
+.color_blue {color:#2d71c4;}
+.id_check_text {width: 100%; line-height:20px; color:red; margin-bottom:20px; background-color:#fdfdfd; font-size:15px; position:absolute; top:0; right:0; z-index:2; display:none; padding-left:10px;}
+.buttons {width: 100%; margin-bottom: 60px;}
+.save_button, .reset_button {width:47.5%; box-sizing: border-box; display:block; text-align: center; font-size: 18px; border-radius:3px; padding:18px 15px;color:#fdfdfd; cursor:pointer;}
+.save_button {background-color: #3579d4;  border: 1px solid #3579d4;}
+.reset_button {background-color: #cccccc;  border: 1px solid #cccccc; color:#555555;  margin-right: 5%;}
+		
+		
 /* Footer */
-#footerWrap{width : 100%; min-width : 1420px; height : 330px; margin : 0 auto; padding-bottom : 20px; background-color : #1d192f; box-sizing: border-box;}
+#footerWrap{width : 100%; min-width : 1420px; height : 330px; margin : 0 auto; padding-bottom : 20px; background-color : #1d192f; box-sizing: border-box; margin-top : 50px;}
 /* 안양시 주소, 연락처 */
 	#footerWrap>#footer{display : block; width : 1420px; margin : 0 auto;}
 	#footerWrap>#footer>#footerLogo{width : 80px; height : 215px;  margin : 0 auto; margin-top : 40px; margin-right : 60px;}	

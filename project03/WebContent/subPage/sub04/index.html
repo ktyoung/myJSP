@@ -13,31 +13,31 @@
 	<link rel="shortcut icon" type="image/x-icon" href="images/index.ico"/>
 	<script src="../../js/html5div.js"></script>
 	<script src="../../js/html5shiv.js"></script>
-	<script src="js/jquery-1.9.0.min.js"></script>
+	<script src="js/jquery-1.12.4.min.js"></script>
 	<script src="../../js/rollover.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/signScript.js"></script>
 	<script>
-	function fn_sendMember(){
-	   // 자바스크립트에서 <form> 태그의 name으로 접근해 입력한 값들을 얻는다
-	   var frmMember=document.frmMember;
-	   var id=frmMember.id.value;
-	   var pwd=frmMember.pwd.value;
-	   var name=frmMember.name.value;
-	   var email=frmMember.email.value;
-	   if(id.length==0 || id=="") {
-	      alert("아이디는 필수입니다.");
-	   } else if(pwd.length==0 || pwd=="") {
-	      alert("비밀번호는 필수입니다.");
-	   } else if(name.length==0 || name=="") {
-	      alert("이름은 필수입니다.");
-	   } else if(email.length==0 || email=="") {
-	      alert("이메일은 필수입니다.");
-	   } else {
-	      frmMember.method="POST";
-	      frmMember.action="/project03/checkMember";
-	      frmMember.submit();
-	   } 
-	}
+		function fn_sendMember(){
+		   var frmMember=document.frmMember;
+		   var id=frmMember.id.value;
+		   var pwd=frmMember.pwd.value;
+		   var name=frmMember.name.value;
+		   var email=frmMember.email.value;
+		   if(id.length==0 || id=="") {
+			  alert("아이디는 필수입니다.");
+		   } else if(pwd.length==0 || pwd=="") {
+			  alert("비밀번호는 필수입니다.");
+		   } else if(name.length==0 || name=="") {
+			  alert("이름은 필수입니다.");
+		   } else if(email.length==0 || email=="") {
+			  alert("이메일은 필수입니다.");
+		   } else {
+			  frmMember.method="POST";
+			  frmMember.action="/project03/checkMember";
+			  frmMember.submit();
+		   } 
+		}
 	</script>
 </head>
 <body>
@@ -176,36 +176,74 @@
 					</div>
 				</div>
 			</section>
+<script>
+	var userid = '';
+</script>
 			<section id="signInWrap">
 				<div class="signIn">
-					<div class="signInBox">
-						<h2>간편 회원가입</h2>
-						<form name="frmMember">
-						<table>
-							<th class="hidden">회원 가입창</th>
-							<tr>
-								<td class="signTitle">아이디</td>
-								<td><input type="text" name="id"></td>
-							</tr>
-							<tr>
-								<td class="signTitle">비밀번호</td>
-								<td><input type="password" name="pwd"></td>
-							</tr>
-							<tr>
-								<td class="signTitle">이름</td>
-								<td><input type="text" name="name"></td>
-							</tr>
-							<tr>
-								<td class="signTitle">이메일</td>
-								<td><input type="text" name="email"></td>
-							</tr>
-						</table>
-						<span class="divLine"></span>
-						<input class="reset" type="reset" value="다시입력">
-						<input class="signIn" type="button" value="가입하기" onclick="fn_sendMember()">
-						<input type="hidden" name="command" value="addMember" />	
-						</form>
-					</div>
+					<div id="join_box" class="join_box">
+					<!-- <span class="signup_title">회원 가입</span> -->
+					<form name="member_form" method="post" action="index.html">
+<script>
+	var check_id_var = 'false';
+	var current_check_id;
+</script>
+
+										
+						<div class="form id">
+							<div class="col1">아이디</div>
+							<div class="col2">
+								<label>
+									<input autocomplete="off" maxlength="11" type="text" name="id" />
+									<div class="id_image info_image"></div>
+								</label>
+							</div>
+							<div class="id_info_box">
+								<div class='id_info signup_info'></div>
+								<div class="id_check_text">아이디 확인중입니다.</div>	
+							</div>								
+						</div>
+						<div class="form password">
+							<div class="col1">비밀번호</div>
+							<div class="col2">
+								<label>
+									<input autocomplete="off" maxlength="15" type="password" name="pass">
+									<div class="pass_image info_image"></div>
+								</label>
+							</div>
+							<div class="password_info signup_info"></div>
+						</div>
+						<div class="form pass_confirm">
+							<div class="col1">비밀번호 확인</div>
+							<div class="col2">
+								<label>
+									<input autocomplete="off" maxlength="15" type="password" name="pass_confirm">
+									<div class="pass_confirm_image info_image"></div>
+								</label>
+							</div>
+							<div class="pass_confirm_info signup_info"></div>
+						</div>
+						<div class="form name">
+							<div class="col1">이름</div>
+							<div class="col2">
+								<input autocomplete="off" maxlength="5" type="text" name="name">
+							</div>
+							<div class="name_info signup_info"></div>
+						</div>
+						<div class="form email">
+							<div class="col1">이메일</div>
+							<div class="col2 cf">
+								<input autocomplete="off" maxlength="35" type="text" name="email" class="fl">
+							</div>
+							<div class="email_info signup_info"></div>
+						</div>
+						<div class="bottom_line"></div>
+						<div class="buttons cf">
+							<a class="reset_button fl" href="#" title="다시하기">다시하기</a>
+							<a class="save_button fl" href="#" title="가입하기">가입하기</a>							
+						</div>
+					</form>
+				</div> <!-- join_box -->>
 				</div>
 			</section>
 		</div>
