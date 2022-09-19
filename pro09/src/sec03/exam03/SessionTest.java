@@ -30,7 +30,6 @@ public class SessionTest extends HttpServlet {
 		if(session.isNew()) {
 			out.print("새 세션이 만들어졌습니다.");
 		}
-		
 		session.invalidate();
 	}
 	
