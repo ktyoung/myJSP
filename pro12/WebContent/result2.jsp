@@ -16,11 +16,11 @@
 		if(user_id == null || user_id.length() == 0) {
 	%>
 		아이디를 입력하세요. <br>
-	<a href="/pro12/login.html">로그인하기</a>
+		<a href="/pro12/login.html">로그인하기</a>
 	<%
 		} else {
 	%>		
-	<h1>환영합니다. <%= user_id %>님!</h1>
+		<h1>환영합니다. <%= user_id %>님!</h1>
 	<%
 		}
 	%>
