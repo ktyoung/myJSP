@@ -12,6 +12,7 @@
 <title>스크립틀릿 연습</title>
 </head>
 <body>
+	<%-- 스크립틀릿은 <% %> 태그 안에있는 모든 것 --%>
 	<h1>안녕하세요 <%=name %>님!</h1>
 	<!-- 주소창에서 변수값을 넘겨준다.
 	http://localhost:8090/pro12/hello2.jsp?age=22 -->
