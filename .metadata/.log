@@ -7510,3 +7510,6 @@ java.lang.NullPointerException
 
 !ENTRY org.eclipse.jface.text 2 0 2022-09-20 09:33:48.754
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-09-20 09:40:19.806
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
