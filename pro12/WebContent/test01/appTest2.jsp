@@ -2,16 +2,16 @@
     pageEncoding="UTF-8"%>
 <%
 	String name = (String) session.getAttribute("name");
-	session.setAttribute("address","서울시 강남구"); 
+	String address = (String) application.getAttribute("address");
 %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>session 내장 객체 테스트 1</title>
+<title>내장 객체 스코프 테스트 2</title>
 </head>
 <body>
-	이름은 <%= name %>입니다. <br>
-	<a href=session2.jsp>두번째 페이지로 이동</a>
+	<h1>이름은 <%= name %>입니다.</h1>
+	<h1>주소는 <%= address %>입니다.</h1>
 </body>
 </html>
