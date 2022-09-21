@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+<!-- 로그인 안 했을 때 index -->
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
@@ -153,120 +156,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="gnbWrap">
-			<div id="gnb">
-				<ul class="gnbLeft">
-					<li class="first"><a href="subPage/sub01/index.html" tabIndex="1">보건소</a></li>
-					<li>&nbsp;&middot;&nbsp;</li>
-					<li><a href="subPage/sub02/index.html" tabIndex="2">시립도서관</a></li>
-					<li>&nbsp;&middot;&nbsp;</li>
-					<li><a href="subPage/sub03/index.html" tabIndex="3">평생교육원</a></li>
-					<li>&nbsp;&middot;&nbsp;</li>
-					<li><a href="subPage/sub01/index.html" tabIndex="4">안양시의회</a></li>
-					<li>&nbsp;&middot;&nbsp;</li>
-					<li class="last"><a href="subPage/sub02/index.html" tabIndex="5">주요 누리집(웹사이트)&nbsp;&or;</a></li>
-				</ul>
-				<ul class="gnbRight">
-					<li><a href="subPage/sub02/index.html" tabIndex="8">LANGUAGE&nbsp;&or;</a></li>
-					<li>&nbsp;&middot;&nbsp;</li>
-					<li><a href="subPage/sub04/index.html" tabIndex="7">회원가입</a></li>
-					<li>&nbsp;&middot;&nbsp;</li>
-					<li><a href="subPage/sub03/index.html" tabIndex="6">로그인</a></li>
-				</ul>
-			</div>
-		</div>		
-		<div id="logoMenuWrap">
-			<div id="menuWrap" class="cf">
-				<div id="logo" class="fl">
-					<a href="index.html" tabIndex="9" class="showBalloon" title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;만안구청 홈페이지로 이동합니다."><div class="logoImg"></div><span class="logoTitle">만안구청</span></a>
-				</div>
-				<div id="menuTitle" class="fl">
-					<ul>
-						<li class="margin70 oneDepth1"><a href="subPage/sub03/index.html" tabIndex="10" class="showBalloon" title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;만안구 소개">만안구소개</a>
-							<div class="twoDepthWrap">
-								<div class="twoDepthText">
-									<ul class="twoDepth1">
-										<li><a href="subPage/sub01/index.html" tabIndex="11">구청장실</a></li>
-										<li><a href="subPage/sub02/index.html" tabIndex="12">지명유래</a></li>
-										<li><a href="subPage/sub03/index.html" tabIndex="13">행정구역변천사</a></li>
-										<li><a href="subPage/sub01/index.html" tabIndex="14">일반현황</a></li>
-										<li><a href="subPage/sub02/index.html" tabIndex="15">조직 및 업무</a></li>
-										<li><a href="subPage/sub03/index.html" tabIndex="16">주요전화번호</a></li>
-										<li><a href="subPage/sub01/index.html" tabIndex="17">청사안내도</a></li>
-										<li><a href="subPage/sub02/index.html" tabIndex="18">오시는길</a></li>
-										<li><a href="subPage/sub03/index.html" tabIndex="19">만안구관내도</a></li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<li class="margin70 oneDepth2"><a href="subPage/sub01/index.html" tabIndex="20" class="showBalloon" title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;종합민원실">종합민원실</a>
-							<div class="twoDepthWrap">
-								<div class="twoDepthText">
-									<ul class="twoDepth2">
-										<li><a href="subPage/sub01/index.html" tabIndex="21">민원신청</a></li>
-										<li><a href="subPage/sub02/index.html" tabIndex="22">민원발급</a></li>
-										<li><a href="subPage/sub03/index.html" tabIndex="23">민원안내</a></li>
-										<li><a href="subPage/sub01/index.html" tabIndex="24">부동산중개업소 자율점검</a></li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<li class="margin70 oneDepth3"><a href="subPage/sub02/index.html" tabIndex="25" class="showBalloon" title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;행정복지센터">행정복지센터</a>
-							<div class="twoDepthWrap">
-								<div class="twoDepthText">
-									<ul class="twoDepth3">
-										<li><a href="subPage/sub02/index.html" tabIndex="26">안양1동</a></li>
-										<li><a href="subPage/sub03/index.html" tabIndex="27">안양2동</a></li>
-										<li><a href="subPage/sub01/index.html" tabIndex="28">안양3동</a></li>
-										<li><a href="subPage/sub02/index.html" tabIndex="29">안양4동</a></li>
-										<li><a href="subPage/sub03/index.html" tabIndex="30">안양5동</a></li>
-										<li><a href="subPage/sub01/index.html" tabIndex="31">안양6동</a></li>
-										<li><a href="subPage/sub02/index.html" tabIndex="32">안양7동</a></li>
-										<li><a href="subPage/sub03/index.html" tabIndex="33">안양8동</a></li>
-										<li><a href="subPage/sub01/index.html" tabIndex="34">안양9동</a></li>
-										<li><a href="subPage/sub02/index.html" tabIndex="35">석수1동</a></li>
-										<li><a href="subPage/sub03/index.html" tabIndex="36">석수2동</a></li>
-										<li><a href="subPage/sub01/index.html" tabIndex="37">석수3동</a></li>
-										<li><a href="subPage/sub02/index.html" tabIndex="38">박달1동</a></li>
-										<li><a href="subPage/sub03/index.html" tabIndex="39">박달2동</a></li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<li class="margin70 oneDepth4"><a href="subPage/sub03/index.html" tabIndex="40" class="showBalloon" title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;열린광장">열린광장</a>
-							<div class="twoDepthWrap">
-								<div class="twoDepthText">
-									<ul class="twoDepth4">
-										<li><a href="subPage/sub01/index.html" tabIndex="41">새소식</a></li>
-										<li><a href="subPage/sub02/index.html" tabIndex="42">시청소식</a></li>
-										<li><a href="subPage/sub03/index.html" tabIndex="43">동소식 모아보기</a></li>
-										<li><a href="subPage/sub01/index.html" tabIndex="44">부서장 업무추진비 공개</a></li>
-										<li><a href="subPage/sub02/index.html" tabIndex="45">행정정보 사전공표 자료실</a></li>
-										<li><a href="subPage/sub03/index.html" tabIndex="46">고시/공고</a></li>
-										<li><a href="subPage/sub01/index.html" tabIndex="47">사진소식</a></li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<li class="margin70 oneDepth5"><a href="subPage/sub01/index.html" tabIndex="48" class="showBalloon" title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;분야별정보">분야별정보</a>
-							<div class="twoDepthWrap">
-								<div class="twoDepthText">
-									<ul class="twoDepth5">
-										<li><a href="subPage/sub02/index.html" tabIndex="49">소비자/경제</a></li>
-										<li><a href="subPage/sub03/index.html" tabIndex="50">문화/관광/체육</a></li>
-										<li><a href="subPage/sub01/index.html" tabIndex="51">복지</a></li>
-										<li><a href="subPage/sub02/index.html" tabIndex="52">교육</a></li>
-										<li><a href="subPage/sub03/index.html" tabIndex="53">환경/보건/위생</a></li>
-										<li><a href="subPage/sub01/index.html" tabIndex="54">재난/안전</a></li>
-										<li><a href="subPage/sub02/index.html" tabIndex="55">교통</a></li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<li><a href="subPage/sub03/index.html" tabIndex="56"><div class="sitemapImg"></div></a></li>
-					</ul> 
-				</div>
-			</div>
+		<%@ include file="main/header.jsp" %>
 		</div>
 		<div id="favoriteMenuWrap" class="fl">
 			<div id="favoriteMenu">
@@ -277,17 +167,17 @@
 					<button type="button" class="favoriteBtn2 showBalloon" title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;닫기"></button>
 				</div>
 				<ul>
-					<li class="oneLine"><a href="subPage/sub03/index.html" tabIndex="57" class="covid" ><div class="covidIcon"></div><span class="favoriteMenuText">코로나19현황</span></a></li>
-					<li class="oneLine"><a href="subPage/sub01/index.html" tabIndex="58" class="building"><div class="buildingIcon"></div><span class="favoriteMenuText">청사안내</span></a></li>
-					<li class="oneLine"><a href="subPage/sub02/index.html" tabIndex="59" class="book"><div class="bookIcon"></div><span class="favoriteMenuText">부서안내</span></a></li>
-					<li class="oneLine"><a href="subPage/sub03/index.html" tabIndex="60" class="map"><div class="mapIcon"></div><span class="favoriteMenuText">찾아오시는길</span></a></li>
-					<li class="oneLine"><a href="subPage/sub01/index.html" tabIndex="61" class="center"><div class="centerIcon"></div><span class="favoriteMenuText">행정복지센터</span></a></li>
-					<li class="oneLine"><a href="subPage/sub02/index.html" tabIndex="62" class="doc"><div class="docIcon"></div><span class="favoriteMenuText">민원발급</span></a></li>
-					<li class="twoLine"><a href="subPage/sub03/index.html" tabIndex="63" class="fam"><div class="famIcon"></div><span class="favoriteMenuText">가족관계<br/>등록</span></a></li>
-					<li class="last twoLine"><a href="subPage/sub01/index.html" tabIndex="64" class="calc"><div class="calcIcon"></div><span class="favoriteMenuText">세금<br/>(지방세)</span></a></li>
-					<li class="secondFMenu twoLine"><a href="subPage/sub01/index.html" tabIndex="65" class="penalty"><div class="penaltyIcon"></div><span class="favoriteMenuText">주정차<br/>과태료</span></a></li>
-					<li class="secondFMenu twoLine"><a href="subPage/sub01/index.html" tabIndex="66" class="kiosk"><div class="kioskIcon"></div><span class="favoriteMenuText">무인민원<br/>발급기</span></a></li>
-					<li class="secondFMenu twoLine"><a href="subPage/sub01/index.html" tabIndex="67" class="carSms"><div class="carSmsIcon"></div><span class="favoriteMenuText">주정차<br/>문자알림</span></a></li>					
+					<li class="oneLine"><a href="subPage/sub03/index.jsp" tabIndex="57" class="covid" ><div class="covidIcon"></div><span class="favoriteMenuText">코로나19현황</span></a></li>
+					<li class="oneLine"><a href="subPage/sub01/index.jsp" tabIndex="58" class="building"><div class="buildingIcon"></div><span class="favoriteMenuText">청사안내</span></a></li>
+					<li class="oneLine"><a href="subPage/sub02/index.jsp" tabIndex="59" class="book"><div class="bookIcon"></div><span class="favoriteMenuText">부서안내</span></a></li>
+					<li class="oneLine"><a href="subPage/sub03/index.jsp" tabIndex="60" class="map"><div class="mapIcon"></div><span class="favoriteMenuText">찾아오시는길</span></a></li>
+					<li class="oneLine"><a href="subPage/sub01/index.jsp" tabIndex="61" class="center"><div class="centerIcon"></div><span class="favoriteMenuText">행정복지센터</span></a></li>
+					<li class="oneLine"><a href="subPage/sub02/index.jsp" tabIndex="62" class="doc"><div class="docIcon"></div><span class="favoriteMenuText">민원발급</span></a></li>
+					<li class="twoLine"><a href="subPage/sub03/index.jsp" tabIndex="63" class="fam"><div class="famIcon"></div><span class="favoriteMenuText">가족관계<br/>등록</span></a></li>
+					<li class="last twoLine"><a href="subPage/sub01/index.jsp" tabIndex="64" class="calc"><div class="calcIcon"></div><span class="favoriteMenuText">세금<br/>(지방세)</span></a></li>
+					<li class="secondFMenu twoLine"><a href="subPage/sub01/index.jsp" tabIndex="65" class="penalty"><div class="penaltyIcon"></div><span class="favoriteMenuText">주정차<br/>과태료</span></a></li>
+					<li class="secondFMenu twoLine"><a href="subPage/sub01/index.jsp" tabIndex="66" class="kiosk"><div class="kioskIcon"></div><span class="favoriteMenuText">무인민원<br/>발급기</span></a></li>
+					<li class="secondFMenu twoLine"><a href="subPage/sub01/index.jsp" tabIndex="67" class="carSms"><div class="carSmsIcon"></div><span class="favoriteMenuText">주정차<br/>문자알림</span></a></li>					
 				</ul>
 				
 			</div>
@@ -341,19 +231,19 @@
 					<div class="keywordImg fl"></div>
 					<div class="keywordList fl">
 						<ul>
-							<li><a href="subPage/sub03/index.html" tabIndex="68">폐기물</a></li>
+							<li><a href="subPage/sub03/index.jsp" tabIndex="68">폐기물</a></li>
 							<li>&nbsp;&#124;&nbsp;</li>
-							<li><a href="subPage/sub01/index.html" tabIndex="69">채용공고</a></li>
+							<li><a href="subPage/sub01/index.jsp" tabIndex="69">채용공고</a></li>
 							<li>&nbsp;&#124;&nbsp;</li>
-							<li><a href="subPage/sub02/index.html" tabIndex="70">안심콜</a></li>
+							<li><a href="subPage/sub02/index.jsp" tabIndex="70">안심콜</a></li>
 							<li>&nbsp;&#124;&nbsp;</li>
-							<li><a href="subPage/sub03/index.html" tabIndex="71">보건증</a></li>
+							<li><a href="subPage/sub03/index.jsp" tabIndex="71">보건증</a></li>
 							<li>&nbsp;&#124;&nbsp;</li>
-							<li><a href="subPage/sub03/index.html" tabIndex="72">대학생</a></li>
+							<li><a href="subPage/sub03/index.jsp" tabIndex="72">대학생</a></li>
 							<li>&nbsp;&#124;&nbsp;</li>
-							<li><a href="subPage/sub03/index.html" tabIndex="73">방역콜</a></li>
+							<li><a href="subPage/sub03/index.jsp" tabIndex="73">방역콜</a></li>
 							<li>&nbsp;&#124;&nbsp;</li>
-							<li><a href="subPage/sub03/index.html" tabIndex="74">조직도</a></li>
+							<li><a href="subPage/sub03/index.jsp" tabIndex="74">조직도</a></li>
 						</ul>
 					</div>
 					<div class="kewordControl">
@@ -366,28 +256,28 @@
 			<div id="photoNews">
 				<ul>
 					<li>
-						<a href="subPage/sub01/index.html" tabIndex="75"><div class="rightSlideBannerContent">
+						<a href="subPage/sub01/index.jsp" tabIndex="75"><div class="rightSlideBannerContent">
 							<div>
 								<span>2022.7.5. [작은 나눔, 행복 한끼 나눔 캠페인]</span>
 							</div>
 						</div></a>
 					</li>
 					<li>
-						<a href="subPage/sub02/index.html" tabIndex="76"><div class="rightSlideBannerContent2">
+						<a href="subPage/sub02/index.jsp" tabIndex="76"><div class="rightSlideBannerContent2">
 							<div>
 								<span>2022.7.5. 만안구 여성합창단 위촉장 수여</span>
 							</div>
 						</div></a>
 					</li>
 					<li>
-						<a href="subPage/sub03/index.html" tabIndex="77"><div class="rightSlideBannerContent3">
+						<a href="subPage/sub03/index.jsp" tabIndex="77"><div class="rightSlideBannerContent3">
 							<div>
 								<span>2022.7.1. #잘 지내줘서 고마워요 "토닥토닥" 거리공연</span>
 							</div>
 						</div></a>
 					</li>
 					<li>
-						<a href="subPage/sub01/index.html" tabIndex="78"><div class="rightSlideBannerContent4">
+						<a href="subPage/sub01/index.jsp" tabIndex="78"><div class="rightSlideBannerContent4">
 							<div>
 								<span>2022.6.24. #잘 지내줘서 고마워요 "토닥토닥" 거리공연</span>
 							</div>
@@ -423,7 +313,7 @@
 		<div id="tabContent">
 			<div class="wardNews">
 				<ul>
-					<li class="mainContent1"><a href="subPage/sub02/index.html" tabIndex="79">
+					<li class="mainContent1"><a href="subPage/sub02/index.jsp" tabIndex="79">
 						<div class="title">
 							<p>2022년 「어게인 안양일번가 거리공연」 참가자 모집 안내</p>
 						</div>
@@ -432,7 +322,7 @@
 						</div>
 						<span>2022.07.11</span>
 					</a></li>
-					<li class="mainContent2"><a href="subPage/sub03/index.html" tabIndex="80">
+					<li class="mainContent2"><a href="subPage/sub03/index.jsp" tabIndex="80">
 						<div class="title">
 							<p>2022 만안구 환경사랑 글ㆍ그림 공모전 개최 안내</p>
 						</div>
@@ -441,7 +331,7 @@
 						</div>
 						<span>2022.06.16</span>
 					</a></li>
-					<li class="mainContent3"><a href="subPage/sub01/index.html" tabIndex="81">
+					<li class="mainContent3"><a href="subPage/sub01/index.jsp" tabIndex="81">
 						<div class="title">
 							<p>#잘지내줘서 고마워요 "토닥토닥" 거리공연 출연팀 선정 공고</p>
 						</div>
@@ -450,7 +340,7 @@
 						</div>
 						<span>2022.06.08</span>
 					</a></li>
-					<li class="mainContent4"><a href="subPage/sub02/index.html" tabIndex="82">
+					<li class="mainContent4"><a href="subPage/sub02/index.jsp" tabIndex="82">
 						<div class="title">
 							<p>2022년 만안구 여성합창단 신규 단원 공개모집 공고</p>
 						</div>
@@ -464,7 +354,7 @@
 			
 			<div class="townNews">
 				<ul>
-					<li class="mainContent1"><a href="subPage/sub03/index.html" tabIndex="83">
+					<li class="mainContent1"><a href="subPage/sub03/index.jsp" tabIndex="83">
 						<div class="title">
 							<p>[안양9동]「인천 영종 A41블록 한신더휴 민간분양 사전청약」장애인 특별공급 안내</p>
 						</div>
@@ -482,7 +372,7 @@
 						</div>
 						<span>2022.07.28</span>
 					</a></li>			
-					<li class="mainContent2"><a href="subPage/sub01/index.html" tabIndex="84">
+					<li class="mainContent2"><a href="subPage/sub01/index.jsp" tabIndex="84">
 						<div class="title">
 							<p>[석수2동]「인천 영종 A41블록 한신더휴 민간분양 사전청약」 장애인 특별공급 안내안내</p>
 						</div>
@@ -491,7 +381,7 @@
 						</div>
 						<span>2022.07.28</span>
 					</a></li>			
-					<li class="mainContent3"><a href="subPage/sub02/index.html" tabIndex="85">
+					<li class="mainContent3"><a href="subPage/sub02/index.jsp" tabIndex="85">
 						<div class="title">
 							<p>[안양9동]파주운정3지구 A23BL 기관추천 특별공급 안내(다문화가족)</p>
 						</div>
@@ -500,7 +390,7 @@
 						</div>
 						<span>2022.07.28</span>
 					</a></li>			
-					<li class="mainContent4"><a href="subPage/sub03/index.html" tabIndex="86">
+					<li class="mainContent4"><a href="subPage/sub03/index.jsp" tabIndex="86">
 						<div class="title">
 							<p>[안양4동]「인천 영종 A41블록 한신더휴 민간분양 사전청약」장애인 특별공급 안내</p>
 						</div>
@@ -520,7 +410,7 @@
 			
 			<div class="cityNews">
 				<ul>
-					<li class="mainContent1"><a href="subPage/sub03/index.html" tabIndex="87">
+					<li class="mainContent1"><a href="subPage/sub03/index.jsp" tabIndex="87">
 						<div class="title">
 							<p>「인천 영종 A41블록 한신더휴 민간분양 사전청약」 장애인 특별공급 안내</p>
 						</div>
@@ -536,7 +426,7 @@
 						</div>
 						<span>2022.07.27</span>
 					</a></li>					
-					<li class="mainContent2"><a href="subPage/sub03/index.html" tabIndex="88">
+					<li class="mainContent2"><a href="subPage/sub03/index.jsp" tabIndex="88">
 						<div class="title">
 							<p>2022 안양시민학당(제7강~제9강) 안내</p>
 						</div>
@@ -545,7 +435,7 @@
 						</div>
 						<span>2022.07.27</span>
 					</a></li>					
-					<li class="mainContent3"><a href="subPage/sub03/index.html" tabIndex="89">
+					<li class="mainContent3"><a href="subPage/sub03/index.jsp" tabIndex="89">
 						<div class="title">
 							<p>파주운정3 특별공급 안내(다문화가족)</p>
 						</div>
@@ -554,7 +444,7 @@
 						</div>
 						<span>2022.07.27</span>
 					</a></li>					
-					<li class="mainContent4"><a href="subPage/sub03/index.html" tabIndex="90">
+					<li class="mainContent4"><a href="subPage/sub03/index.jsp" tabIndex="90">
 						<div class="title">
 							<p>안양시 「월간 기업정보」 8월호</p>
 						</div>
@@ -577,7 +467,7 @@
 			
 			<div class="publicNews">
 				<ul>
-					<li class="mainContent1"><a href="subPage/sub03/index.html" tabIndex="91">
+					<li class="mainContent1"><a href="subPage/sub03/index.jsp" tabIndex="91">
 						<div class="title">
 							<p>삼성천 보 수위 관찰용 CCTV 설치를 위한 행정예고</p>
 						</div>
@@ -588,7 +478,7 @@
 						</div>
 						<span>2022.07.28</span>
 					</a></li>					
-					<li class="mainContent2"><a href="subPage/sub03/index.html" tabIndex="92">
+					<li class="mainContent2"><a href="subPage/sub03/index.jsp" tabIndex="92">
 						<div class="title">
 							<p>미등록 이륜자동차 운행 및 과태료 처분 사전통지서 공시...</p>
 						</div>
@@ -599,7 +489,7 @@
 						</div>
 						<span>2022.07.28</span>
 					</a></li>				
-					<li class="mainContent3"><a href="subPage/sub03/index.html" tabIndex="93">
+					<li class="mainContent3"><a href="subPage/sub03/index.jsp" tabIndex="93">
 						<div class="title">
 							<p>장애인주차구역 위반차량 과태료처분에 대한 사전통보 공시...</p>
 						</div>
@@ -610,7 +500,7 @@
 						</div>
 						<span>2022.07.28</span>
 					</a></li>					
-					<li class="mainContent4"><a href="subPage/sub03/index.html" tabIndex="94">
+					<li class="mainContent4"><a href="subPage/sub03/index.jsp" tabIndex="94">
 						<div class="title">
 							<p>담배소매업 폐업에 따른 담배소매인 지정신청 공고</p>
 						</div>
@@ -630,7 +520,7 @@
 		<div id="covidTitle">
 			<h2>안양시<span>코로나 19</span></h2>
 			<p>2022. 7. 17. 00시 기준</p>
-			<div class="viewDetails"><div class="detailsBtn"><span class="txt">자세히</span><a href="subPage/sub03/index.html" tabIndex="95"><span class="plus">+</span></a></div></div>
+			<div class="viewDetails"><div class="detailsBtn"><span class="txt">자세히</span><a href="subPage/sub03/index.jsp" tabIndex="95"><span class="plus">+</span></a></div></div>
 		</div>
 		<div id="covidInfo" class="cf">
 			<div id="covidSituation" class="fl">
@@ -759,7 +649,7 @@
 					<li>
 						<div class="snsLeftContent fl">
 							<div class="snsAnyang">
-								<a href="subPage/sub01/index.html" tabIndex="96">
+								<a href="subPage/sub01/index.jsp" tabIndex="96">
 									<div class="ayImgWrap"><div class="ayImg"></div><h4><span class="blind">안양SNS</span></h4></div>
 									<span class="ayTitle">안양시농협 사랑의 쌀 전달식…</span>
 									<p class="text">최근 행사소식 - 포토 갤러리</p>
@@ -774,7 +664,7 @@
 					<li>
 						<div class="snsMiddleContent fl">
 							<div class="ytAnyang">
-								<a href="subPage/sub02/index.html" tabIndex="97">
+								<a href="subPage/sub02/index.jsp" tabIndex="97">
 									<div class="ytImgWrap"><div class="ytImg"></div><h4><span class="blind">안양유튜브</span></h4></div>
 									<span class="ytTitle">[2022 안양시민학당] 그리스 로마 신화에서…</span>
 									<p class="text">[2022 안양시민학당] 그리스 로마 신화에서 배우는 삶의 지혜｜김헌 교수</p>
@@ -789,7 +679,7 @@
 					<li>
 						<div class="snsRightContent fl">
 							<div class="ayNewsletter">
-								<a href="subPage/sub03/index.html" tabIndex="98">
+								<a href="subPage/sub03/index.jsp" tabIndex="98">
 									<div class="nlImgWrap"><div class="nlImg"></div><h4><span class="blind">안양뉴스레터</span></h4></div>
 									<span class="newsletterTitle">안양 소식지</span>
 									<p class="text">우리안양 eBook 2022년 7월호</p>
@@ -809,7 +699,7 @@
 					<li>
 						<div class="youthFirstContent fl">
 							<div class="youthContent">
-								<a href="subPage/sub01/index.html" tabIndex="99">
+								<a href="subPage/sub01/index.jsp" tabIndex="99">
 									<span class="youthTitle">청년창업펀드</span>
 									<p class="divLine"></p>
 									<p class="text">관내 우수한 청년·초기기업을 발굴하여 직접 투자</p>
@@ -822,7 +712,7 @@
 					<li>
 						<div class="youthSecondContent fl">
 							<div class="youthContent">
-								<a href="subPage/sub02/index.html" tabIndex="100">
+								<a href="subPage/sub02/index.jsp" tabIndex="100">
 									<span class="youthTitle">인터레스트 지원사업</span>
 									<p class="divLine"></p>
 									<p class="text">청년들의 주거비 경감 지원 사업</p>
@@ -835,7 +725,7 @@
 					<li>
 						<div class="youthThirdContent fl">
 							<div class="youthContent">
-								<a href="subPage/sub03/index.html" tabIndex="101">
+								<a href="subPage/sub03/index.jsp" tabIndex="101">
 									<span class="youthTitle">범계역 청년출구</span>
 									<p class="divLine"></p>
 									<p class="text">청년들이 미래를 설계할 수 있는 활동 공간</p>
@@ -848,7 +738,7 @@
 					<li>
 						<div class="youthFourthContent fl">
 							<div class="youthContent">
-								<a href="subPage/sub01/index.html" tabIndex="102">
+								<a href="subPage/sub01/index.jsp" tabIndex="102">
 									<span class="youthTitle">안양시 청년정책</span>
 									<p class="divLine"></p>
 									<p class="text">안양청년광장 홈페이지 바로가기</p>
@@ -866,7 +756,7 @@
 					<li>
 						<div class="jobFirstContent fl">
 							<div class="jobContent">
-								<a href="subPage/sub01/index.html" tabIndex="103">
+								<a href="subPage/sub01/index.jsp" tabIndex="103">
 									<span class="youthTitle">안양맨투맨컨설팅</span>
 									<p class="divLine"></p>
 									<p class="text">1:1 입사서류 컨설팅을 통해 구직서류 및 면접역량 강화를 위한 온 · 오프라인 상담 지원</p>
@@ -879,7 +769,7 @@
 					<li>
 						<div class="jobSecondContent fl">
 							<div class="jobContent">
-								<a href="subPage/sub02/index.html" tabIndex="104">
+								<a href="subPage/sub02/index.jsp" tabIndex="104">
 									<span class="youthTitle">AI/VR 면접체험</span>
 									<p class="divLine"></p>
 									<p class="text">면접트렌드를 반영하고 구직자가 AI·VR 전용공간에서 스스로 면접 실전트레이닝 가능하도록 지원</p>
@@ -892,7 +782,7 @@
 					<li>
 						<div class="jobThirdContent fl">
 							<div class="jobContent">
-								<a href="subPage/sub03/index.html" tabIndex="105">
+								<a href="subPage/sub03/index.jsp" tabIndex="105">
 									<span class="youthTitle">안양청년옷장</span>
 									<p class="divLine"></p>
 									<p class="text">정장 구입에 대한 부담없이 자신감을 가지고 면접에 임하여 취업에 성공할 수 있도록 정장 무료대여 지원</p>
@@ -905,7 +795,7 @@
 					<li>
 						<div class="jobFourthContent fl">
 							<div class="jobContent">
-								<a href="subPage/sub01/index.html" tabIndex="106">
+								<a href="subPage/sub01/index.jsp" tabIndex="106">
 									<span class="youthTitle">안양시 일자리정책</span>
 									<p class="divLine"></p>
 									<p class="text">안양시 일자리센터 홈페이지<br/><br/>바로가기</p>
@@ -923,7 +813,7 @@
 					<li>
 						<div class="tourFirstContent fl">
 							<div class="tourContent">
-								<a href="subPage/sub01/index.html" tabIndex="107">
+								<a href="subPage/sub01/index.jsp" tabIndex="107">
 									<span class="tourTitle">안양9경</span>
 									<p class="divLine"></p>
 									<p class="text">17년만에 재지정된 안양9경 <br/><br/>둘러보기</p>
@@ -936,7 +826,7 @@
 					<li>
 						<div class="tourSecondContent fl">
 							<div class="tourContent">
-								<a href="subPage/sub02/index.html" tabIndex="108">
+								<a href="subPage/sub02/index.jsp" tabIndex="108">
 									<span class="tourTitle">안양예술공원</span>
 									<p class="divLine"></p>
 									<p class="text">예술·자연·역사·맛이 공존하는 안양예술공원</p>
@@ -949,7 +839,7 @@
 					<li>
 						<div class="tourThirdContent fl">
 							<div class="tourContent">
-								<a href="subPage/sub03/index.html" tabIndex="109">
+								<a href="subPage/sub03/index.jsp" tabIndex="109">
 									<span class="tourTitle">APAP 트리엔날레</span>
 									<p class="divLine"></p>
 									<p class="text">안양을 배경으로 3년마다 열리는 국내 유일의 공공예술축제</p>
@@ -962,7 +852,7 @@
 					<li>
 						<div class="tourFourthContent fl">
 							<div class="tourContent">
-								<a href="subPage/sub01/index.html" tabIndex="110">
+								<a href="subPage/sub01/index.jsp" tabIndex="110">
 									<span class="tourTitle">360° 공공예술 VR여행</span>
 									<p class="divLine"></p>
 									<p class="text">앉아서 즐기는 360° 안양여행!</p>
@@ -986,26 +876,26 @@
 				<div id="leftNewsSlide">			
 					<ul>
 						<li class="topNews">
-							<a href="subPage/sub01/index.html" tabIndex="111" class="topNews1 on"></a>
-							<a href="subPage/sub02/index.html" tabIndex="112" class="topNews2"></a>
-							<a href="subPage/sub02/index.html" tabIndex="113" class="topNews3"></a>
-							<a href="subPage/sub02/index.html" tabIndex="114" class="topNews4"></a>
-							<a href="subPage/sub02/index.html" tabIndex="115" class="topNews5"></a>
-							<a href="subPage/sub02/index.html" tabIndex="116" class="topNews6"></a>
-							<a href="subPage/sub02/index.html" tabIndex="117" class="topNews7"></a>
-							<a href="subPage/sub02/index.html" tabIndex="118" class="topNews8"></a>
-							<a href="subPage/sub02/index.html" tabIndex="119" class="topNews9"></a>
+							<a href="subPage/sub01/index.jsp" tabIndex="111" class="topNews1 on"></a>
+							<a href="subPage/sub02/index.jsp" tabIndex="112" class="topNews2"></a>
+							<a href="subPage/sub02/index.jsp" tabIndex="113" class="topNews3"></a>
+							<a href="subPage/sub02/index.jsp" tabIndex="114" class="topNews4"></a>
+							<a href="subPage/sub02/index.jsp" tabIndex="115" class="topNews5"></a>
+							<a href="subPage/sub02/index.jsp" tabIndex="116" class="topNews6"></a>
+							<a href="subPage/sub02/index.jsp" tabIndex="117" class="topNews7"></a>
+							<a href="subPage/sub02/index.jsp" tabIndex="118" class="topNews8"></a>
+							<a href="subPage/sub02/index.jsp" tabIndex="119" class="topNews9"></a>
 						</li>
 						<li class="botNews">
-							<a href="subPage/sub02/index.html" tabIndex="120" class="botNews1 on"></a>
-							<a href="subPage/sub02/index.html" tabIndex="121" class="botNews2"></a>
-							<a href="subPage/sub02/index.html" tabIndex="122" class="botNews3"></a>
-							<a href="subPage/sub02/index.html" tabIndex="123" class="botNews4"></a>
-							<a href="subPage/sub02/index.html" tabIndex="124" class="botNews5"></a>
-							<a href="subPage/sub02/index.html" tabIndex="125" class="botNews6"></a>
-							<a href="subPage/sub02/index.html" tabIndex="126" class="botNews7"></a>
-							<a href="subPage/sub02/index.html" tabIndex="127" class="botNews8"></a>
-							<a href="subPage/sub02/index.html" tabIndex="128" class="botNews9"></a>
+							<a href="subPage/sub02/index.jsp" tabIndex="120" class="botNews1 on"></a>
+							<a href="subPage/sub02/index.jsp" tabIndex="121" class="botNews2"></a>
+							<a href="subPage/sub02/index.jsp" tabIndex="122" class="botNews3"></a>
+							<a href="subPage/sub02/index.jsp" tabIndex="123" class="botNews4"></a>
+							<a href="subPage/sub02/index.jsp" tabIndex="124" class="botNews5"></a>
+							<a href="subPage/sub02/index.jsp" tabIndex="125" class="botNews6"></a>
+							<a href="subPage/sub02/index.jsp" tabIndex="126" class="botNews7"></a>
+							<a href="subPage/sub02/index.jsp" tabIndex="127" class="botNews8"></a>
+							<a href="subPage/sub02/index.jsp" tabIndex="128" class="botNews9"></a>
 						</li>
 					</ul>
 				</div>
@@ -1039,14 +929,14 @@
 				</div>
 				<ul>
 					<li class="rightNewsContent">
-						<a href="subPage/sub03/index.html" tabIndex="129" class="on"><div class="contentOne"></div></a>
-						<a href="subPage/sub03/index.html" tabIndex="130"><div class="contentTwo"></div></a>
-						<a href="subPage/sub03/index.html" tabIndex="131"><div class="contentThree"></div></a>
-						<a href="subPage/sub03/index.html" tabIndex="132"><div class="contentFour"></div></a>
-						<a href="subPage/sub03/index.html" tabIndex="133"><div class="contentFive"></div></a>
-						<a href="subPage/sub03/index.html" tabIndex="134"><div class="contentSix"></div></a>
-						<a href="subPage/sub03/index.html" tabIndex="135"><div class="contentSeven"></div></a>
-						<a href="subPage/sub03/index.html" tabIndex="136"><div class="contentEight"></div></a>
+						<a href="subPage/sub03/index.jsp" tabIndex="129" class="on"><div class="contentOne"></div></a>
+						<a href="subPage/sub03/index.jsp" tabIndex="130"><div class="contentTwo"></div></a>
+						<a href="subPage/sub03/index.jsp" tabIndex="131"><div class="contentThree"></div></a>
+						<a href="subPage/sub03/index.jsp" tabIndex="132"><div class="contentFour"></div></a>
+						<a href="subPage/sub03/index.jsp" tabIndex="133"><div class="contentFive"></div></a>
+						<a href="subPage/sub03/index.jsp" tabIndex="134"><div class="contentSix"></div></a>
+						<a href="subPage/sub03/index.jsp" tabIndex="135"><div class="contentSeven"></div></a>
+						<a href="subPage/sub03/index.jsp" tabIndex="136"><div class="contentEight"></div></a>
 					</li>
 				</ul>
 			</div>
@@ -1165,19 +1055,19 @@
 			<div class="bannerTitle"></div>
 			<div class="bannerMenu">
 				<ul>
-					<li><a href="subPage/sub01/index.html" tabIndex="145">공유누리</a></li>
+					<li><a href="subPage/sub01/index.jsp" tabIndex="145">공유누리</a></li>
 					<li><div class="divDot"></div></li>
-					<li><a href="subPage/sub02/index.html" tabIndex="146">정부/지자체 조직도</a></li>
+					<li><a href="subPage/sub02/index.jsp" tabIndex="146">정부/지자체 조직도</a></li>
 					<li><div class="divDot"></div></li>
-					<li><a href="subPage/sub03/index.html" tabIndex="147">경기도 민생범죄통계</a></li>
+					<li><a href="subPage/sub03/index.jsp" tabIndex="147">경기도 민생범죄통계</a></li>
 					<li><div class="divDot"></div></li>
-					<li><a href="subPage/sub01/index.html" tabIndex="148">당번약국</a></li>
+					<li><a href="subPage/sub01/index.jsp" tabIndex="148">당번약국</a></li>
 					<li><div class="divDot"></div></li>
-					<li><a href="subPage/sub02/index.html" tabIndex="149">정부24</a></li>
+					<li><a href="subPage/sub02/index.jsp" tabIndex="149">정부24</a></li>
 					<li><div class="divDot"></div></li>
-					<li><a href="subPage/sub03/index.html" tabIndex="150">위택스</a></li>
+					<li><a href="subPage/sub03/index.jsp" tabIndex="150">위택스</a></li>
 					<li><div class="divDot"></div></li>
-					<li><a href="subPage/sub01/index.html" tabIndex="151">성범죄자 알림e</a></li>				
+					<li><a href="subPage/sub01/index.jsp" tabIndex="151">성범죄자 알림e</a></li>				
 				</ul>
 			</div>
 			<div class="bannerControl">
@@ -1190,71 +1080,6 @@
 		<button class="fBtn2 icon-arrow-down"></button>
 	</section>
 	
-	<footer id="footerWrap" class="cf">
-		<div id="footer">
-			<div id="footerLogo" class="fl">
-				<div class="fLogoImg"></div>
-			</div>
-			<div id="ayAddress" class="fl">
-				<h3>만안구청</h3>
-				<ul class="ayInfo">
-					<li class="ayAddress">
-						<div class="addressImg"></div>
-						<span class="title">주소</span>
-						<span class="text">14034 경기도 안양시 만안구 안양로 128(안양동)</span>
-					</li>
-					<li class="ayContact">
-						<div class="contactImg"></div>
-						<span class="title">전화</span>
-						<span class="text">031-8045-7000 (콜센터/평일·주간)<br/>031-8045-3222 (당직실/공휴일·야간)</span>
-					</li>
-					<li class="ayFax">
-						<div class="faxImg"></div>
-						<span class="title">팩스</span>
-						<span class="text">031-8045-6600</span>
-					</li>
-				</ul>
-			</div>
-			<div id="privacyPolicy" class="fl">
-				<h3><a href="subPage/sub02/index.html" tabIndex="152">개인정보 처리방침</a></h3>
-				<ul>
-					<li class="policy"><a href="subPage/sub03/index.html" tabIndex="153">저작권정책</a></li>
-					<li class="policy"><a href="subPage/sub01/index.html" tabIndex="154">청사 안내</a></li>
-					<li class="policy"><a href="subPage/sub02/index.html" tabIndex="155">찾아오시는 길</a></li>
-					<li class="policy"><a href="subPage/sub03/index.html" tabIndex="156">홈페이지 개선건의</a></li>
-				</ul>
-			</div>
-			<div id="copyright" class="fl">
-				<h3><span class="blind">저작권</span></h3>
-				<ul class="footerSns">
-					<li class="footerIcon">
-						<a href="subPage/sub01/index.html" tabIndex="157" class="rollover"><img src="images/footer/facebook_off.png" alt="페이스북 아이콘" class="facebook"/></a>
-					</li>
-					<li class="footerIcon">
-						<a href="subPage/sub02/index.html" tabIndex="158" class="rollover"><img src="images/footer/twitter_off.png" alt="트위터 아이콘" class="twitter"/></a>
-					</li>
-					<li class="footerIcon">
-						<a href="subPage/sub03/index.html" tabIndex="159" class="rollover"><img src="images/footer/instagram_off.png" alt="인스타그램 아이콘" class="instagram"/></a>
-					</li>
-					<li class="footerIcon">
-						<a href="subPage/sub01/index.html" tabIndex="160" class="rollover"><img src="images/footer/youtube_off.png" alt="유튜브 아이콘" class="youtube"/></a>
-					</li>
-					<li class="footerIcon">
-						<a href="subPage/sub02/index.html" tabIndex="161" class="rollover"><img src="images/footer/blog_off.png" alt="블로그 아이콘" class="blog"/></a>
-					</li>
-				</ul>
-				<p class="copy">&copy;ANYANG CITY.ALL RIGHTS RESERVED.</p>
-				<div class="accessibility"></div>
-				<div class="eprivacy"></div>
-			</div>
-			<p class="fr">
-				<a href="http://jigsaw.w3.org/css-validator/check/referer">
-					<img style="border:0;width:88px;height:31px"
-					src="http://jigsaw.w3.org/css-validator/images/vcss"
-					alt="올바른 CSS입니다!" />
-				</a>
-			</p>
-		</div>
-	</footer>
+	<%@ include file="main/footer.jsp" %>
 </body>
 </html>
