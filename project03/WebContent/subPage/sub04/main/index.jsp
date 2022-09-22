@@ -12,14 +12,14 @@
 	<meta name="Author" content="김태영"/>
 	<meta name="Keywords" content="김태영, KimTaeYoung, 포트폴리오, 김태영 포트폴리오, portfolio, TaeYoung's portfolio, 프로젝트, Project, 김 태영, 김 태 영, 태영 김, 태영, rla, xo, dud, xodud, HTML5, CSS3, jQuery, 프로젝트, Portfolio, Project, 반응형웹, 반응형웹 포트폴리오, 학생 포트폴리오"/>
 	<meta name="Description" content="김태영의 포트폴리오 사이트입니다. 방문해 주셔서 감사합니다." />
-	<link rel="stylesheet" href="css/style.css"/>
-	<link rel="shortcut icon" type="image/x-icon" href="images/index.ico"/>
-	<script src="../../js/html5div.js"></script>
-	<script src="../../js/html5shiv.js"></script>
-	<script src="js/jquery-1.12.4.min.js"></script>
-	<script src="../../js/rollover.js"></script>
-	<script src="js/script.js"></script>
-	<script src="js/signScript.js"></script>
+	<link rel="stylesheet" href="../css/style.css"/>
+	<link rel="shortcut icon" type="image/x-icon" href="../images/index.ico"/>
+	<script src="../../../js/html5div.js"></script>
+	<script src="../../../js/html5shiv.js"></script>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../../../js/rollover.js"></script>
+	<script src="../js/script.js"></script>
+	<script src="../js/signScript.js"></script>
 	<script>
 		function fn_sendMember(){
 		   var memberForm=document.memberForm;
@@ -55,7 +55,7 @@
 					<div id="loginHead">
 						<div class="loginHeadTitle"><h3>회원가입</h3></div>
 						<div class="breadCrumbs">
-							<a href="../../main/index.jsp" tabIndex="57"></a>
+							<a href="../../../main/index.jsp" tabIndex="57"></a>
 							<div class="arrowImg"></div>
 							<span>회원정보</span>
 							<div class="arrowImg"></div>
@@ -135,6 +135,6 @@
 		</div>
 	</div>
 	
-	<%@ include file="footer.jsp" %>
+	<%@ include file="footer_login.jsp" %>
 </body>
 </html>

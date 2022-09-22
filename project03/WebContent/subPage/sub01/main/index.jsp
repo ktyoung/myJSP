@@ -13,13 +13,13 @@
 	<meta name="Author" content="김태영"/>
 	<meta name="Keywords" content="김태영, KimTaeYoung, 포트폴리오, 김태영 포트폴리오, portfolio, TaeYoung's portfolio, 프로젝트, Project, 김 태영, 김 태 영, 태영 김, 태영, rla, xo, dud, xodud, HTML5, CSS3, jQuery, 프로젝트, Portfolio, Project, 반응형웹, 반응형웹 포트폴리오, 학생 포트폴리오"/>
 	<meta name="Description" content="김태영의 포트폴리오 사이트입니다. 방문해 주셔서 감사합니다." />
-	<link rel="stylesheet" href="css/style.css"/>
-	<link rel="shortcut icon" type="image/x-icon" href="images/index.ico"/>
-	<script src="../../js/html5div.js"></script>
-	<script src="../../js/html5shiv.js"></script>
-	<script src="js/jquery-1.9.0.min.js"></script>
-	<script src="../../js/rollover.js"></script>
-	<script src="js/script.js"></script>
+	<link rel="stylesheet" href="../css/style.css"/>
+	<link rel="shortcut icon" type="image/x-icon" href="../images/index.ico"/>
+	<script src="../../../js/html5div.js"></script>
+	<script src="../../../js/html5shiv.js"></script>
+	<script src="../js/jquery-1.9.0.min.js"></script>
+	<script src="../../../js/rollover.js"></script>
+	<script src="../js/script.js"></script>
 </head>
 <body>
 	<header id="header" class="cf">
@@ -46,12 +46,12 @@
 						<div class="keywordList">
 							<div class="keywordTxt">
 								<ul>
-									<li><a href="../../sub02/index.jsp" tabIndex="57">안심콜</a></li>
-									<li><a href="../../sub03/index.jsp" tabIndex="58">보건증</a></li>
-									<li><a href="../../sub04/index.jsp" tabIndex="59">대학생</a></li>
-									<li><a href="../../sub02/index.jsp" tabIndex="60">방역콜</a></li>
-									<li><a href="../../sub03/index.jsp" tabIndex="61">조직도</a></li>
-									<li><a href="../../sub04/index.jsp" tabIndex="62">폐기물</a></li>
+									<li><a href="../../sub02/main/index.jsp" tabIndex="57">안심콜</a></li>
+									<li><a href="../../sub03/main/index.jsp" tabIndex="58">보건증</a></li>
+									<li><a href="../../sub04/main/index.jsp" tabIndex="59">대학생</a></li>
+									<li><a href="../../sub02/main/index.jsp" tabIndex="60">방역콜</a></li>
+									<li><a href="../../sub03/main/index.jsp" tabIndex="61">조직도</a></li>
+									<li><a href="../../sub04/main/index.jsp" tabIndex="62">폐기물</a></li>
 								</ul>
 							</div>
 						</div>
@@ -74,13 +74,13 @@
 				</div>
 				<div class="sideMenuContents">
 					<ul>
-						<li class="menuTitle firstMenu"><a href="../../sub02/index.jsp" class="menuTitleText" tabIndex="63">새소식</a></li>
-						<li class="menuTitle"><a href="../../sub03/index.jsp" class="menuTitleText" tabIndex="64">시정소식</a></li>
-						<li class="menuTitle"><a href="../../sub04/index.jsp" class="menuTitleText" tabIndex="65">동소식 모아보기</a></li>
-						<li class="menuTitle"><a href="../../sub02/index.jsp" class="menuTitleText" tabIndex="66">부서장 업무추진비 공개</a></li>
-						<li class="menuTitle"><a href="../../sub03/index.jsp" class="menuTitleText" tabIndex="67">행정정보 사전공표 자료실</a></li>
-						<li class="menuTitle"><a href="../../sub04/index.jsp" class="menuTitleText" tabIndex="68">고시/공고</a></li>
-						<li class="menuTitle"><a href="../../sub02/index.jsp" class="menuTitleText" tabIndex="69">사진소식</a></li>
+						<li class="menuTitle firstMenu"><a href="../../sub02/main/index.jsp" class="menuTitleText" tabIndex="63">새소식</a></li>
+						<li class="menuTitle"><a href="../../sub03/main/index.jsp" class="menuTitleText" tabIndex="64">시정소식</a></li>
+						<li class="menuTitle"><a href="../../sub04/main/index.jsp" class="menuTitleText" tabIndex="65">동소식 모아보기</a></li>
+						<li class="menuTitle"><a href="../../sub02/main/index.jsp" class="menuTitleText" tabIndex="66">부서장 업무추진비 공개</a></li>
+						<li class="menuTitle"><a href="../../sub03/main/index.jsp" class="menuTitleText" tabIndex="67">행정정보 사전공표 자료실</a></li>
+						<li class="menuTitle"><a href="../../sub04/main/index.jsp" class="menuTitleText" tabIndex="68">고시/공고</a></li>
+						<li class="menuTitle"><a href="../../sub02/main/index.jsp" class="menuTitleText" tabIndex="69">사진소식</a></li>
 					</ul>
 				</div>
 			</div>
@@ -134,7 +134,7 @@
 					</div>
 					<div class="postInfo">
 						<div class="postNum">1342</div>
-						<div class="postTitle"><a href="../../sub03/index.jsp" tabIndex="70">2022 만안구 환경사랑 글·그림 공모전 개최 안내</a></div>
+						<div class="postTitle"><a href="../../sub03/main/index.jsp" tabIndex="70">2022 만안구 환경사랑 글·그림 공모전 개최 안내</a></div>
 						<div class="postDept"><span>(만안구)환경위생과</span></div>
 						<div class="postFile imgFolder"></div>
 						<div class="postDate">2022-06-16</div>
@@ -142,7 +142,7 @@
 					</div>
 					<div class="postInfo">
 						<div class="postNum">1341</div>
-						<div class="postTitle"><a href="../../sub04/index.jsp" tabIndex="71">#잘지내줘서 고마워요 "토닥토닥" 거리공연 출연팀 선정 공고</a></div>
+						<div class="postTitle"><a href="../../sub04/main/index.jsp" tabIndex="71">#잘지내줘서 고마워요 "토닥토닥" 거리공연 출연팀 선정 공고</a></div>
 						<div class="postDept"><span>(만안구)복지문화과</span></div>
 						<div class="postFile imgHwp"></div>
 						<div class="postDate">2022-06-08</div>
@@ -150,7 +150,7 @@
 					</div>
 					<div class="postInfo">
 						<div class="postNum">1340</div>
-						<div class="postTitle"><a href="../../sub02/index.jsp" tabIndex="72">2022년 만안구 여성합창단 신규 단원 공개모집 공고</a></div>
+						<div class="postTitle"><a href="../../sub02/main/index.jsp" tabIndex="72">2022년 만안구 여성합창단 신규 단원 공개모집 공고</a></div>
 						<div class="postDept"><span>(만안구)복지문화과</span></div>
 						<div class="postFile imgHwp"></div>
 						<div class="postDate">2022-06-08</div>
@@ -158,7 +158,7 @@
 					</div>
 					<div class="postInfo">
 						<div class="postNum">1339</div>
-						<div class="postTitle"><a href="../../sub03/index.jsp" tabIndex="73">제8회 전국동시지방선거 선거인명부 열람 및 이의신청 안내</a></div>
+						<div class="postTitle"><a href="../../sub03/main/index.jsp" tabIndex="73">제8회 전국동시지방선거 선거인명부 열람 및 이의신청 안내</a></div>
 						<div class="postDept"><span>(만안구)행정지원과</span></div>
 						<div class="postFile"></div>
 						<div class="postDate">2022-05-13</div>
@@ -166,7 +166,7 @@
 					</div>
 					<div class="postInfo">
 						<div class="postNum">1338</div>
-						<div class="postTitle"><a href="../../sub04/index.jsp" tabIndex="74">제8회 전국동시지방선거 코로나19 확진자 거소투표 신고 안내</a></div>
+						<div class="postTitle"><a href="../../sub04/main/index.jsp" tabIndex="74">제8회 전국동시지방선거 코로나19 확진자 거소투표 신고 안내</a></div>
 						<div class="postDept"><span>(만안구)행정지원과</span></div>
 						<div class="postFile imgFolder"></div>
 						<div class="postDate">2022-05-13</div>
@@ -174,7 +174,7 @@
 					</div>
 					<div class="postInfo">
 						<div class="postNum">1337</div>
-						<div class="postTitle"><a href="../../sub02/index.jsp" tabIndex="75">2022년 어르신 동화구연 지도사 양성과정 수강생 모집</a></div>
+						<div class="postTitle"><a href="../../sub02/main/index.jsp" tabIndex="75">2022년 어르신 동화구연 지도사 양성과정 수강생 모집</a></div>
 						<div class="postDept"><span>(만안구)복지문화과</span></div>
 						<div class="postFile imgFolder"></div>
 						<div class="postDate">2022-04-11	</div>
@@ -182,7 +182,7 @@
 					</div>
 					<div class="postInfo">
 						<div class="postNum">1336</div>
-						<div class="postTitle"><a href="../../sub03/index.jsp" tabIndex="76">공정선거지원단 모집 안내</a></div>
+						<div class="postTitle"><a href="../../sub03/main/index.jsp" tabIndex="76">공정선거지원단 모집 안내</a></div>
 						<div class="postDept"><span>(만안구)행정지원과</span></div>
 						<div class="postFile imgHwp"></div>
 						<div class="postDate">2022-03-14	</div>
@@ -190,7 +190,7 @@
 					</div>
 					<div class="postInfo">
 						<div class="postNum">1335</div>
-						<div class="postTitle"><a href="../../sub04/index.jsp" tabIndex="77">제20대 대통령선거 만안구 사전투표소 현황 안내</a></div>
+						<div class="postTitle"><a href="../../sub04/main/index.jsp" tabIndex="77">제20대 대통령선거 만안구 사전투표소 현황 안내</a></div>
 						<div class="postDept"><span>(만안구)행정지원과</span></div>
 						<div class="postFile imgFolder"></div>
 						<div class="postDate">2022-02-26</div>
@@ -198,7 +198,7 @@
 					</div>
 					<div class="postInfo">
 						<div class="postNum">1334</div>
-						<div class="postTitle"><a href="../../sub02/index.jsp" tabIndex="78">제20대 대통령선거 선거인명부 열람</a></div>
+						<div class="postTitle"><a href="../../sub02/main/index.jsp" tabIndex="78">제20대 대통령선거 선거인명부 열람</a></div>
 						<div class="postDept"><span>(만안구)행정지원과</span></div>
 						<div class="postFile"></div>
 						<div class="postDate">2022-02-26</div>
@@ -206,7 +206,7 @@
 					</div>
 					<div class="postInfo">
 						<div class="postNum">1333</div>
-						<div class="postTitle"><a href="../../sub03/index.jsp" tabIndex="79">재외선거인 등 「귀국투표 신고 」안내</a></div>
+						<div class="postTitle"><a href="../../sub03/main/index.jsp" tabIndex="79">재외선거인 등 「귀국투표 신고 」안내</a></div>
 						<div class="postDept"><span>(만안구)행정지원과</span></div>
 						<div class="postFile imgHwp"></div>
 						<div class="postDate">2022-02-14</div>
@@ -214,22 +214,22 @@
 					</div>
 				</div>
 				<div id="pagination">
-					<div class="imgPprev"><a href="../../sub04/index.jsp" tabIndex="80">처음페이지</a></div>
-					<div class="imgPrev"><a href="../../sub02/index.jsp" tabIndex="81">이전페이지</a></div>
+					<div class="imgPprev"><a href="../../sub04/main/index.jsp" tabIndex="80">처음페이지</a></div>
+					<div class="imgPrev"><a href="../../sub02/main/index.jsp" tabIndex="81">이전페이지</a></div>
 					<span class="split"></span>
-					<div class="active"><a href="../../sub03/index.jsp" tabIndex="82" class="active">1</a></div>
-					<div><a href="../../sub04/index.jsp" tabIndex="83">2</a></div>
-					<div><a href="../../sub02/index.jsp" tabIndex="84">3</a></div>
-					<div><a href="../../sub03/index.jsp" tabIndex="85">4</a></div>
-					<div><a href="../../sub04/index.jsp" tabIndex="86">5</a></div>
-					<div><a href="../../sub02/index.jsp" tabIndex="87">6</a></div>
-					<div><a href="../../sub03/index.jsp" tabIndex="88">7</a></div>
-					<div><a href="../../sub04/index.jsp" tabIndex="89">8</a></div>
-					<div><a href="../../sub02/index.jsp" tabIndex="90">9</a></div>
-					<div><a href="../../sub03/index.jsp" tabIndex="91">10</a></div>
+					<div class="active"><a href="../../sub03/main/index.jsp" tabIndex="82" class="active">1</a></div>
+					<div><a href="../../sub04/main/index.jsp" tabIndex="83">2</a></div>
+					<div><a href="../../sub02/main/index.jsp" tabIndex="84">3</a></div>
+					<div><a href="../../sub03/main/index.jsp" tabIndex="85">4</a></div>
+					<div><a href="../../sub04/main/index.jsp" tabIndex="86">5</a></div>
+					<div><a href="../../sub02/main/index.jsp" tabIndex="87">6</a></div>
+					<div><a href="../../sub03/main/index.jsp" tabIndex="88">7</a></div>
+					<div><a href="../../sub04/main/index.jsp" tabIndex="89">8</a></div>
+					<div><a href="../../sub02/main/index.jsp" tabIndex="90">9</a></div>
+					<div><a href="../../sub03/main/index.jsp" tabIndex="91">10</a></div>
 					<span class="split"></span>
-					<div class="imgNext"><a href="../../sub04/index.jsp" tabIndex="92">다음페이지</a></div>
-					<div class="imgNnext"><a href="../../sub02/index.jsp" tabIndex="93">끝페이지</a></div>
+					<div class="imgNext"><a href="../../sub04/main/index.jsp" tabIndex="92">다음페이지</a></div>
+					<div class="imgNnext"><a href="../../sub02/main/index.jsp" tabIndex="93">끝페이지</a></div>
 				</div>
 				<div id="satisfaction">
 					<div class="koglOpen">
@@ -287,6 +287,6 @@
 			</section>
 		</div>
 	</div>
-	<%@ include file="footer.jsp" %>
+	<%@ include file="footer_login.jsp" %>
 </body>
 </html>

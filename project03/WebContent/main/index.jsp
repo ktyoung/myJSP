@@ -13,9 +13,8 @@
 	<meta name="Keywords" content="김태영, KimTaeYoung, 포트폴리오, 김태영 포트폴리오, portfolio, TaeYoung's portfolio, 프로젝트, Project, 김 태영, 김 태 영, 태영 김, 태영, rla, xo, dud, xodud, HTML5, CSS3, jQuery, 프로젝트, Portfolio, Project, 반응형웹, 반응형웹 포트폴리오, 학생 포트폴리오"/>
 	<meta name="Description" content="김태영의 포트폴리오 사이트입니다. 방문해 주셔서 감사합니다." />
 	<link href="http://mozilla.github.io/foundation-icons/assets/foundation-icons.css" type="text/css" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="../css/style.css"/> -->
+	<link rel="stylesheet" href="../css/style.css"/>
 	<link rel="shortcut icon" type="image/x-icon" href="../images/index.ico"/>
-	<!-- 
 	<script src="../js/html5div.js"></script>
 	<script src="../js/html5shiv.js"></script>
 	<script src="../js/jquery-1.9.0.min.js"></script>
@@ -24,7 +23,6 @@
 	<script src="../js/dDayCount_login.js"></script>
 	<script src="../js/weather_login.js"></script>
 	<script src="../js/script.js"></script> 
-	-->
 </head>
 <body onLoad="ddaycount()">
 	<!-- 팝업 -->
@@ -1082,6 +1080,6 @@
 		<button class="fBtn2 icon-arrow-down"></button>
 	</section>
 	
-	<%@ include file="footer.jsp" %>
+	<%@ include file="footer_login.jsp" %>
 </body>
 </html>

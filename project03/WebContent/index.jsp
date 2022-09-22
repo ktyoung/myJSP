@@ -1,6 +1,8 @@
 <!-- 로그인 안 했을 때 index -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"
+    errorPage="errorPage.jsp"
+%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
