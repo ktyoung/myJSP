@@ -13,7 +13,7 @@
 	안녕하세요. 쇼핑몰 중심 JSP 시작입니다!
 	<br>
 	<jsp:include page="duke_image.jsp" flush="true">
-		<jsp:param value="듀크" name="name"/>
+		<jsp:param value="듀크2" name="name"/>
 		<jsp:param value="duke2.png" name="imgName"/>
 	</jsp:include>
 	<br>
