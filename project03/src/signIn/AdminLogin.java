@@ -27,7 +27,8 @@ public class AdminLogin extends HttpServlet {
 		
 		String data = "<html><body>";
 			data += "<h2>관리자 권한으로 로그인하셨습니다.</h2>";
-			data += "<form style='margin:0 auto;' action='/project03/checkMember' method='POST'><input type='submit' value='회원정보 보기'></form>";
+			data += "<form style='margin:0 auto;' action='/project03/checkMember' method='POST'><input type='submit' value='회원 정보 삭제'></form>";
+			data += "<form style='margin:0 auto;' action='/project03/admin/member.jsp' method='POST'><input type='submit' value='회원 정보 열람'></form>";
 			data += "</html>";
 			data += "</body>";
 		out.print(data);

@@ -11,6 +11,8 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
+import signIn.MemberVO;
+
 public class MemberDAO {
 	private Connection con;
 	private PreparedStatement pstmt;
@@ -60,6 +62,47 @@ public class MemberDAO {
 		return list;
 	}
 	
+	public List listMembers(MemberVO memberVO) {
+		List membersList = new ArrayList();
+		String _name=memberVO.getName();
+		try {
+			con = dataFactory.getConnection();
+			String query = "select * from t_member ";
+			
+			if((_name!=null && _name.length()!=0)){
+				 query+="where name=?";
+				 pstmt = con.prepareStatement(query);
+				 pstmt.setString(1, _name);
+			}else {
+				pstmt = con.prepareStatement(query);	
+			}
+			
+			
+			System.out.println("prepareStatememt: " + query);
+			ResultSet rs = pstmt.executeQuery();
+			while (rs.next()) {
+				String id = rs.getString("id");
+				String pwd = rs.getString("pwd");
+				String name = rs.getString("name");
+				String email = rs.getString("email");
+				Date joinDate = rs.getDate("joinDate");
+				MemberVO vo = new MemberVO();
+				vo.setId(id);
+				vo.setPwd(pwd);
+				vo.setName(name);
+				vo.setEmail(email);
+				vo.setJoinDate(joinDate);
+				membersList.add(vo);
+			}
+			rs.close();
+			pstmt.close();
+			con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return membersList;
+	}
+	
 	public void addMember(MemberVO memberVO) {
 		try {
 			con = dataFactory.getConnection();
@@ -76,11 +119,12 @@ public class MemberDAO {
 			pstmt.setString(3, name);
 			pstmt.setString(4, email);	
 			pstmt.executeUpdate();
-			pstmt.close();
+			pstmt.close();			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
+	
 	public void delMember(String id) {
 		try {
 			con = dataFactory.getConnection();

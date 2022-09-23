@@ -13,7 +13,7 @@
 <title>회원 정보 출력창</title>
 </head>
 <body>
-	<h1>회원 정보 출력</h1>
+	<h1>회원 정보 열람</h1>
 <%
 	request.setCharacterEncoding("utf-8");
 	String _name = request.getParameter("name");

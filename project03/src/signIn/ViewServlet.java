@@ -51,24 +51,5 @@ public class ViewServlet extends HttpServlet {
 			String id = request.getParameter("id");
 			dao.delMember(id);
 		}
-		
-		List list=dao.listMembers();
-		out.print("<html><body>");
-		out.print("<table border=1><tr align='center' bgcolor='lightgreen'>");
-		out.print("<td>아이디</td><td>비밀번호</td><td>이름</td><td>이메일</td><td>가입일</td><td>삭제</td></tr>");
-		for (int i=0; i<list.size(); i++){
-			MemberVO memberVO=(MemberVO) list.get(i);
-	 		String id=memberVO.getId();
-	 		String pwd = memberVO.getPwd();
-	 		String name = memberVO.getName();
-	 		String email =memberVO.getEmail();
-	 		Date joinDate = memberVO.getJoinDate();	
-	 		out.print("<tr><td>"+id+"</td><td>"+pwd+"</td><td>"+name+"</td><td>"+email+"</td><td>"+joinDate+"</td>"
-                    +"<td><form style='margin:0 auto;' action='/project03/checkMember?command=delMember&id="+id+"' method='POST'><input type='submit' value='삭제'></form></td></tr>");	 		
-		}
-		out.print("</table></body></html>");
-		out.print("<a href='/project03/subPage/sub04/index.html'>새 회원 등록하기</a>");
-		
 	}
-	
 }
