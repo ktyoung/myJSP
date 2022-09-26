@@ -4,7 +4,7 @@
     %>
 <%
 	request.setCharacterEncoding("utf-8");
-	MemberBean member = new MemberBean("lee", "1234", "이순신", "lee@test");
+	MemberBean member = new MemberBean("lee", "1234", "이순신", "lee@test.com");
 	request.setAttribute("member", member);
 %>
 <!DOCTYPE html>
