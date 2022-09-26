@@ -22,6 +22,7 @@
 			<td>${membersList[0].name}</td>
 			<td>${membersList[0].email}</td>
 		</tr>
+		
 		<tr align="center">
 			<td>${membersList[1].id}</td>
 			<td>${membersList[1].pwd}</td>
