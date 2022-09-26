@@ -2,13 +2,6 @@
     pageEncoding="UTF-8"
 	isELIgnored="false"    
 %>
-<%
-	request.setCharacterEncoding("utf-8");
-	String id = (String) request.getAttribute("id");
-	String pwd = (String) request.getAttribute("pwd");
-	String name = (String) session.getAttribute("name");
-	String email = (String) application.getAttribute("email");
-%>
 <!DOCTYPE html>
 <html>
 <head>
