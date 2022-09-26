@@ -6,7 +6,7 @@
 	request.setAttribute("pwd", "1234");
 	session.setAttribute("name", "홍길동");
 	application.setAttribute("email", "hong@test.com");
-	request.setAttribute("address", "서울시 강남구");
+	/* request.setAttribute("address", "서울시 강남구"); */
 %>
 <!DOCTYPE html>
 <html>
