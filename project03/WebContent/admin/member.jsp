@@ -36,7 +36,7 @@
 				<span style="width : 100px; text-align : center; display : inline-block; font-size : 14px;"><%= name %></span>
 				<span style="width : 185px; text-align : center; display : inline-block; font-size : 14px;"><%= email %></span>
 				<span style="width : 185px; text-align : center; display : inline-block; font-size : 14px;"><%= joinDate %></span>
-				<form style="display : inline-block; margin:0 auto;" action="/project03/checkMember?command=delMember&id=<%= id %>"; method='POST'><input type='submit' value='삭제'></form>
+				<form style="display : inline-block; margin:0 auto;" action="/project03/delete"; method='DELETE'><input type='submit' value='삭제'></form>
 			</li>
 		<%	
 			}
