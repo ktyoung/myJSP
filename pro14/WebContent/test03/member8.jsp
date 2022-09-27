@@ -31,14 +31,9 @@
 			<td width="5%" ><b>이름</b></td>
 			<td width="5%"><b>이메일</b></td>
 		</tr>
-		<c:forEach var="member" items="${membersList}" >
-			<tr align="center">
-				<td>${member.id}</td>
-				<td>${member.pwd}</td>
-				<td>${member.name}</td>
-				<td>${member.email}</td>
-			</tr>
-		</c:forEach>
+		<c:choose>
+			<c:when></c:when>
+		</c:choose>
 	</table>
 </body>
 </html>
