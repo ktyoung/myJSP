@@ -11,7 +11,7 @@
 <title>로그인창</title>
 </head>
 <body>
-	<form action="result.jsp" method="post">
+	<form action="result2.jsp" method="post">
 		아이디 : 	<input type="text" name="userID" /><br>
 		비밀번호 :	<input type="password" name="userPw" /><br>
 		<input type="submit" value="로그인" />
