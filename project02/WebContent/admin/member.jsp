@@ -11,6 +11,18 @@
 	MemberDAO dao = new MemberDAO();
 	List membersList = dao.listMembers(memberVO);
 %>
+	<script>
+	function fn_validate(){
+		var delForm = document.delForm;
+		var id = delForm.userId.value;
+		
+		if(command == delMember) {
+			loginForm.method = "post";
+			loginForm.action = "/project02/delete?command=delMember&id="+id;
+			loginForm.submit();
+		}
+	}
+	</script>
 	<div style="margin-top : -30px;">
 		<ul style="margin: 30px 0 0 0; color : #333333;">
 			<li style="padding : 10px 0px; display : block; margin : 0 auto; font-weight: bold; border-top: solid 2px #dddddd; border-bottom: solid 2px #dddddd; background-color: #eeeeee;">
@@ -36,7 +48,7 @@
 				<span style="width : 100px; text-align : center; display : inline-block; font-size : 14px;"><%= name %></span>
 				<span style="width : 185px; text-align : center; display : inline-block; font-size : 14px;"><%= email %></span>
 				<span style="width : 185px; text-align : center; display : inline-block; font-size : 14px;"><%= joinDate %></span>
-				<form style="display : inline-block; margin:0 auto;" action="/project03/delete"; method='DELETE'><input type='submit' value='삭제'></form>
+				<form style="display : inline-block; margin:0 auto;" action=""; method='post' name="delForm"><input type='submit' value='삭제'></form>
 			</li>
 		<%	
 			}

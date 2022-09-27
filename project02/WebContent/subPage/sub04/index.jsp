@@ -37,7 +37,7 @@
 			  alert("이메일은 필수입니다.");
 		   } else {
 				memberForm.method="POST";
-				memberForm.action="/project03/checkMember";
+				memberForm.action="/project02/checkMember";
 				memberForm.submit();
 		   } 
 		}

@@ -30,12 +30,12 @@
 			} else if(userId === "admin") {
 				alert("관리자 권한으로 로그인합니다.");
 				loginForm.method = "post";
-				loginForm.action = "/project03/adminlogin";
+				loginForm.action = "/project02/adminlogin";
 				loginForm.submit();
 			}
 			else {
 				loginForm.method = "post";
-				loginForm.action = "/project03/main/main/index.jsp";
+				loginForm.action = "/project02/main/main/index.jsp";
 				loginForm.submit();
 			}
 		}

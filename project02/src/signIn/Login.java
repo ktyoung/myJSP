@@ -35,7 +35,7 @@ public class Login extends HttpServlet {
 			data += "<br>";
 			data += "비밀번호 : " + pw;
 			data += "<br><br>";
-			data += "<a href='/project03/'>메인 페이지로 이동</a>";
+			data += "<a href='/project02/'>메인 페이지로 이동</a>";
 			data += "</html>";
 			data += "</body>";
 		out.print(data);

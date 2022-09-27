@@ -30,7 +30,8 @@ public class ViewServlet extends HttpServlet {
 	protected void doHandle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
-		MemberDAO dao=new MemberDAO();
+		MemberDAO dao = new MemberDAO();
+		DeleteMember del = new DeleteMember();
 		PrintWriter out=response.getWriter();
 
 		String command=request.getParameter("command");
@@ -49,7 +50,7 @@ public class ViewServlet extends HttpServlet {
 			 dao.addMember(vo);
 		} else if(command != null && command.equals("delMember")) {
 			String id = request.getParameter("id");
-			dao.delMember(id);
+			del.doDelete(request, response);
 		}
 	}
 }
