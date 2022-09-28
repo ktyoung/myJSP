@@ -39,7 +39,7 @@
 	<fmt:formatDate value="${now}" pattern="YYYY-MM-dd :hh:mm:ss" /><br>
 	
 	<br><br>
-	한국 현재 시간:
+	한국 현재 시간 :
 	<fmt:formatDate value="${now}" type="both" dateStyle="full" timeStyle="full" /><br><br>
 	<fmt:timeZone value="America/New York">
 		뉴욕 현재 시간 : <fmt:formatDate value="${now}" type="both" dateStyle="full" timeStyle="full" />
