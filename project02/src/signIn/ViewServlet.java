@@ -50,7 +50,7 @@ public class ViewServlet extends HttpServlet {
 			 dao.addMember(vo);
 		} else if(command != null && command.equals("delMember")) {
 			String id = request.getParameter("id");
-			del.doDelete(request, response);
+			del.doPost(request, response);
 		}
 	}
 }

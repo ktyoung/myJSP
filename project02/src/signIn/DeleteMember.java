@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
+import javax.naming.spi.DirStateFactory.Result;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,15 +34,15 @@ public class DeleteMember extends HttpServlet {
     }	
     
 	@Override
-	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String id = (String) request.getAttribute("id");
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String id = (String) request.getParameter("id");
 		try {
 			con = dataFactory.getConnection();
 			String query = "DELETE FROM t_member" + " WHERE id=?";
 			pstmt = con.prepareStatement(query);
 			pstmt.setString(1, id);	
-			pstmt.executeUpdate();
-			pstmt.close();			
+			pstmt.executeQuery();
+			pstmt.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

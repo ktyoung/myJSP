@@ -1,5 +1,4 @@
 <!-- 로그인하지 않았을 때 header -->
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
     isELIgnored="false"
@@ -28,7 +27,12 @@
 					<li>&nbsp;&middot;&nbsp;</li>
 					<li><a href="subPage/sub04/index.jsp" tabIndex="7"><fmt:message key="menu.gnb7"/></a></li>
 					<li>&nbsp;&middot;&nbsp;</li>
-					<li><a href="subPage/sub03/index.jsp" tabIndex="6"><fmt:message key="menu.gnb6"/></a></li>
+					<li>
+						<span id="counter"></span>
+						<span>후</span>
+						<a href="subPage/sub03/index.jsp" tabIndex="6"><fmt:message key="menu.gnb6"/></a>
+						<span>페이지로 이동</span>
+					</li>
 				</ul>
 			</div>
 		</div>		

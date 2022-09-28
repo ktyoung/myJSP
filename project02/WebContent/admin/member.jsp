@@ -12,15 +12,11 @@
 	List membersList = dao.listMembers(memberVO);
 %>
 	<script>
-	function fn_validate(){
+	function fn_validate(id){
 		var delForm = document.delForm;
-		var id = delForm.userId.value;
 		
-		if(command == delMember) {
-			loginForm.method = "post";
-			loginForm.action = "/project02/delete?command=delMember&id="+id;
-			loginForm.submit();
-		}
+		delForm.method = "post";
+		delForm.action = "/project02/delete?command=delMember&id="+id;
 	}
 	</script>
 	<div style="margin-top : -30px;">
@@ -48,7 +44,10 @@
 				<span style="width : 100px; text-align : center; display : inline-block; font-size : 14px;"><%= name %></span>
 				<span style="width : 185px; text-align : center; display : inline-block; font-size : 14px;"><%= email %></span>
 				<span style="width : 185px; text-align : center; display : inline-block; font-size : 14px;"><%= joinDate %></span>
-				<form style="display : inline-block; margin:0 auto;" action=""; method='post' name="delForm"><input type='submit' value='삭제'></form>
+				<form style="display : inline-block; margin:0 auto;" action="/project02/delete?command=delMember&id=<%= id %>"; method='post' name="delForm" target='blankifr'>
+					<input type='submit' value='삭제'" onClick="location.reload(true);">
+				</form>
+				<iframe name='blankifr' style='display:none;'></iframe>
 			</li>
 		<%	
 			}

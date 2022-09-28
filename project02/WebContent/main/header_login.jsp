@@ -30,7 +30,6 @@
 	<script src="../js/weather.js"></script>
 	<script src="../js/script.js"></script> -->
 </head>
-
 	<header id="header" class="cf">
 		<div id="gnbWrap">
 			<div id="gnb">

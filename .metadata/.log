@@ -1697,3 +1697,25 @@ Java Model Exception: Java Model Status [Unknown javadoc format for ScrollbarPee
 
 !ENTRY org.eclipse.jface.text 2 0 2022-09-28 17:24:37.155
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.core.jobs 4 2 2022-09-28 17:38:17.539
+!MESSAGE Deadlock detected. All locks owned by thread Worker-230: Building workspace will be suspended.
+!STACK 0
+java.lang.IllegalStateException
+	at org.eclipse.core.internal.jobs.DeadlockDetector.reportDeadlock(DeadlockDetector.java:599)
+	at org.eclipse.core.internal.jobs.DeadlockDetector.lockWaitStart(DeadlockDetector.java:403)
+	at org.eclipse.core.internal.jobs.LockManager.addLockWaitThread(LockManager.java:154)
+	at org.eclipse.core.internal.jobs.OrderedLock.doAcquire(OrderedLock.java:168)
+	at org.eclipse.core.internal.jobs.OrderedLock.acquire(OrderedLock.java:106)
+	at org.eclipse.core.internal.jobs.OrderedLock.acquire(OrderedLock.java:82)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:122)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2237)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:36)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+!SUBENTRY 1 org.eclipse.core.jobs 4 2 2022-09-28 17:38:17.539
+!MESSAGE Thread Worker-233: Flushing content description cache. has locks: R/ and is waiting for lock OrderedLock (0)
+!SUBENTRY 1 org.eclipse.core.jobs 4 2 2022-09-28 17:38:17.539
+!MESSAGE Thread Worker-230: Building workspace has locks: OrderedLock (0) and is waiting for lock R/
+
+!ENTRY org.eclipse.jface.text 2 0 2022-09-28 17:47:22.320
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
