@@ -6,7 +6,8 @@
 %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-		<fmt:setLocale value="${param.lo}" />
+	<fmt:setLocale value="en_US" /> 
+	<%-- <fmt:setLocale value="ko_KR" /> --%>
 		<fmt:bundle basename="resource.member">
 		<div id="gnbWrap">
 			<div id="gnb">
@@ -22,9 +23,7 @@
 					<li class="last"><a href="subPage/sub02/index.jsp" tabIndex="5"><fmt:message key="menu.gnb5"/>&nbsp;&or;</a></li>
 				</ul>
 				<ul class="gnbRight">
-					<li><a href="index.jsp?lo=en">English</a></li>
-					<li>&nbsp;&middot;&nbsp;</li>
-					<li><a href="index.jsp?lo=ko">한국어</a></li>
+					<li><a href="subPage/sub02/index.jsp" tabIndex="8">LANGUAGE&nbsp;&or;</a></li>
 					<li>&nbsp;&middot;&nbsp;</li>
 					<li><a href="subPage/sub04/index.jsp" tabIndex="7"><fmt:message key="menu.gnb7"/></a></li>
 					<li>&nbsp;&middot;&nbsp;</li>
