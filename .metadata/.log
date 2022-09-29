@@ -2120,3 +2120,9 @@ Java Model Exception: Java Model Status [Unknown javadoc format for recompile [i
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
 !SUBENTRY 1 org.eclipse.jdt.core 4 1009 2022-09-29 14:28:32.832
 !MESSAGE Unknown javadoc format for recompile [in recompile.class [in com.sun.org.apache.regexp.internal [in C:\Program Files\Java\jre1.8.0_201\lib\rt.jar]]]
+
+!ENTRY org.eclipse.jface.text 2 0 2022-09-29 15:05:25.885
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-09-29 15:09:33.064
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
