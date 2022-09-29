@@ -36,6 +36,8 @@
 		   } else if(email.length==0 || email=="") {
 			  alert("이메일은 필수입니다.");
 		   } else {
+			   	alert("회원가입 성공!");
+			   	location.reload(true);
 				memberForm.method="POST";
 				memberForm.action="/project02/checkMember";
 				memberForm.submit();
@@ -68,7 +70,7 @@
 			<section id="signInWrap">
 				<div class="signIn">
 					<div id="joinBox" class="joinBox">
-					<form name="memberForm" method="post" action="index.jsp">
+					<form name="memberForm" method="post" action="index.jsp" target='blankifr'>
 <script>
 	var checkIdVar = 'false';
 	var currentCheckId;
@@ -129,6 +131,7 @@
 						</div>
 						<input type="hidden" name="command" value="addMember" />	
 					</form>
+					<iframe name='blankifr' style='display:none;'></iframe>
 				</div> <!-- joinBox -->
 				</div>
 			</section>
