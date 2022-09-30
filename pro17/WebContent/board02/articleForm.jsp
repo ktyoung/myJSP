@@ -9,7 +9,7 @@
   request.setCharacterEncoding("UTF-8");
 %>
  
-<c:set var="contextPath"  value="${pageContext.request.contextPath}"  />
+<c:set var="contextPath" value="${pageContext.request.contextPath}" />
  
 <head>
 <meta charset="UTF-8">
