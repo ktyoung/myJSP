@@ -123,96 +123,50 @@
 					<em class="currentPage">1</em>
 					/135 페이지 ]
 				</div>
-				<div id="postContents" class="fl">
-					<div class="contentTitle">
-						<div class="num">번호</div>
-						<div class="title">제목</div>
-						<div class="dept">부서명</div>
-						<div class="file">파일</div>
-						<div class="date">작성일</div>
-						<div class="view">조회수</div>
-					</div>
-					<div class="postInfo">
-						<div class="postNum">1342</div>
-						<div class="postTitle"><a href="../sub03/index.jsp" tabIndex="70">2022 만안구 환경사랑 글·그림 공모전 개최 안내</a></div>
-						<div class="postDept"><span>(만안구)환경위생과</span></div>
-						<div class="postFile imgFolder"></div>
-						<div class="postDate">2022-06-16</div>
-						<div class="postView">95</div>
-					</div>
-					<div class="postInfo">
-						<div class="postNum">1341</div>
-						<div class="postTitle"><a href="../../index.jsp" tabIndex="71">#잘지내줘서 고마워요 "토닥토닥" 거리공연 출연팀 선정 공고</a></div>
-						<div class="postDept"><span>(만안구)복지문화과</span></div>
-						<div class="postFile imgHwp"></div>
-						<div class="postDate">2022-06-08</div>
-						<div class="postView">63</div>
-					</div>
-					<div class="postInfo">
-						<div class="postNum">1340</div>
-						<div class="postTitle"><a href="../sub02/index.jsp" tabIndex="72">2022년 만안구 여성합창단 신규 단원 공개모집 공고</a></div>
-						<div class="postDept"><span>(만안구)복지문화과</span></div>
-						<div class="postFile imgHwp"></div>
-						<div class="postDate">2022-06-08</div>
-						<div class="postView">54</div>
-					</div>
-					<div class="postInfo">
-						<div class="postNum">1339</div>
-						<div class="postTitle"><a href="../sub03/index.jsp" tabIndex="73">제8회 전국동시지방선거 선거인명부 열람 및 이의신청 안내</a></div>
-						<div class="postDept"><span>(만안구)행정지원과</span></div>
-						<div class="postFile"></div>
-						<div class="postDate">2022-05-13</div>
-						<div class="postView">46</div>
-					</div>
-					<div class="postInfo">
-						<div class="postNum">1338</div>
-						<div class="postTitle"><a href="../../index.jsp" tabIndex="74">제8회 전국동시지방선거 코로나19 확진자 거소투표 신고 안내</a></div>
-						<div class="postDept"><span>(만안구)행정지원과</span></div>
-						<div class="postFile imgFolder"></div>
-						<div class="postDate">2022-05-13</div>
-						<div class="postView">31</div>
-					</div>
-					<div class="postInfo">
-						<div class="postNum">1337</div>
-						<div class="postTitle"><a href="../sub02/index.jsp" tabIndex="75">2022년 어르신 동화구연 지도사 양성과정 수강생 모집</a></div>
-						<div class="postDept"><span>(만안구)복지문화과</span></div>
-						<div class="postFile imgFolder"></div>
-						<div class="postDate">2022-04-11	</div>
-						<div class="postView">138</div>
-					</div>
-					<div class="postInfo">
-						<div class="postNum">1336</div>
-						<div class="postTitle"><a href="../sub03/index.jsp" tabIndex="76">공정선거지원단 모집 안내</a></div>
-						<div class="postDept"><span>(만안구)행정지원과</span></div>
-						<div class="postFile imgHwp"></div>
-						<div class="postDate">2022-03-14	</div>
-						<div class="postView">194</div>
-					</div>
-					<div class="postInfo">
-						<div class="postNum">1335</div>
-						<div class="postTitle"><a href="../../index.jsp" tabIndex="77">제20대 대통령선거 만안구 사전투표소 현황 안내</a></div>
-						<div class="postDept"><span>(만안구)행정지원과</span></div>
-						<div class="postFile imgFolder"></div>
-						<div class="postDate">2022-02-26</div>
-						<div class="postView">135</div>
-					</div>
-					<div class="postInfo">
-						<div class="postNum">1334</div>
-						<div class="postTitle"><a href="../sub02/index.jsp" tabIndex="78">제20대 대통령선거 선거인명부 열람</a></div>
-						<div class="postDept"><span>(만안구)행정지원과</span></div>
-						<div class="postFile"></div>
-						<div class="postDate">2022-02-26</div>
-						<div class="postView">76</div>
-					</div>
-					<div class="postInfo">
-						<div class="postNum">1333</div>
-						<div class="postTitle"><a href="../sub03/index.jsp" tabIndex="79">재외선거인 등 「귀국투표 신고 」안내</a></div>
-						<div class="postDept"><span>(만안구)행정지원과</span></div>
-						<div class="postFile imgHwp"></div>
-						<div class="postDate">2022-02-14</div>
-						<div class="postView">43</div>
-					</div>
-				</div>
+				<table align="center" border="1" width="80%">
+		<tr height="10" align="center" bgcolor="lightgreen">
+			<td>글번호</td>
+			<td>작성자</td>
+			<td>제목</td>
+			<td>작성일</td>
+		</tr>
+		<c:choose>
+			<c:when test="${empty articlesList}">
+				<tr height="10">
+					<td colspan="4">
+						<p align="center">
+							<b><span style="font-size : 9pt;">등록된 글이 없습니다.</span></b>
+						</p>
+					</td>
+				</tr>
+			</c:when>
+			<c:when test="${!empty articlesList}" >
+				<c:forEach  var="article" items="${articlesList}" varStatus="articleNum" >
+					<tr align="center">
+						<td width="5%">${articleNum.count}</td>
+						<td width="10%">${article.id }</td>
+						<td align='left'  width="35%">
+							<span style="padding-right:30px"></span>
+					<c:choose>
+						<c:when test='${article.level > 1 }'>  
+							<c:forEach begin="1" end="${article.level }" step="1">
+								<span style="padding-left:20px"></span>    
+							</c:forEach>
+							<span style="font-size:12px;">[답변]</span>
+							<a class='cls1' href="${contextPath}/board/viewArticle.do?articleNO=${article.articleNO}">${article.title}</a>
+						</c:when>
+						<c:otherwise>
+							<a class='cls1' href="${contextPath}/board/viewArticle.do?articleNO=${article.articleNO}">${article.title }</a>
+						</c:otherwise>
+					</c:choose>
+					</td>
+					<td  width="10%"><fmt:formatDate value="${article.writeDate}" /></td> 
+					</tr>
+				</c:forEach>
+			</c:when>
+		</c:choose>
+	</table>
+	<a class="cls1" href="#"><p class="cls2">글쓰기</p></a>
 				<div id="pagination">
 					<div class="imgPprev"><a href="../../index.jsp" tabIndex="80">처음페이지</a></div>
 					<div class="imgPrev"><a href="../sub02/index.jsp" tabIndex="81">이전페이지</a></div>

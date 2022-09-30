@@ -1,8 +1,9 @@
-package sec03.brd01;
+package sec03.brd02;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,14 +12,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/*@WebServlet("/board/*")*/
+@WebServlet("/board/*")
 public class BoardController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static String ARTICLE_IMAGE_REPO = "C:\\board\\article_image";
 	BoardService boardService;
 	ArticleVO articleVO;
 	
 	public void init() throws ServletException {
 		boardService = new BoardService();
+		articleVO = new ArticleVO();
 	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -40,13 +43,28 @@ public class BoardController extends HttpServlet {
 			if (action == null) {
 				articlesList = boardService.listArticles();
 				request.setAttribute("articlesList", articlesList);
-				nextPage = "/board01/listArticles.jsp";
+				nextPage = "/board02/listArticles.jsp";
 			} else if (action.equals("/listArticles.do")) {
 				articlesList = boardService.listArticles();
 				request.setAttribute("articlesList", articlesList);
-				nextPage = "/board01/listArticles.jsp";
-			} else {
-				nextPage = "/board01/listArticles.jsp";
+				nextPage = "/board02/listArticles.jsp";
+			} else if (action.equals("/articleForm.do")) {
+				nextPage = "/board02/articleForm.jsp";
+			} else if (action.equals("/addArticle.do")) {
+				Map<String, String> articleMap = upload(request, response);
+				String title = articleMap.get("title");
+				String content = articleMap.get("content");
+				String imageFileName = articleMap.get("imageFileName");
+
+				articleVO.setParentNO(0);
+				articleVO.setId("hong");
+				articleVO.setTitle(title);
+				articleVO.setContent(content);
+				articleVO.setImageFileName(imageFileName);
+				boardService.addArticle(articleVO);
+				nextPage = "/board/listArticles.do";
+			}else {
+				nextPage = "/board02/listArticles.jsp";
 			}
 			
 			RequestDispatcher dispatch = request.getRequestDispatcher(nextPage);

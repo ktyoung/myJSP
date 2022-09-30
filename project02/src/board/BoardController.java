@@ -1,4 +1,4 @@
-package sec03.brd01;
+package board;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/*@WebServlet("/board/*")*/
+@WebServlet("/board/*")
 public class BoardController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	BoardService boardService;
@@ -40,13 +40,13 @@ public class BoardController extends HttpServlet {
 			if (action == null) {
 				articlesList = boardService.listArticles();
 				request.setAttribute("articlesList", articlesList);
-				nextPage = "/board01/listArticles.jsp";
+				nextPage = "/sub01/listArticles.jsp";
 			} else if (action.equals("/listArticles.do")) {
 				articlesList = boardService.listArticles();
 				request.setAttribute("articlesList", articlesList);
-				nextPage = "/board01/listArticles.jsp";
+				nextPage = "/sub01/listArticles.jsp";
 			} else {
-				nextPage = "/board01/listArticles.jsp";
+				nextPage = "/sub01/listArticles.jsp";
 			}
 			
 			RequestDispatcher dispatch = request.getRequestDispatcher(nextPage);

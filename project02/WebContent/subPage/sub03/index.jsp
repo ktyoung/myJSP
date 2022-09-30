@@ -1,6 +1,17 @@
 <!-- 로그인하지 않았을 때 sub03 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	import=" java.util.*,memberControl.*"
+	pageEncoding="UTF-8"
+	isELIgnored="false" 
+%>
+
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"  /> 
+
+<%
+	request.setCharacterEncoding("UTF-8");
+%> 
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -30,7 +41,7 @@
 			} else if(userId === "admin") {
 				alert("관리자 권한으로 로그인합니다.");
 				loginForm.method = "post";
-				loginForm.action = "/project02/admin/admin_member.jsp";
+				loginForm.action = "${contextPath}/member/listMembers.do";
 				loginForm.submit();
 			}
 			else {
