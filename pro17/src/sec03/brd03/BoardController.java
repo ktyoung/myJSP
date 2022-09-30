@@ -59,7 +59,7 @@ public class BoardController extends HttpServlet {
 			} else if (action.equals("/articleForm.do")) {
 				nextPage = "/board02/articleForm.jsp";
 			} else if (action.equals("/addArticle.do")) {
-				int articleNO=0;
+				int articleNO = 0;
 				Map<String, String> articleMap = upload(request, response);
 				String title = articleMap.get("title");
 				String content = articleMap.get("content");
@@ -69,7 +69,7 @@ public class BoardController extends HttpServlet {
 				articleVO.setTitle(title);
 				articleVO.setContent(content);
 				articleVO.setImageFileName(imageFileName);
-				articleNO= boardService.addArticle(articleVO);
+				articleNO = boardService.addArticle(articleVO);
 				
 				if(imageFileName!=null && imageFileName.length()!=0) {
 				    File srcFile = new 	File(ARTICLE_IMAGE_REPO +"\\"+"temp"+"\\"+imageFileName);
@@ -82,7 +82,6 @@ public class BoardController extends HttpServlet {
 				         +"  alert('새글을 추가했습니다.');" 
 						 +" location.href='"+request.getContextPath()+"/board/listArticles.do';"
 				         +"</script>");
-
 				return;
 			}else {
 				nextPage = "/board02/listArticles.jsp";
@@ -112,24 +111,20 @@ public class BoardController extends HttpServlet {
 					articleMap.put(fileItem.getFieldName(), fileItem.getString(encoding));
 				} else {
 					System.out.println("파라미터명:" + fileItem.getFieldName());
-					//System.out.println("파일명:" + fileItem.getName());
 					System.out.println("파일크기:" + fileItem.getSize() + "bytes");
-					//articleMap.put(fileItem.getFieldName(), fileItem.getName());
 					if (fileItem.getSize() > 0) {
 						int idx = fileItem.getName().lastIndexOf("\\");
 						if (idx == -1) {
 							idx = fileItem.getName().lastIndexOf("/");
 						}
-
 						String fileName = fileItem.getName().substring(idx + 1);
 						System.out.println("파일명:" + fileName);
-						articleMap.put(fileItem.getFieldName(), fileName);  //익스플로러에서 업로드 파일의 경로 제거 후 map에 파일명 저장
+						articleMap.put(fileItem.getFieldName(), fileName);
 						File uploadFile = new File(currentDirPath + "\\temp\\" + fileName);
 						fileItem.write(uploadFile);
-
-					} // end if
-				} // end if
-			} // end for
+					}
+				}
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
