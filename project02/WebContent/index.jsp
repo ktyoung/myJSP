@@ -29,28 +29,26 @@
 	<script src="js/weather.js"></script>
 	<script src="js/script.js"></script>
 	<script>
-	// 자바 스크립트 팝업
 	window.open("popup_js.html", "", "resizable = no, toolbar = no, menubar = no, location = no, directories = no, status = no,  scrollbars=no, width=510, height=700");
 	
-	// 로그인 카운트다운
 	var tid;
 	var cnt = parseInt(5);
 	function counter_init() {
 		tid = setInterval("counter_run()", 1000);
 	}
-	
+
 	function counter_reset() {
 		clearInterval(tid);
 		cnt = parseInt(60);
 		counter_init();
 	}
-	
+
 	function counter_run() {
 		document.getElementById("counter").innerText = time_format(cnt);
 		cnt--;
 		if(cnt < 0) {
 			clearInterval(tid);
-			self.location = "subPage/sub03/index.jsp";
+			self.location = "./subPage/sub03/index.jsp";
 		}
 	}
 	function time_format(s) {
@@ -60,7 +58,7 @@
 		if(s>0) {
 			nMin = parseInt(s/60);
 			nSec = s%60;
-	
+
 			if(nMin>60) {
 				nHour = parseInt(nMin/60);
 				nMin = nMin%60;
@@ -68,9 +66,10 @@
 		} 
 		if(nSec<10) nSec = "0"+nSec;
 		if(nMin<10) nMin = "0"+nMin;
-	
+
 		return ""+nHour+":"+nMin+":"+nSec;
 	}
+	counter_init();
 </script>
 </head>
 <body onLoad="ddaycount()">

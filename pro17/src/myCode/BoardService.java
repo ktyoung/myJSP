@@ -1,9 +1,6 @@
-package board;
+package myCode;
 
 import java.util.List;
-
-import board.ArticleVO;
-import board.BoardDAO;
 
 public class BoardService {
 	BoardDAO boardDAO;

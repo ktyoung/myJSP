@@ -1,4 +1,4 @@
-package board;
+package myCode;
 
 import java.io.File;
 import java.io.IOException;
@@ -53,13 +53,13 @@ public class BoardController extends HttpServlet {
 			if (action == null) {
 				articlesList = boardService.listArticles();
 				request.setAttribute("articlesList", articlesList);
-				nextPage = "/subPage/sub01/index.jsp";
+				nextPage = "/board06/listArticles.jsp";
 			} else if (action.equals("/listArticles.do")) {
 				articlesList = boardService.listArticles();
 				request.setAttribute("articlesList", articlesList);
-				nextPage = "/subPage/sub01/index.jsp";
+				nextPage = "/board06/listArticles.jsp";
 			} else if (action.equals("/articleForm.do")) {
-				nextPage = "/subPage/sub01/articleForm.jsp";
+				nextPage = "/board06/articleForm.jsp";
 			} else if (action.equals("/addArticle.do")) {
 				int articleNO=0;
 				Map<String, String> articleMap = upload(request, response);
@@ -90,7 +90,7 @@ public class BoardController extends HttpServlet {
 				String articleNO = request.getParameter("articleNO");
 				articleVO = boardService.viewArticle(Integer.parseInt(articleNO));
 				request.setAttribute("article",articleVO);
-				nextPage = "/subPage/sub01/viewArticle.jsp";
+				nextPage = "/board06/viewArticle.jsp";
 			} else if(action.equals("/modArticle.do")) {
 				Map<String, String> articleMap = upload(request, response);
 				int articleNO = Integer.parseInt(articleMap.get("articleNO"));
@@ -100,8 +100,8 @@ public class BoardController extends HttpServlet {
 				String imageFileName = articleMap.get("imageFileName");
 				articleVO.setParentNO(0);
 				articleVO.setId("hong");
-				articleVO.setTitle(title);
-				articleVO.setContent(content);
+				articleVO.setTitle(title);;
+				articleVO.setContent(content);;
 				articleVO.setImageFileName(imageFileName);
 				boardService.modArticle(articleVO);
 				
@@ -136,7 +136,7 @@ public class BoardController extends HttpServlet {
 				int parentNO = Integer.parseInt(request.getParameter("parentNO"));
 				session = request.getSession();
 				session.setAttribute("parentNO", parentNO);
-				nextPage = "/subPage/sub01/replyForm.jsp";
+				nextPage = "/board06/replyForm.jsp";
 			} else if(action.equals("/addReply.do")) {
 				session = request.getSession();
 				int parentNO = (Integer) session.getAttribute("parentNO");
@@ -164,7 +164,7 @@ public class BoardController extends HttpServlet {
 				return;
 			}
 			else {
-				nextPage = "/subPage/sub01/listArticles.jsp";
+				nextPage = "/board06/listArticles.jsp";
 			}
 			RequestDispatcher dispatch = request.getRequestDispatcher(nextPage);
 			dispatch.forward(request, response);

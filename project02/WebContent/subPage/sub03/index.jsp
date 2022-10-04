@@ -46,7 +46,7 @@
 			}
 			else {
 				loginForm.method = "post";
-				loginForm.action = "/project02/main/index.jsp";
+				loginForm.action = "/project02/loginCheck";
 				loginForm.submit();
 			}
 		}

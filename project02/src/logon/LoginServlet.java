@@ -55,10 +55,6 @@ public class LoginServlet extends HttpServlet{
 			out.print("<a href='subPage/sub03/index.html'>다시 로그인</a><br>");
 			out.print("<a href='subPage/sub04/index.html'>회원가입</a>");
 			out.print("</body></html>");
-			/*
-			
-			*/
 		}
-		
 	}
 }

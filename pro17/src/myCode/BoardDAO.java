@@ -1,4 +1,4 @@
-package board;
+package myCode;
 
 import java.net.URLEncoder;
 import java.sql.Connection;

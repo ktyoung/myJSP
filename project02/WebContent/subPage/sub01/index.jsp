@@ -11,6 +11,7 @@
 %>
  
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -172,7 +173,7 @@
 								<c:forEach  var="article" items="${articlesList}" varStatus="articleNum" >
 									<div class="postInfo">
 									<ul>
-									<li class="postNum">${articleNum.count}</li>
+									<li class="postNum">${article.articleNO}</li>
 									<c:choose>
 										<c:when test='${article.level > 1}'>
 											<li class='postTitle'><a class="postDept" href="${contextPath}/board/viewArticle.do?articleNO=${article.articleNO}"><c:forEach begin="2" end="${article.level}" step="1">
@@ -192,7 +193,7 @@
 							</c:when>
 					</c:choose>
 				</div>
-				<a style="float : right; padding : 10px 20px; background : #3d72fc; color : #ffffff; margin-top : 30px;" href="#">글쓰기</a>
+				<a style="float : right; padding : 10px 20px; background : #3d72fc; color : #ffffff; margin-top : 30px;" href="${contextPath}/board/articleForm.do">글쓰기</a>
 				<div id="pagination">
 					<div class="imgPprev"><a href="../../index.jsp" tabIndex="80">처음페이지</a></div>
 					<div class="imgPrev"><a href="../sub02/index.jsp" tabIndex="81">이전페이지</a></div>

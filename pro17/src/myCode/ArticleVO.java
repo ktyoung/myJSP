@@ -1,4 +1,4 @@
-package board;
+package myCode;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;

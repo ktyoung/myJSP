@@ -1,4 +1,4 @@
-package board;
+package otherCode.copy;
 
 import java.net.URLEncoder;
 import java.sql.Connection;
@@ -11,7 +11,6 @@ import java.util.List;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
-
 
 public class BoardDAO {
 	private DataSource dataFactory;
@@ -35,6 +34,9 @@ public class BoardDAO {
 			String query = "SELECT LEVEL,articleNO,parentNO,title,content,id,writeDate" + " from t_board"
 					+ " START WITH  parentNO=0" + " CONNECT BY PRIOR articleNO=parentNO"
 					+ " ORDER SIBLINGS BY articleNO DESC";
+			/*String query = "SELECT LEVEL,articleNO,parentNO,title,content,id,writeDate" + " from t_board"
+					+ " START WITH  parentNO=0" + " CONNECT BY PRIOR articleNO=parentNO"
+					+ " ORDER SIBLINGS BY articleNO DESC";*/
 			System.out.println(query);
 			pstmt = conn.prepareStatement(query);
 			ResultSet rs = pstmt.executeQuery();
@@ -64,6 +66,45 @@ public class BoardDAO {
 		}
 		return articlesList;
 	}
+	
+	public ArticleVO selectArticle(int articleNO){
+		ArticleVO article=new ArticleVO();
+		try{
+			conn = dataFactory.getConnection();
+			String query ="select articleNO,parentNO,title,content,  NVL(imageFileName, 'null') as imageFileName, id, writeDate"
+				                     +" from t_board" 
+				                     +" where articleNO=?";
+			System.out.println(query);
+			pstmt = conn.prepareStatement(query);
+			pstmt.setInt(1, articleNO);
+			ResultSet rs =pstmt.executeQuery();
+			rs.next();
+			int _articleNO =rs.getInt("articleNO");
+			int parentNO=rs.getInt("parentNO");
+			String title = rs.getString("title");
+			String content =rs.getString("content");
+			String imageFileName = URLEncoder.encode(rs.getString("imageFileName"), "UTF-8"); //파일이름에 특수문자가 있을 경우 인코딩합니다.
+				if(imageFileName.equals("null")) {
+					imageFileName = null;
+				}
+			String id = rs.getString("id");
+			Date writeDate = rs.getDate("writeDate");
+	
+			article.setArticleNO(_articleNO);
+			article.setParentNO (parentNO);
+			article.setTitle(title);
+			article.setContent(content);
+			article.setImageFileName(imageFileName);
+			article.setId(id);
+			article.setWriteDate(writeDate);
+			rs.close();
+			pstmt.close();
+			conn.close();
+		}catch(Exception e){
+			e.printStackTrace();	
+		}
+			return article;
+	}
 
 	private int getNewArticleNO() {
 		try {
@@ -87,6 +128,7 @@ public class BoardDAO {
 		int articleNO = getNewArticleNO();
 		try {
 			conn = dataFactory.getConnection();
+			//int articleNO = getNewArticleNO();
 			int parentNO = article.getParentNO();
 			String title = article.getTitle();
 			String content = article.getContent();
@@ -108,50 +150,7 @@ public class BoardDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 		return articleNO;
-	}
-	
-	public ArticleVO selectArticle(int articleNO){
-		ArticleVO article=new ArticleVO();
-		try {
-			conn = dataFactory.getConnection();
-			String query ="select articleNO,parentNO,title,content,  NVL(imageFileName, 'null') as imageFileName, id, writeDate"
-				                     +" from t_board" 
-				                     +" where articleNO=?";
-			System.out.println(query);
-			pstmt = conn.prepareStatement(query);
-			pstmt.setInt(1, articleNO);
-			ResultSet rs =pstmt.executeQuery();
-			rs.next();
-			
-			int _articleNO =rs.getInt("articleNO");
-			int parentNO=rs.getInt("parentNO");
-			String title = rs.getString("title");
-			String content =rs.getString("content");
-			String imageFileName = URLEncoder.encode(rs.getString("imageFileName"), "UTF-8");
-
-			if(imageFileName.equals("null")) {
-				imageFileName = null;
-			}
-			String id = rs.getString("id");
-			Date writeDate = rs.getDate("writeDate");
-	
-			article.setArticleNO(_articleNO);
-			article.setParentNO (parentNO);
-			article.setTitle(title);
-			article.setContent(content);
-			article.setImageFileName(imageFileName);
-			article.setId(id);
-			article.setWriteDate(writeDate);
-			rs.close();
-			pstmt.close();
-			conn.close();
-			
-		} catch(Exception e) {
-			e.printStackTrace();	
-		}
-		return article;
 	}
 	
 	public void updateArticle(ArticleVO article) {
@@ -159,73 +158,81 @@ public class BoardDAO {
 		String title = article.getTitle();
 		String content = article.getContent();
 		String imageFileName = article.getImageFileName();
-		
 		try {
 			conn = dataFactory.getConnection();
-			String query = "UPDATE t_board SET title=?, content=?";
-			if(imageFileName != null && imageFileName.length() != 0) {
-				query += ", imageFileName=?";
+			String query = "update t_board set title=?,content=?";
+			if(imageFileName != null && imageFileName.length() !=0) {
+				query += ",imageFileName=?";
 			}
-			query += " WHERE articleNO=?";
+			query += "where articleNO=?";
 			
 			System.out.println(query);
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, title);
 			pstmt.setString(2, content);
-			if(imageFileName != null && imageFileName.length() != 0) {
+			if(imageFileName != null && imageFileName.length() !=0) {
 				pstmt.setString(3, imageFileName);
 				pstmt.setInt(4, articleNO);
-			} else {
+			}else {
 				pstmt.setInt(3, articleNO);
 			}
 			pstmt.executeUpdate();
 			pstmt.close();
 			conn.close();
-		} catch (Exception e) {
+		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
 	public void deleteArticle(int articleNO) {
 		try {
 			conn = dataFactory.getConnection();
-			String query = "DELETE FROM t_board ";
-			query += " WHERE articleNO in (";
-			query += " SELECT articleNO FROM t_board ";
-			query += " START WITH articleNO=?";
-			query += " CONNECT BY PRIOR articleNO = parentNO )";
+			String query = "DELETE FROM t_board";
+			query += "WHERE articleNO in (";
+			query += "SELECT articleNO FROM t_board";
+			query += "START WITH articleNO =?";
+			query += "CONNECT BY PRIOR articleNO = parentNO";
 			System.out.println(query);
 			pstmt = conn.prepareStatement(query);
 			pstmt.setInt(1, articleNO);
 			pstmt.executeUpdate();
 			pstmt.close();
 			conn.close();
-		} catch (Exception e) {
+		} catch (Exception e){
 			e.printStackTrace();
 		}
 	}
 	
-	public List<Integer> selectRemovedArticles(int articleNO) {
+	public List<Integer> selectRemovedArticles(int articleNO){
 		List<Integer> articleNOList = new ArrayList<Integer>();
 		try {
 			conn = dataFactory.getConnection();
 			String query = "SELECT articleNO FROM t_board";
-			query += " START WITH articleNO = ?";
-			query += " CONNECT BY PRIOR articleNO = parentNO";
+			query += "START WITH articleNO =?";
+			query += "CONNECT BY PRIOR articleNO = parentNO";
 			System.out.println(query);
 			pstmt = conn.prepareStatement(query);
 			pstmt.setInt(1, articleNO);
 			ResultSet rs = pstmt.executeQuery();
 			while(rs.next()) {
 				articleNO = rs.getInt("articleNO");
-				articleNOList .add(articleNO);
+				articleNOList.add(articleNO);
 			}
 			pstmt.close();
 			conn.close();
-		} catch (Exception e) {
+		} catch(Exception e) {
 			e.printStackTrace();
 		}
 		return articleNOList;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }
