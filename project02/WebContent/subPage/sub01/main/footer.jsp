@@ -1,5 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%
+  request.setCharacterEncoding("UTF-8");
+%>
+ 
+<c:set var="contextPath" value="${pageContext.request.contextPath}" />
 	<footer id="footerWrap" class="cf">
 		<div id="footer">
 			<div id="footerLogo" class="fl">
@@ -38,19 +47,19 @@
 				<h3><span class="blind">저작권</span></h3>
 				<ul class="footerSns">
 					<li class="footerIcon">
-						<a href="subPage/sub01/index.html" tabIndex="157" class="rollover"><img src="images/footer/facebook_off.png" alt="페이스북 아이콘" class="facebook"/></a>
+						<a href="subPage/sub01/index.html" tabIndex="157" class="rollover"><img src="${contextPath}/images/footer/facebook_off.png" alt="페이스북 아이콘" class="facebook"/></a>
 					</li>
 					<li class="footerIcon">
-						<a href="subPage/sub02/index.html" tabIndex="158" class="rollover"><img src="images/footer/twitter_off.png" alt="트위터 아이콘" class="twitter"/></a>
+						<a href="subPage/sub02/index.html" tabIndex="158" class="rollover"><img src="${contextPath}/images/footer/twitter_off.png" alt="트위터 아이콘" class="twitter"/></a>
 					</li>
 					<li class="footerIcon">
-						<a href="subPage/sub03/index.html" tabIndex="159" class="rollover"><img src="images/footer/instagram_off.png" alt="인스타그램 아이콘" class="instagram"/></a>
+						<a href="subPage/sub03/index.html" tabIndex="159" class="rollover"><img src="${contextPath}/images/footer/instagram_off.png" alt="인스타그램 아이콘" class="instagram"/></a>
 					</li>
 					<li class="footerIcon">
-						<a href="subPage/sub01/index.html" tabIndex="160" class="rollover"><img src="images/footer/youtube_off.png" alt="유튜브 아이콘" class="youtube"/></a>
+						<a href="subPage/sub01/index.html" tabIndex="160" class="rollover"><img src="${contextPath}/images/footer/youtube_off.png" alt="유튜브 아이콘" class="youtube"/></a>
 					</li>
 					<li class="footerIcon">
-						<a href="subPage/sub02/index.html" tabIndex="161" class="rollover"><img src="images/footer/blog_off.png" alt="블로그 아이콘" class="blog"/></a>
+						<a href="subPage/sub02/index.html" tabIndex="161" class="rollover"><img src="${contextPath}/images/footer/blog_off.png" alt="블로그 아이콘" class="blog"/></a>
 					</li>
 				</ul>
 				<p class="copy">&copy;ANYANG CITY.ALL RIGHTS RESERVED.</p>

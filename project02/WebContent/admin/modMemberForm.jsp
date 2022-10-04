@@ -30,8 +30,8 @@
 	<script src="../js/rollover.js"></script>
 	<script src="../js/script.js"></script>
 	<style>
-		form{background-color : #ffffff; padding : 20px;}
-		input{display : block; width : 100%; text-align : left; display : inline-block; font-size : 18px; padding : 15px; border-radius : 5px; border : 1px solid #dddddd;}
+		form{background-color : #ffffff; padding : 20px; color : #333333;}
+		input{display : block; width : 100%; text-align : left; display : inline-block; font-size : 18px; padding : 15px; border-radius : 5px; border : 1px solid #dddddd; color : #333333;}
 		input:disabled{background-color : #d9d9d9;}
 		
 		.modInput > input{text-align : center; padding : 20px;}

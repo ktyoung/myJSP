@@ -28,7 +28,10 @@
 	<script src="js/dDayCount.js"></script>
 	<script src="js/weather.js"></script>
 	<script src="js/script.js"></script>
-		<script>
+	<script>
+	// 자바 스크립트 팝업
+	window.open("popup_js.html", "", "resizable = no, toolbar = no, menubar = no, location = no, directories = no, status = no,  scrollbars=no, width=510, height=700");
+	
 	// 로그인 카운트다운
 	var tid;
 	var cnt = parseInt(5);

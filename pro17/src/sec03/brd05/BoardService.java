@@ -1,4 +1,4 @@
-package board;
+package sec03.brd05;
 
 import java.util.List;
 
@@ -22,5 +22,9 @@ public class BoardService {
 		ArticleVO article = null;
 		article = boardDAO.selectArticle(articleNO);
 		return article;
+	}
+	
+	public void modArticle(ArticleVO article) {
+		boardDAO.updateArticle(article);
 	}
 }

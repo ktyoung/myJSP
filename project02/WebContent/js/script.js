@@ -1,7 +1,4 @@
 ﻿$(function(){
-	// 자바스크립트 팝업
-	window.open("popup_js.html", "", "resizable = no, toolbar = no, menubar = no, location = no, directories = no, status = no,  scrollbars=no, width=510, height=700");	
-	
 	// 툴팁
 	var balloon = $('<div class="balloon"></div>').appendTo('body');
 	

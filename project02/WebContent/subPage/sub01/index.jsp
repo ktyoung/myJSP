@@ -2,6 +2,15 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%
+  request.setCharacterEncoding("UTF-8");
+%>
+ 
+<c:set var="contextPath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -13,13 +22,37 @@
 	<meta name="Author" content="김태영"/>
 	<meta name="Keywords" content="김태영, KimTaeYoung, 포트폴리오, 김태영 포트폴리오, portfolio, TaeYoung's portfolio, 프로젝트, Project, 김 태영, 김 태 영, 태영 김, 태영, rla, xo, dud, xodud, HTML5, CSS3, jQuery, 프로젝트, Portfolio, Project, 반응형웹, 반응형웹 포트폴리오, 학생 포트폴리오"/>
 	<meta name="Description" content="김태영의 포트폴리오 사이트입니다. 방문해 주셔서 감사합니다." />
-	<link rel="stylesheet" href="css/style.css"/>
-	<link rel="shortcut icon" type="image/x-icon" href="images/index.ico"/>
-	<script src="../../js/html5div.js"></script>
-	<script src="../../js/html5shiv.js"></script>
-	<script src="js/jquery-1.9.0.min.js"></script>
-	<script src="../../js/rollover.js"></script>
-	<script src="js/script.js"></script>
+	<link rel="stylesheet" href="${contextPath}/subPage/sub01/css/style.css"/>
+	<link rel="shortcut icon" type="image/x-icon" href="${contextPath}/images/index.ico"/>
+	<script src="${contextPath}/subPage/sub01/js/html5div.js"></script>
+	<script src="${contextPath}/subPage/sub01/js/html5shiv.js"></script>
+	<script src="${contextPath}/subPage/sub01/js/jquery-1.9.0.min.js"></script>
+	<script src="${contextPath}/subPage/sub01/js/rollover.js"></script>
+	<script src="${contextPath}/subPage/sub01/js/script.js"></script>
+	<script>
+		var url = window.location.pathname;
+		if (url == "/project02/subPage/sub01/index.jsp") {
+			window.location.href = "${contextPath}/board/listArticles.do";
+		}
+	</script>
+	<style>
+			/* 게시글 상단 */
+		#container>#noticeBoardWrap>#noticeBoard>#postContents{display : block; width : 1090px; height : 100%; margin : 0 auto; float : left; margin-left : 10px; font-size : 19px; color : #333333;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.contentTitle{display : block; width : 1090px; height : 60px; background : #ffffff;  margin : 0 auto; float : left; border-top : 2px solid #222222; box-sizing : border-box; border-bottom : 1px solid #d9d9d9;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.contentTitle>ul>li{display : block; text-align : center; color : #222222; line-height : 60px; text-align : center;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.contentTitle>ul>li.num{display : block; width : 75px; height : 60px; margin : 0 auto; float : left;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.contentTitle>ul>li.title{display : block; width : 735px; height : 60px; margin : 0 auto; float : left;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.contentTitle>ul>li.dept{display : block; width : 140px; height : 60px; margin : 0 auto; float : left;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.contentTitle>ul>li.date{display : block; width : 140px; height : 60px; margin : 0 auto; float : left;}
+	/* 게시글 내용 */
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo{display : block; width : 1090px; height : 75px; margin : 0 auto; float : left;border-bottom : 1px solid #d9d9d9; box-sizing : border-box; background : #ffffff;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li{float : left; display : block; text-align : center;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li.postNum{display : block; width : 75px; height : 75px; margin : 0 auto; float : left; text-align : center; line-height : 75px;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li.postTitle{display : block; width : 735px; height : 75px; margin : 0 auto; float : left; line-height : 75px;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li.postTitle>a:hover{color : #202e70;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li.postDept{display : block; width : 140px; height : 75px; margin : 0 auto; float : left; text-align : center; line-height : 75px;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li.postDate{display : block; width : 140px; height : 75px; margin : 0 auto; float : left; text-align : center; line-height : 75px;}
+	</style>
 </head>
 <body>
 	<header id="header" class="cf">
@@ -65,7 +98,6 @@
 			</div>			
 		</div>
 	</header>
-		
 	<div id="container" class="cf">
 		<div id="noticeBoardWrap">
 			<div id="sideMenu">
@@ -123,50 +155,44 @@
 					<em class="currentPage">1</em>
 					/135 페이지 ]
 				</div>
-				<table align="center" border="1" width="80%">
-		<tr height="10" align="center" bgcolor="lightgreen">
-			<td>글번호</td>
-			<td>작성자</td>
-			<td>제목</td>
-			<td>작성일</td>
-		</tr>
-		<c:choose>
-			<c:when test="${empty articlesList}">
-				<tr height="10">
-					<td colspan="4">
-						<p align="center">
-							<b><span style="font-size : 9pt;">등록된 글이 없습니다.</span></b>
-						</p>
-					</td>
-				</tr>
-			</c:when>
-			<c:when test="${!empty articlesList}" >
-				<c:forEach  var="article" items="${articlesList}" varStatus="articleNum" >
-					<tr align="center">
-						<td width="5%">${articleNum.count}</td>
-						<td width="10%">${article.id }</td>
-						<td align='left'  width="35%">
-							<span style="padding-right:30px"></span>
+				<div id="postContents">
+					<div class="contentTitle">
+						<ul>
+							<li class="num">번호</li>
+							<li class="title">제목</li>
+							<li class="dept">작성자</li>
+							<li class="date">작성일</li>
+						</ul>
+					</div>
 					<c:choose>
-						<c:when test='${article.level > 1 }'>  
-							<c:forEach begin="1" end="${article.level }" step="1">
-								<span style="padding-left:20px"></span>    
-							</c:forEach>
-							<span style="font-size:12px;">[답변]</span>
-							<a class='cls1' href="${contextPath}/board/viewArticle.do?articleNO=${article.articleNO}">${article.title}</a>
-						</c:when>
-						<c:otherwise>
-							<a class='cls1' href="${contextPath}/board/viewArticle.do?articleNO=${article.articleNO}">${article.title }</a>
-						</c:otherwise>
+							<c:when test="${empty articlesList}">
+								<li style="font-size : 9pt;">등록된 글이 없습니다.</li>
+							</c:when>
+							<c:when test="${!empty articlesList}" >
+								<c:forEach  var="article" items="${articlesList}" varStatus="articleNum" >
+									<div class="postInfo">
+									<ul>
+									<li class="postNum">${articleNum.count}</li>
+									<c:choose>
+										<c:when test='${article.level > 1}'>
+											<li class='postTitle'><a class="postDept" href="${contextPath}/board/viewArticle.do?articleNO=${article.articleNO}"><c:forEach begin="2" end="${article.level}" step="1">
+												<span style="font-size:12px;">[답변]</span>    
+											</c:forEach>
+											${article.title}></a></li>
+										</c:when>
+										<c:otherwise>
+											<li class='postTitle'><a class="postDept" href="${contextPath}/board/viewArticle.do?articleNO=${article.articleNO}">${article.title}</a></li>
+										</c:otherwise>
+									</c:choose>
+									<li class="postDept">${article.id}</li>
+									<li class="postDate"><fmt:formatDate value="${article.writeDate}" /></li> 
+									</ul>
+									</div>
+								</c:forEach>
+							</c:when>
 					</c:choose>
-					</td>
-					<td  width="10%"><fmt:formatDate value="${article.writeDate}" /></td> 
-					</tr>
-				</c:forEach>
-			</c:when>
-		</c:choose>
-	</table>
-	<a class="cls1" href="#"><p class="cls2">글쓰기</p></a>
+				</div>
+				<a style="float : right; padding : 10px 20px; background : #3d72fc; color : #ffffff; margin-top : 30px;" href="#">글쓰기</a>
 				<div id="pagination">
 					<div class="imgPprev"><a href="../../index.jsp" tabIndex="80">처음페이지</a></div>
 					<div class="imgPrev"><a href="../sub02/index.jsp" tabIndex="81">이전페이지</a></div>

@@ -22,7 +22,7 @@
 	<script src="../js/rollover.js"></script>
 	<script src="../js/dDayCount_login.js"></script>
 	<script src="../js/weather_login.js"></script>
-	<script src="../js/script.js"></script> 
+	<script src="../js/script.js"></script>
 </head>
 <body onLoad="ddaycount()">
 	<!-- 팝업 -->

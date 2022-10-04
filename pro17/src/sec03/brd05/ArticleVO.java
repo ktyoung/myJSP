@@ -1,4 +1,4 @@
-package board;
+package sec03.brd05;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
