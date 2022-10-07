@@ -37,7 +37,7 @@
 		}
 	</script>
 	<style>
-			/* 게시글 상단 */
+		/* 게시글 상단 */
 		#container>#noticeBoardWrap>#noticeBoard>#postContents{display : block; width : 1090px; height : 100%; margin : 0 auto; float : left; margin-left : 10px; font-size : 19px; color : #333333;}
 		#container>#noticeBoardWrap>#noticeBoard>#postContents>.contentTitle{display : block; width : 1090px; height : 60px; background : #ffffff;  margin : 0 auto; float : left; border-top : 2px solid #222222; box-sizing : border-box; border-bottom : 1px solid #d9d9d9;}
 		#container>#noticeBoardWrap>#noticeBoard>#postContents>.contentTitle>ul>li{display : block; text-align : center; color : #222222; line-height : 60px; text-align : center;}
@@ -45,11 +45,11 @@
 		#container>#noticeBoardWrap>#noticeBoard>#postContents>.contentTitle>ul>li.title{display : block; width : 735px; height : 60px; margin : 0 auto; float : left;}
 		#container>#noticeBoardWrap>#noticeBoard>#postContents>.contentTitle>ul>li.dept{display : block; width : 140px; height : 60px; margin : 0 auto; float : left;}
 		#container>#noticeBoardWrap>#noticeBoard>#postContents>.contentTitle>ul>li.date{display : block; width : 140px; height : 60px; margin : 0 auto; float : left;}
-	/* 게시글 내용 */
+		/* 게시글 내용 */
 		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo{display : block; width : 1090px; height : 75px; margin : 0 auto; float : left;border-bottom : 1px solid #d9d9d9; box-sizing : border-box; background : #ffffff;}
 		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li{float : left; display : block; text-align : center;}
 		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li.postNum{display : block; width : 75px; height : 75px; margin : 0 auto; float : left; text-align : center; line-height : 75px;}
-		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li.postTitle{display : block; width : 735px; height : 75px; margin : 0 auto; float : left; line-height : 75px;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li.postTitle{display : block; width : 735px; height : 75px; margin : 0 auto; float : left; line-height : 75px; text-align : left;}
 		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li.postTitle>a:hover{color : #202e70;}
 		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li.postDept{display : block; width : 140px; height : 75px; margin : 0 auto; float : left; text-align : center; line-height : 75px;}
 		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li.postDate{display : block; width : 140px; height : 75px; margin : 0 auto; float : left; text-align : center; line-height : 75px;}
@@ -80,12 +80,12 @@
 						<div class="keywordList">
 							<div class="keywordTxt">
 								<ul>
-									<li><a href="../sub02/index.jsp" tabIndex="57">안심콜</a></li>
-									<li><a href="../sub03/index.jsp" tabIndex="58">보건증</a></li>
-									<li><a href="../../index.jsp" tabIndex="59">대학생</a></li>
-									<li><a href="../sub02/index.jsp" tabIndex="60">방역콜</a></li>
-									<li><a href="../sub03/index.jsp" tabIndex="61">조직도</a></li>
-									<li><a href="../../index.jsp" tabIndex="62">폐기물</a></li>
+									<li><a href="${contextPath}/subPage/sub02/index.jsp" tabIndex="57">안심콜</a></li>
+									<li><a href="${contextPath}/subPage/sub03/index.jsp" tabIndex="58">보건증</a></li>
+									<li><a href="${contextPath}/subPage/sub04/index.jsp" tabIndex="59">대학생</a></li>
+									<li><a href="${contextPath}/subPage/sub02/index.jsp" tabIndex="60">방역콜</a></li>
+									<li><a href="${contextPath}/subPage/sub03/index.jsp" tabIndex="61">조직도</a></li>
+									<li><a href="${contextPath}/subPage/sub04/index.jsp" tabIndex="62">폐기물</a></li>
 								</ul>
 							</div>
 						</div>
@@ -107,13 +107,13 @@
 				</div>
 				<div class="sideMenuContents">
 					<ul>
-						<li class="menuTitle firstMenu"><a href="../sub02/index.jsp" class="menuTitleText" tabIndex="63">새소식</a></li>
-						<li class="menuTitle"><a href="../sub03/index.jsp" class="menuTitleText" tabIndex="64">시정소식</a></li>
-						<li class="menuTitle"><a href="../../index.jsp" class="menuTitleText" tabIndex="65">동소식 모아보기</a></li>
-						<li class="menuTitle"><a href="../sub02/index.jsp" class="menuTitleText" tabIndex="66">부서장 업무추진비 공개</a></li>
-						<li class="menuTitle"><a href="../sub03/index.jsp" class="menuTitleText" tabIndex="67">행정정보 사전공표 자료실</a></li>
-						<li class="menuTitle"><a href="../../index.jsp" class="menuTitleText" tabIndex="68">고시/공고</a></li>
-						<li class="menuTitle"><a href="../sub02/index.jsp" class="menuTitleText" tabIndex="69">사진소식</a></li>
+						<li class="menuTitle firstMenu"><a href="${contextPath}/subPage/sub02/index.jsp" class="menuTitleText" tabIndex="63">새소식</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub03/index.jsp" class="menuTitleText" tabIndex="64">시정소식</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub04/index.jsp" class="menuTitleText" tabIndex="65">동소식 모아보기</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub02/index.jsp" class="menuTitleText" tabIndex="66">부서장 업무추진비 공개</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub03/index.jsp" class="menuTitleText" tabIndex="67">행정정보 사전공표 자료실</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub04/index.jsp" class="menuTitleText" tabIndex="68">고시/공고</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub02/index.jsp" class="menuTitleText" tabIndex="69">사진소식</a></li>
 					</ul>
 				</div>
 			</div>
@@ -195,22 +195,22 @@
 				</div>
 				<a style="float : right; padding : 10px 20px; background : #3d72fc; color : #ffffff; margin-top : 30px;" href="${contextPath}/board/articleForm.do">글쓰기</a>
 				<div id="pagination">
-					<div class="imgPprev"><a href="../../index.jsp" tabIndex="80">처음페이지</a></div>
-					<div class="imgPrev"><a href="../sub02/index.jsp" tabIndex="81">이전페이지</a></div>
+					<div class="imgPprev"><a href="${contextPath}/subPage/sub04/index.jsp" tabIndex="80">처음페이지</a></div>
+					<div class="imgPrev"><a href="${contextPath}/subPage/sub02/index.jsp" tabIndex="81">이전페이지</a></div>
 					<span class="split"></span>
-					<div class="active"><a href="../sub03/index.jsp" tabIndex="82" class="active">1</a></div>
-					<div><a href="../../index.jsp" tabIndex="83">2</a></div>
-					<div><a href="../sub02/index.jsp" tabIndex="84">3</a></div>
-					<div><a href="../sub03/index.jsp" tabIndex="85">4</a></div>
-					<div><a href="../../index.jsp" tabIndex="86">5</a></div>
-					<div><a href="../sub02/index.jsp" tabIndex="87">6</a></div>
-					<div><a href="../sub03/index.jsp" tabIndex="88">7</a></div>
-					<div><a href="../../index.jsp" tabIndex="89">8</a></div>
-					<div><a href="../sub02/index.jsp" tabIndex="90">9</a></div>
-					<div><a href="../sub03/index.jsp" tabIndex="91">10</a></div>
+					<div class="active"><a href="${contextPath}/subPage/sub03/index.jsp" tabIndex="82" class="active">1</a></div>
+					<div><a href="${contextPath}/subPage/sub04/index.jsp" tabIndex="83">2</a></div>
+					<div><a href="${contextPath}/subPage/sub02/index.jsp" tabIndex="84">3</a></div>
+					<div><a href="${contextPath}/subPage/sub03/index.jsp" tabIndex="85">4</a></div>
+					<div><a href="${contextPath}/subPage/sub04/index.jsp" tabIndex="86">5</a></div>
+					<div><a href="${contextPath}/subPage/sub02/index.jsp" tabIndex="87">6</a></div>
+					<div><a href="${contextPath}/subPage/sub03/index.jsp" tabIndex="88">7</a></div>
+					<div><a href="${contextPath}/subPage/sub04/index.jsp" tabIndex="89">8</a></div>
+					<div><a href="${contextPath}/subPage/sub02/index.jsp" tabIndex="90">9</a></div>
+					<div><a href="${contextPath}/subPage/sub03/index.jsp" tabIndex="91">10</a></div>
 					<span class="split"></span>
-					<div class="imgNext"><a href="../../index.jsp" tabIndex="92">다음페이지</a></div>
-					<div class="imgNnext"><a href="../sub02/index.jsp" tabIndex="93">끝페이지</a></div>
+					<div class="imgNext"><a href="${contextPath}/subPage/sub04/index.jsp" tabIndex="92">다음페이지</a></div>
+					<div class="imgNnext"><a href="${contextPath}/subPage/sub02/index.jsp" tabIndex="93">끝페이지</a></div>
 				</div>
 				<div id="satisfaction">
 					<div class="koglOpen">

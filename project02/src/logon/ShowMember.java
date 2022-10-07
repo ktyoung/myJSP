@@ -31,19 +31,19 @@ public class ShowMember extends HttpServlet {
 		if(session != null) {
 			isLogon = (Boolean) session.getAttribute("isLogon");
 			if(isLogon == true) {
-				id = (String) session.getAttribute("login.id");
-				pwd = (String) session.getAttribute("login.pwd");
-				
-				out.print("<html><body>");
+				id = (String) session.getAttribute("login_id");
+				pwd = (String) session.getAttribute("login_pwd");
+				/*out.print("<html><body>");
 				out.print("아이디 : " + id + "<br>");
 				out.print("비밀번호 : " + pwd + "<br>");
-				out.print("<a href='index.html'>메인 페이지로 이동</a>");
-				out.print("</body></html>");
+				out.print("<a href='index.jsp'>메인 페이지로 이동</a>");
+				out.print("</body></html>");*/
+				response.sendRedirect("main/index.jsp");
 			} else {
-				response.sendRedirect("subPage/sub03/index.html");
+				response.sendRedirect("subPage/sub03/index.jsp");
 			}
 		} else {
-			response.sendRedirect("subPage/sub03/index.html");
+			response.sendRedirect("subPage/sub03/index.jsp");
 		}
 		
 	}

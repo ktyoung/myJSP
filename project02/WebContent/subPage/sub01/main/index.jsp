@@ -2,6 +2,16 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%
+  request.setCharacterEncoding("UTF-8");
+%>
+ 
+<c:set var="contextPath" value="${pageContext.request.contextPath}" />
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -13,17 +23,48 @@
 	<meta name="Author" content="김태영"/>
 	<meta name="Keywords" content="김태영, KimTaeYoung, 포트폴리오, 김태영 포트폴리오, portfolio, TaeYoung's portfolio, 프로젝트, Project, 김 태영, 김 태 영, 태영 김, 태영, rla, xo, dud, xodud, HTML5, CSS3, jQuery, 프로젝트, Portfolio, Project, 반응형웹, 반응형웹 포트폴리오, 학생 포트폴리오"/>
 	<meta name="Description" content="김태영의 포트폴리오 사이트입니다. 방문해 주셔서 감사합니다." />
-	<link rel="stylesheet" href="../css/style.css"/>
-	<link rel="shortcut icon" type="image/x-icon" href="../images/index.ico"/>
-	<script src="../../../js/html5div.js"></script>
-	<script src="../../../js/html5shiv.js"></script>
-	<script src="../js/jquery-1.9.0.min.js"></script>
-	<script src="../../../js/rollover.js"></script>
-	<script src="../js/script.js"></script>
+	<link rel="stylesheet" href="${contextPath}/subPage/sub01/css/style.css"/>
+	<link rel="shortcut icon" type="image/x-icon" href="${contextPath}/images/index.ico"/>
+	<script src="${contextPath}/subPage/sub01/js/html5div.js"></script>
+	<script src="${contextPath}/subPage/sub01/js/html5shiv.js"></script>
+	<script src="${contextPath}/subPage/sub01/js/jquery-1.9.0.min.js"></script>
+	<script src="${contextPath}/subPage/sub01/js/rollover.js"></script>
+	<script src="${contextPath}/subPage/sub01/js/script.js"></script>
+	<script>
+		var url = window.location.pathname;
+		if (url == "/project02/subPage/sub01/main/index.jsp") {
+			window.location.href = "${contextPath}/board/listArticlesLogin.do";
+		}
+	</script>
+	<style>
+		/* 게시글 상단 */
+		#container>#noticeBoardWrap>#noticeBoard>#postContents{display : block; width : 1090px; height : 100%; margin : 0 auto; float : left; margin-left : 10px; font-size : 19px; color : #333333;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.contentTitle{display : block; width : 1090px; height : 60px; background : #ffffff;  margin : 0 auto; float : left; border-top : 2px solid #222222; box-sizing : border-box; border-bottom : 1px solid #d9d9d9;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.contentTitle>ul>li{display : block; text-align : center; color : #222222; line-height : 60px; text-align : center;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.contentTitle>ul>li.num{display : block; width : 75px; height : 60px; margin : 0 auto; float : left;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.contentTitle>ul>li.title{display : block; width : 735px; height : 60px; margin : 0 auto; float : left;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.contentTitle>ul>li.dept{display : block; width : 140px; height : 60px; margin : 0 auto; float : left;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.contentTitle>ul>li.date{display : block; width : 140px; height : 60px; margin : 0 auto; float : left;}
+		/* 게시글 내용 */
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo{display : block; width : 1090px; height : 75px; margin : 0 auto; float : left;border-bottom : 1px solid #d9d9d9; box-sizing : border-box; background : #ffffff;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li{float : left; display : block; text-align : center;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li.postNum{display : block; width : 75px; height : 75px; margin : 0 auto; float : left; text-align : center; line-height : 75px;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li.postTitle{display : block; width : 735px; height : 75px; margin : 0 auto; float : left; line-height : 75px; text-align : left;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li.postTitle>a:hover{color : #202e70;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li.postDept{display : block; width : 140px; height : 75px; margin : 0 auto; float : left; text-align : center; line-height : 75px;}
+		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li.postDate{display : block; width : 140px; height : 75px; margin : 0 auto; float : left; text-align : center; line-height : 75px;}
+	</style>
 </head>
 <body>
 	<header id="header" class="cf">
-		<%@ include file="header_login.jsp" %>
+		<c:choose>
+		<c:when test="${login_id == 'admin'}">
+			<%@ include file="/admin/header_admin.jsp" %>
+		</c:when>
+		<c:when test="${login_id != 'admin'}">
+			<%@ include file="header_login.jsp" %>
+		</c:when>
+		</c:choose>
 		<div id="searchBoxWrap">
 			<div id="searchBox">
 				<h2 class="blind">검색</h2>
@@ -46,12 +87,12 @@
 						<div class="keywordList">
 							<div class="keywordTxt">
 								<ul>
-									<li><a href="../../sub02/main/index.jsp" tabIndex="57">안심콜</a></li>
-									<li><a href="../../sub03/main/index.jsp" tabIndex="58">보건증</a></li>
-									<li><a href="../../sub04/main/index.jsp" tabIndex="59">대학생</a></li>
-									<li><a href="../../sub02/main/index.jsp" tabIndex="60">방역콜</a></li>
-									<li><a href="../../sub03/main/index.jsp" tabIndex="61">조직도</a></li>
-									<li><a href="../../sub04/main/index.jsp" tabIndex="62">폐기물</a></li>
+									<li><a href="${contextPath}/subPage/sub02/main/index.jsp" tabIndex="57">안심콜</a></li>
+									<li><a href="${contextPath}/subPage/sub03/main/index.jsp" tabIndex="58">보건증</a></li>
+									<li><a href="${contextPath}/subPage/sub04/main/index.jsp" tabIndex="59">대학생</a></li>
+									<li><a href="${contextPath}/subPage/sub02/main/index.jsp" tabIndex="60">방역콜</a></li>
+									<li><a href="${contextPath}/subPage/sub03/main/index.jsp" tabIndex="61">조직도</a></li>
+									<li><a href="${contextPath}/subPage/sub04/main/index.jsp" tabIndex="62">폐기물</a></li>
 								</ul>
 							</div>
 						</div>
@@ -65,7 +106,6 @@
 			</div>			
 		</div>
 	</header>
-		
 	<div id="container" class="cf">
 		<div id="noticeBoardWrap">
 			<div id="sideMenu">
@@ -74,13 +114,13 @@
 				</div>
 				<div class="sideMenuContents">
 					<ul>
-						<li class="menuTitle firstMenu"><a href="../../sub02/main/index.jsp" class="menuTitleText" tabIndex="63">새소식</a></li>
-						<li class="menuTitle"><a href="../../sub03/main/index.jsp" class="menuTitleText" tabIndex="64">시정소식</a></li>
-						<li class="menuTitle"><a href="../../sub04/main/index.jsp" class="menuTitleText" tabIndex="65">동소식 모아보기</a></li>
-						<li class="menuTitle"><a href="../../sub02/main/index.jsp" class="menuTitleText" tabIndex="66">부서장 업무추진비 공개</a></li>
-						<li class="menuTitle"><a href="../../sub03/main/index.jsp" class="menuTitleText" tabIndex="67">행정정보 사전공표 자료실</a></li>
-						<li class="menuTitle"><a href="../../sub04/main/index.jsp" class="menuTitleText" tabIndex="68">고시/공고</a></li>
-						<li class="menuTitle"><a href="../../sub02/main/index.jsp" class="menuTitleText" tabIndex="69">사진소식</a></li>
+						<li class="menuTitle firstMenu"><a href="${contextPath}/subPage/sub02/main/index.jsp" class="menuTitleText" tabIndex="63">새소식</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub03/main/index.jsp" class="menuTitleText" tabIndex="64">시정소식</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub04/main/index.jsp" class="menuTitleText" tabIndex="65">동소식 모아보기</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub02/main/index.jsp" class="menuTitleText" tabIndex="66">부서장 업무추진비 공개</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub03/main/index.jsp" class="menuTitleText" tabIndex="67">행정정보 사전공표 자료실</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub04/main/index.jsp" class="menuTitleText" tabIndex="68">고시/공고</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub02/main/index.jsp" class="menuTitleText" tabIndex="69">사진소식</a></li>
 					</ul>
 				</div>
 			</div>
@@ -123,113 +163,61 @@
 					<em class="currentPage">1</em>
 					/135 페이지 ]
 				</div>
-				<div id="postContents" class="fl">
+				<div id="postContents">
 					<div class="contentTitle">
-						<div class="num">번호</div>
-						<div class="title">제목</div>
-						<div class="dept">부서명</div>
-						<div class="file">파일</div>
-						<div class="date">작성일</div>
-						<div class="view">조회수</div>
+						<ul>
+							<li class="num">번호</li>
+							<li class="title">제목</li>
+							<li class="dept">작성자</li>
+							<li class="date">작성일</li>
+						</ul>
 					</div>
-					<div class="postInfo">
-						<div class="postNum">1342</div>
-						<div class="postTitle"><a href="../../sub03/main/index.jsp" tabIndex="70">2022 만안구 환경사랑 글·그림 공모전 개최 안내</a></div>
-						<div class="postDept"><span>(만안구)환경위생과</span></div>
-						<div class="postFile imgFolder"></div>
-						<div class="postDate">2022-06-16</div>
-						<div class="postView">95</div>
-					</div>
-					<div class="postInfo">
-						<div class="postNum">1341</div>
-						<div class="postTitle"><a href="../../sub04/main/index.jsp" tabIndex="71">#잘지내줘서 고마워요 "토닥토닥" 거리공연 출연팀 선정 공고</a></div>
-						<div class="postDept"><span>(만안구)복지문화과</span></div>
-						<div class="postFile imgHwp"></div>
-						<div class="postDate">2022-06-08</div>
-						<div class="postView">63</div>
-					</div>
-					<div class="postInfo">
-						<div class="postNum">1340</div>
-						<div class="postTitle"><a href="../../sub02/main/index.jsp" tabIndex="72">2022년 만안구 여성합창단 신규 단원 공개모집 공고</a></div>
-						<div class="postDept"><span>(만안구)복지문화과</span></div>
-						<div class="postFile imgHwp"></div>
-						<div class="postDate">2022-06-08</div>
-						<div class="postView">54</div>
-					</div>
-					<div class="postInfo">
-						<div class="postNum">1339</div>
-						<div class="postTitle"><a href="../../sub03/main/index.jsp" tabIndex="73">제8회 전국동시지방선거 선거인명부 열람 및 이의신청 안내</a></div>
-						<div class="postDept"><span>(만안구)행정지원과</span></div>
-						<div class="postFile"></div>
-						<div class="postDate">2022-05-13</div>
-						<div class="postView">46</div>
-					</div>
-					<div class="postInfo">
-						<div class="postNum">1338</div>
-						<div class="postTitle"><a href="../../sub04/main/index.jsp" tabIndex="74">제8회 전국동시지방선거 코로나19 확진자 거소투표 신고 안내</a></div>
-						<div class="postDept"><span>(만안구)행정지원과</span></div>
-						<div class="postFile imgFolder"></div>
-						<div class="postDate">2022-05-13</div>
-						<div class="postView">31</div>
-					</div>
-					<div class="postInfo">
-						<div class="postNum">1337</div>
-						<div class="postTitle"><a href="../../sub02/main/index.jsp" tabIndex="75">2022년 어르신 동화구연 지도사 양성과정 수강생 모집</a></div>
-						<div class="postDept"><span>(만안구)복지문화과</span></div>
-						<div class="postFile imgFolder"></div>
-						<div class="postDate">2022-04-11	</div>
-						<div class="postView">138</div>
-					</div>
-					<div class="postInfo">
-						<div class="postNum">1336</div>
-						<div class="postTitle"><a href="../../sub03/main/index.jsp" tabIndex="76">공정선거지원단 모집 안내</a></div>
-						<div class="postDept"><span>(만안구)행정지원과</span></div>
-						<div class="postFile imgHwp"></div>
-						<div class="postDate">2022-03-14	</div>
-						<div class="postView">194</div>
-					</div>
-					<div class="postInfo">
-						<div class="postNum">1335</div>
-						<div class="postTitle"><a href="../../sub04/main/index.jsp" tabIndex="77">제20대 대통령선거 만안구 사전투표소 현황 안내</a></div>
-						<div class="postDept"><span>(만안구)행정지원과</span></div>
-						<div class="postFile imgFolder"></div>
-						<div class="postDate">2022-02-26</div>
-						<div class="postView">135</div>
-					</div>
-					<div class="postInfo">
-						<div class="postNum">1334</div>
-						<div class="postTitle"><a href="../../sub02/main/index.jsp" tabIndex="78">제20대 대통령선거 선거인명부 열람</a></div>
-						<div class="postDept"><span>(만안구)행정지원과</span></div>
-						<div class="postFile"></div>
-						<div class="postDate">2022-02-26</div>
-						<div class="postView">76</div>
-					</div>
-					<div class="postInfo">
-						<div class="postNum">1333</div>
-						<div class="postTitle"><a href="../../sub03/main/index.jsp" tabIndex="79">재외선거인 등 「귀국투표 신고 」안내</a></div>
-						<div class="postDept"><span>(만안구)행정지원과</span></div>
-						<div class="postFile imgHwp"></div>
-						<div class="postDate">2022-02-14</div>
-						<div class="postView">43</div>
-					</div>
+					<c:choose>
+							<c:when test="${empty articlesList}">
+								<li style="font-size : 9pt;">등록된 글이 없습니다.</li>
+							</c:when>
+							<c:when test="${!empty articlesList}" >
+								<c:forEach  var="article" items="${articlesList}" varStatus="articleNum" >
+									<div class="postInfo">
+									<ul>
+									<li class="postNum">${article.articleNO}</li>
+									<c:choose>
+										<c:when test='${article.level > 1}'>
+											<li class='postTitle'><a class="postDept" href="${contextPath}/board/viewArticle.do?articleNO=${article.articleNO}"><c:forEach begin="2" end="${article.level}" step="1">
+												<span style="font-size:12px;">[답변]</span>    
+											</c:forEach>
+											${article.title}></a></li>
+										</c:when>
+										<c:otherwise>
+											<li class='postTitle'><a class="postDept" href="${contextPath}/board/viewArticle.do?articleNO=${article.articleNO}">${article.title}</a></li>
+										</c:otherwise>
+									</c:choose>
+									<li class="postDept">${article.id}</li>
+									<li class="postDate"><fmt:formatDate value="${article.writeDate}" /></li> 
+									</ul>
+									</div>
+								</c:forEach>
+							</c:when>
+					</c:choose>
 				</div>
+				<a style="float : right; padding : 10px 20px; background : #3d72fc; color : #ffffff; margin-top : 30px;" href="${contextPath}/board/articleForm.do">글쓰기</a>
 				<div id="pagination">
-					<div class="imgPprev"><a href="../../sub04/main/index.jsp" tabIndex="80">처음페이지</a></div>
-					<div class="imgPrev"><a href="../../sub02/main/index.jsp" tabIndex="81">이전페이지</a></div>
+					<div class="imgPprev"><a href="${contextPath}/subPage/sub04/main/index.jsp" tabIndex="80">처음페이지</a></div>
+					<div class="imgPrev"><a href="${contextPath}/subPage/sub02/main/index.jsp" tabIndex="81">이전페이지</a></div>
 					<span class="split"></span>
-					<div class="active"><a href="../../sub03/main/index.jsp" tabIndex="82" class="active">1</a></div>
-					<div><a href="../../sub04/main/index.jsp" tabIndex="83">2</a></div>
-					<div><a href="../../sub02/main/index.jsp" tabIndex="84">3</a></div>
-					<div><a href="../../sub03/main/index.jsp" tabIndex="85">4</a></div>
-					<div><a href="../../sub04/main/index.jsp" tabIndex="86">5</a></div>
-					<div><a href="../../sub02/main/index.jsp" tabIndex="87">6</a></div>
-					<div><a href="../../sub03/main/index.jsp" tabIndex="88">7</a></div>
-					<div><a href="../../sub04/main/index.jsp" tabIndex="89">8</a></div>
-					<div><a href="../../sub02/main/index.jsp" tabIndex="90">9</a></div>
-					<div><a href="../../sub03/main/index.jsp" tabIndex="91">10</a></div>
+					<div class="active"><a href="${contextPath}/subPage/sub03/main/index.jsp" tabIndex="82" class="active">1</a></div>
+					<div><a href="${contextPath}/subPage/sub04/main/index.jsp" tabIndex="83">2</a></div>
+					<div><a href="${contextPath}/subPage/sub02/main/index.jsp" tabIndex="84">3</a></div>
+					<div><a href="${contextPath}/subPage/sub03/main/index.jsp" tabIndex="85">4</a></div>
+					<div><a href="${contextPath}/subPage/sub04/main/index.jsp" tabIndex="86">5</a></div>
+					<div><a href="${contextPath}/subPage/sub02/main/index.jsp" tabIndex="87">6</a></div>
+					<div><a href="${contextPath}/subPage/sub03/main/index.jsp" tabIndex="88">7</a></div>
+					<div><a href="${contextPath}/subPage/sub04/main/index.jsp" tabIndex="89">8</a></div>
+					<div><a href="${contextPath}/subPage/sub02/main/index.jsp" tabIndex="90">9</a></div>
+					<div><a href="${contextPath}/subPage/sub03/main/index.jsp" tabIndex="91">10</a></div>
 					<span class="split"></span>
-					<div class="imgNext"><a href="../../sub04/main/index.jsp" tabIndex="92">다음페이지</a></div>
-					<div class="imgNnext"><a href="../../sub02/main/index.jsp" tabIndex="93">끝페이지</a></div>
+					<div class="imgNext"><a href="${contextPath}/subPage/sub04/main/index.jsp" tabIndex="92">다음페이지</a></div>
+					<div class="imgNnext"><a href="${contextPath}/subPage/sub02/main/index.jsp" tabIndex="93">끝페이지</a></div>
 				</div>
 				<div id="satisfaction">
 					<div class="koglOpen">

@@ -124,4 +124,25 @@ public class MemberDAO {
 			e.printStackTrace();
 		}
 	}
+	
+	public boolean isExisted(MemberVO memberVO) {
+		boolean result = false;
+		String id = memberVO.getId();
+		String pwd = memberVO.getPwd();
+		try {
+			con = dataFactory.getConnection();
+			String query = "SELECT DECODE(COUNT(*), 1, 'true', 'false') AS RESULT FROM t_member";
+			query += " WHERE id=? AND pwd=?";
+			pstmt = con.prepareStatement(query);
+			pstmt.setString(1, id);
+			pstmt.setString(2, pwd);
+			ResultSet rs = pstmt.executeQuery();
+			rs.next();
+			result = Boolean.parseBoolean(rs.getString("result"));
+			System.out.println("result = " + result);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
 }

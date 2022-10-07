@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="sec01.exam01.MemberBean"/>
-    <fullyQualifiedTypeName name="sec01.exam02.Address"/>
     <fullyQualifiedTypeName name="org.omg.PortableServer.ID_ASSIGNMENT_POLICY_ID"/>
     <fullyQualifiedTypeName name="signIn.DeleteMember"/>
     <fullyQualifiedTypeName name="org.omg.CORBA.PUBLIC_MEMBER"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="javax.websocket.Session"/>
+    <fullyQualifiedTypeName name="board.ArticleVO"/>
 </qualifiedTypeNameHistroy>

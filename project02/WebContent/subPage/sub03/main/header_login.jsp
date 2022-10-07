@@ -1,11 +1,22 @@
 <!-- 로그인 했을 때 header -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    
-<%
-	request.setCharacterEncoding("utf-8");
-	String userId = request.getParameter("userId");
+	pageEncoding="UTF-8"
 %>
+
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"  /> 
+
+<%
+	request.setCharacterEncoding("UTF-8");
+	String userId = (String) session.getAttribute("login_id");
+%> 
+<c:if test="${login_id != null}">
+	<script>
+		alert("로그인 상태에서는 로그인 할 수 없습니다.");
+		location.href="${contextPath}/main/index.jsp";
+	</script>
+</c:if>
 		<div id="gnbWrap">
 			<div id="gnb">
 				<ul class="gnbLeft">
@@ -24,7 +35,12 @@
 					<li>&nbsp;&middot;&nbsp;</li>
 					<li><a href="../../../index.jsp" tabIndex="7">로그아웃</a></li>
 					<li>&nbsp;&middot;&nbsp;</li>
-					<li><a href="index.jsp" tabIndex="6"><%= userId %>님</a></li>
+					<% if(session.getAttribute("login_id")!=null) { 
+					%>
+						<li><a href="index.jsp" tabIndex="6"><%= userId %>님</a></li>
+					<%
+					} 
+					%>
 				</ul>
 			</div>
 		</div>		

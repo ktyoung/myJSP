@@ -40,21 +40,13 @@ public class LoginServlet extends HttpServlet{
 		if(result) {
 			HttpSession session = request.getSession();
 			session.setAttribute("isLogon", true);
-			session.setAttribute("login.id", user_id);
-			session.setAttribute("login.pwd", user_pwd);
+			session.setAttribute("login_id", user_id);
+			session.setAttribute("login_pwd", user_pwd);
 			
-			out.print("<html><body>");
-			out.print("안녕하세요 " + user_id + "님! <br>");
-			out.print("<a href='show'>회원정보보기</a>");
-			out.print("</body></html>");
+			response.sendRedirect("/project02/show");
 		} else {
-			out.print("<script>");
-			out.print("alert('존재하지 않는 계정입니다.');");
-			out.print("</script>");
-			out.print("<html><body>");
-			out.print("<a href='subPage/sub03/index.html'>다시 로그인</a><br>");
-			out.print("<a href='subPage/sub04/index.html'>회원가입</a>");
-			out.print("</body></html>");
+			out.print("<script>alert('아이디 또는 비밀번호가 잘못 입력되었습니다.');");
+			out.print("location.href='subPage/sub03/index.jsp';</script>");
 		}
 	}
 }

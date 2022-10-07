@@ -1,6 +1,17 @@
 <!-- 로그인하지 않았을 때 sub04 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	import=" java.util.*,memberControl.*"
+	pageEncoding="UTF-8"
+	isELIgnored="false" 
+%>
+
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"  /> 
+
+<%
+	request.setCharacterEncoding("UTF-8");
+%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -13,13 +24,13 @@
 	<meta name="Keywords" content="김태영, KimTaeYoung, 포트폴리오, 김태영 포트폴리오, portfolio, TaeYoung's portfolio, 프로젝트, Project, 김 태영, 김 태 영, 태영 김, 태영, rla, xo, dud, xodud, HTML5, CSS3, jQuery, 프로젝트, Portfolio, Project, 반응형웹, 반응형웹 포트폴리오, 학생 포트폴리오"/>
 	<meta name="Description" content="김태영의 포트폴리오 사이트입니다. 방문해 주셔서 감사합니다." />
 	<link rel="stylesheet" href="css/style.css"/>
-	<link rel="shortcut icon" type="image/x-icon" href="images/index.ico"/>
-	<script src="../../js/html5div.js"></script>
-	<script src="../../js/html5shiv.js"></script>
-	<script src="js/jquery-1.12.4.min.js"></script>
-	<script src="../../js/rollover.js"></script>
-	<script src="js/script.js"></script>
-	<script src="js/signScript.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="${contextPath}/images/index.ico"/>
+	<script src="${contextPath}/js/html5div.js"></script>
+	<script src="${contextPath}/js/html5shiv.js"></script>
+	<script src="${contextPath}/subPage/sub04/js/jquery-1.9.0.min.js"></script>
+	<script src="${contextPath}/js/rollover.js"></script>
+	<script src="${contextPath}/subPage/sub04/js/script.js"></script>
+	<script src="${contextPath}/subPage/sub04/js/signScript.js"></script>
 	<script>
 		function fn_sendMember(){
 		   var memberForm=document.memberForm;
@@ -37,10 +48,10 @@
 			  alert("이메일은 필수입니다.");
 		   } else {
 			   	alert("회원가입 성공!");
-			   	location.reload(true);
 				memberForm.method="POST";
 				memberForm.action="/project02/checkMember";
 				memberForm.submit();
+			   	location.reload(true);
 		   } 
 		}
 	</script>
@@ -49,7 +60,6 @@
 	<header id="header" class="cf">
 		<%@ include file="main/header.jsp" %>
 	</header>
-		
 	<div id="container" class="cf">
 		<div id="loginWrap" class="cf">
 			<section id="loginBoard">
@@ -57,7 +67,7 @@
 					<div id="loginHead">
 						<div class="loginHeadTitle"><h3>회원가입</h3></div>
 						<div class="breadCrumbs">
-							<a href="../../index.jsp" tabIndex="57"></a>
+							<a href="${contextPath}/index.jsp" tabIndex="57"></a>
 							<div class="arrowImg"></div>
 							<span>회원정보</span>
 							<div class="arrowImg"></div>
@@ -74,9 +84,7 @@
 <script>
 	var checkIdVar = 'false';
 	var currentCheckId;
-</script>
-
-										
+</script>		
 						<div class="form id">
 							<div class="col1">아이디</div>
 							<div class="col2">
@@ -137,7 +145,6 @@
 			</section>
 		</div>
 	</div>
-	
 	<%@ include file="main/footer.jsp" %>
 </body>
 </html>

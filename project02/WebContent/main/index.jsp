@@ -1,6 +1,16 @@
 <!-- 로그인 했을 때 index -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%
+	request.setCharacterEncoding("UTF-8");
+%>
+ 
+<c:set var="contextPath" value="${pageContext.request.contextPath}" />
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -156,8 +166,14 @@
 				</div>
 			</div>
 		</div>
-		<%@ include file="header_login.jsp" %>
-		</div>
+		<c:choose>
+		<c:when test="${login_id == 'admin'}">
+			<%@ include file="/admin/header_admin.jsp" %>
+		</c:when>
+		<c:when test="${login_id != 'admin'}">
+			<%@ include file="header_login.jsp" %>
+		</c:when>
+		</c:choose>
 		<div id="favoriteMenuWrap" class="fl">
 			<div id="favoriteMenu">
 				<div class="favoriteMenuTitle fl">

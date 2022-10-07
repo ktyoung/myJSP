@@ -1,6 +1,16 @@
 <!-- 로그인하지 않았을 때 sub02 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%
+  request.setCharacterEncoding("UTF-8");
+%>
+ 
+<c:set var="contextPath" value="${pageContext.request.contextPath}" />
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -12,14 +22,14 @@
 	<meta name="Author" content="김태영"/>
 	<meta name="Keywords" content="김태영, KimTaeYoung, 포트폴리오, 김태영 포트폴리오, portfolio, TaeYoung's portfolio, 프로젝트, Project, 김 태영, 김 태 영, 태영 김, 태영, rla, xo, dud, xodud, HTML5, CSS3, jQuery, 프로젝트, Portfolio, Project, 반응형웹, 반응형웹 포트폴리오, 학생 포트폴리오"/>
 	<meta name="Description" content="김태영의 포트폴리오 사이트입니다. 방문해 주셔서 감사합니다." />
-	<link rel="stylesheet" href="css/style.css"/>
-	<link rel="shortcut icon" type="image/x-icon" href="images/index.ico"/>
-	<script src="js/html5div.js"></script>
-	<script src="js/html5shiv.js"></script>
-	<script src="js/jquery-1.9.0.min.js"></script>
-	<script src="js/rollover.js"></script>
-	<script src="js/script.js"></script>
-	<script src="js/ajax.js"></script>
+	<link rel="stylesheet" href="${contextPath}/subPage/sub02/css/style.css"/>
+	<link rel="shortcut icon" type="image/x-icon" href="${contextPath}/images/index.ico"/>
+	<script src="${contextPath}/subPage/sub02/js/html5div.js"></script>
+	<script src="${contextPath}/subPage/sub02/js/html5shiv.js"></script>
+	<script src="${contextPath}/subPage/sub02/js/jquery-1.9.0.min.js"></script>
+	<script src="${contextPath}/subPage/sub02/js/rollover.js"></script>
+	<script src="${contextPath}/subPage/sub02/js/script.js"></script>
+	<script src="${contextPath}/subPage/sub02/js/ajax.js"></script>
 </head>
 <body>
 	<header id="header" class="cf">
@@ -46,12 +56,12 @@
 						<div class="keywordList">
 							<div class="keywordTxt">
 								<ul>
-									<li><a href="../sub01/index.jsp" tabIndex="57">안심콜</a></li>
-									<li><a href="../sub03/index.jsp" tabIndex="58">보건증</a></li>
-									<li><a href="../sub04/index.jsp" tabIndex="59">대학생</a></li>
-									<li><a href="../sub01/index.jsp" tabIndex="60">방역콜</a></li>
-									<li><a href="../sub03/index.jsp" tabIndex="61">조직도</a></li>
-									<li><a href="../sub04/index.jsp" tabIndex="62">폐기물</a></li>
+									<li><a href="${contextPath}/subPage/sub01/index.jsp" tabIndex="57">안심콜</a></li>
+									<li><a href="${contextPath}/subPage/sub03/index.jsp" tabIndex="58">보건증</a></li>
+									<li><a href="${contextPath}/subPage/sub04/index.jsp" tabIndex="59">대학생</a></li>
+									<li><a href="${contextPath}/subPage/sub01/index.jsp" tabIndex="60">방역콜</a></li>
+									<li><a href="${contextPath}/subPage/sub03/index.jsp" tabIndex="61">조직도</a></li>
+									<li><a href="${contextPath}/subPage/sub04/index.jsp" tabIndex="62">폐기물</a></li>
 								</ul>
 							</div>
 						</div>
@@ -74,16 +84,16 @@
 				</div>
 				<div class="sideMenuContents">
 					<ul>
-						<li class="menuTitle firstMenu"><a href="../sub01/index.jsp" class="menuTitleText" tabIndex="63">종합민원안내</a></li>
-						<li class="menuTitle"><a href="../sub03/index.jsp" class="menuTitleText" tabIndex="64">안양시에 바란다</a></li>
-						<li class="menuTitle"><a href="../sub04/index.jsp" class="menuTitleText" tabIndex="65">청렴안양클린신고</a></li>
-						<li class="menuTitle"><a href="../sub01/index.jsp" class="menuTitleText" tabIndex="66">자동차민원</a></li>
-						<li class="menuTitle"><a href="../sub03/index.jsp" class="menuTitleText" tabIndex="67">건설기계민원</a></li>
-						<li class="menuTitle"><a href="../sub04/index.jsp" class="menuTitleText" tabIndex="68">이륜자동차민원</a></li>
-						<li class="menuTitle"><a href="../sub01/index.jsp" class="menuTitleText" tabIndex="69">여권발급민원</a></li>
-						<li class="menuTitle"><a href="../sub03/index.jsp" class="menuTitleText" tabIndex="70">민원편람</a></li>
-						<li class="menuTitle"><a href="../sub04/index.jsp" class="menuTitleText" tabIndex="71">행정서비스헌장</a></li>
-						<li class="menuTitle"><a href="../sub01/index.jsp" class="menuTitleText" tabIndex="72">콜센터</a></li>
+						<li class="menuTitle firstMenu"><a href="${contextPath}/subPage/sub01/index.jsp" class="menuTitleText" tabIndex="63">종합민원안내</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub03/index.jsp" class="menuTitleText" tabIndex="64">안양시에 바란다</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub04/index.jsp" class="menuTitleText" tabIndex="65">청렴안양클린신고</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub01/index.jsp" class="menuTitleText" tabIndex="66">자동차민원</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub03/index.jsp" class="menuTitleText" tabIndex="67">건설기계민원</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub04/index.jsp" class="menuTitleText" tabIndex="68">이륜자동차민원</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub01/index.jsp" class="menuTitleText" tabIndex="69">여권발급민원</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub03/index.jsp" class="menuTitleText" tabIndex="70">민원편람</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub04/index.jsp" class="menuTitleText" tabIndex="71">행정서비스헌장</a></li>
+						<li class="menuTitle"><a href="${contextPath}/subPage/sub01/index.jsp" class="menuTitleText" tabIndex="72">콜센터</a></li>
 					</ul>
 				</div>
 			</div>

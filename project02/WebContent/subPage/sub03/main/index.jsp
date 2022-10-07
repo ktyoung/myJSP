@@ -1,6 +1,15 @@
 <!-- 로그인 했을 때 sub03 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%
+  request.setCharacterEncoding("UTF-8");
+%>
+ 
+<c:set var="contextPath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -12,13 +21,13 @@
 	<meta name="Author" content="김태영"/>
 	<meta name="Keywords" content="김태영, KimTaeYoung, 포트폴리오, 김태영 포트폴리오, portfolio, TaeYoung's portfolio, 프로젝트, Project, 김 태영, 김 태 영, 태영 김, 태영, rla, xo, dud, xodud, HTML5, CSS3, jQuery, 프로젝트, Portfolio, Project, 반응형웹, 반응형웹 포트폴리오, 학생 포트폴리오"/>
 	<meta name="Description" content="김태영의 포트폴리오 사이트입니다. 방문해 주셔서 감사합니다." />
-	<link rel="stylesheet" href="../css/style.css"/>
-	<link rel="shortcut icon" type="image/x-icon" href="../images/index.ico"/>
-	<script src="../../../js/html5div.js"></script>
-	<script src="../../../js/html5shiv.js"></script>
-	<script src="../js/jquery-1.9.0.min.js"></script>
-	<script src="../../../js/rollover.js"></script>
-	<script src="../js/script.js"></script>
+	<link rel="stylesheet" href="${contextPath}/subPage/sub03/css/style.css"/>
+	<link rel="shortcut icon" type="image/x-icon" href="${contextPath}/images/index.ico"/>
+	<script src="${contextPath}/js/html5div.js"></script>
+	<script src="${contextPath}/js/html5shiv.js"></script>
+	<script src="${contextPath}/subPage/sub03/js/jquery-1.9.0.min.js"></script>
+	<script src="${contextPath}/js/rollover.js"></script>
+	<script src="${contextPath}/subPage/sub03/js/script.js"></script>
 	<script>
 		function fn_validate(){
 			var loginForm = document.loginForm;
@@ -35,7 +44,7 @@
 			}
 			else {
 				loginForm.method = "post";
-				loginForm.action = "/project02/main/main/index.jsp";
+				loginForm.action = "/project02/main/index.jsp";
 				loginForm.submit();
 			}
 		}
@@ -43,7 +52,14 @@
 </head>
 <body>
 	<header id="header" class="cf">
-		<%@ include file="header_login.jsp" %>
+		<c:choose>
+		<c:when test="${userId == 'admin'}">
+			<%@ include file="/admin/header_admin.jsp" %>
+		</c:when>
+		<c:when test="${userId != 'admin'}">
+			<%@ include file="header_login.jsp" %>
+		</c:when>
+		</c:choose>
 	</header>
 		
 	<div id="container" class="cf">

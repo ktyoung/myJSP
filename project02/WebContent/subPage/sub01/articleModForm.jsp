@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"
+	import="board.*, java.io.PrintWriter"
+%>
     
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -40,9 +42,30 @@
 		}  
 		
 		function backToList(obj){
-			obj.action="${contextPath}/board/listArticles.do";
-			obj.submit();
+			window.history.go(-2);
 		}
+		
+		/* function fn_modify_article(obj){
+			obj.action="${contextPath}/board/modArticle.do?articleNO=${article.articleNO}";
+			obj.submit();
+		} */
+		
+		function check_input() {
+			if (!document.articleModForm.title.value)
+			{
+				alert("제목을 입력하세요!");
+				document.articleModForm.title.focus();
+				return;
+			}
+			else if (!document.articleModForm.content.value)
+			{
+				alert("내용을 입력하세요!");    
+				document.articleModForm.content.focus();
+				return;
+			} else {
+				location.href = "${contextPath}/board/modArticle.do?articleNO=${article.articleNO}";
+			}
+		 }
 	</script>
 </head>
 <body>
@@ -58,8 +81,8 @@
 	</header>
 	<section style="width : 100%; margin-bottom : 50px; color : #333333;">
 		<div style="width : 1420px; margin : 0 auto; font-size : 19px;">
-			<h3 style="font-weight : normal; margin-top: 30px; padding: 22px 20px; border-bottom: solid 2px #333333; font-size: 20px;">일반 게시판 > 글쓰기</h3>
-			<form name="articleForm" method="post" action="${contextPath}/board/addArticle.do" enctype="multipart/form-data">
+			<h3 style="font-weight : normal; margin-top: 30px; padding: 22px 20px; border-bottom: solid 2px #333333; font-size: 20px;">일반 게시판 > 수정하기</h3>
+			<form name="articleModForm" method="post" action="${contextPath}/board/modArticle.do?articleNO=${article.articleNO}" enctype="multipart/form-data">
 				<ul style="font-size : 19px;" class="cf">
 					<li class="cf" style="padding: 25px 40px; border-bottom: solid 1px #dddddd;">
 						<span style="display: block; width: 10%; float : left;">제목 : </span>
@@ -80,7 +103,7 @@
 					</li>
 				<ul style="text-align: right; margin: 20px 0 40px 0;">
 					<li style="display: inline-block;"><input style="text-align: center; font-size: 18px; border-radius: 2px; padding: 8px 20px; border: 1px solid #cccccc; background-color: #cccccc; color: #555555; margin-right: 5px; cursor: pointer;" type="button" value="목록보기" onClick="backToList(this.form)" /></li>
-					<li style="display: inline-block;"><input style="text-align: center; font-size: 18px; border-radius: 2px; padding: 8px 20px; border: 1px solid #cccccc; background-color: #3D72FC; color: #ffffff; margin-right: 5px; cursor: pointer;" type="submit" value="작성하기" /></li>
+					<li style="display: inline-block;"><input style="text-align: center; font-size: 18px; border-radius: 2px; padding: 8px 20px; border: 1px solid #cccccc; background-color: #3D72FC; color: #ffffff; margin-right: 5px; cursor: pointer;" type="submit" value="수정하기" onClick="check_input()" /></li>
 				</ul>
 			</form>
 		</div>

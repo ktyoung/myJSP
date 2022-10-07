@@ -13,7 +13,20 @@
 
 <head>
 <meta charset="UTF-8">
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<title>만안구청 - 열린광장</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="Generator" content="Notepad++" />
+	<meta name="Author" content="김태영"/>
+	<meta name="Keywords" content="김태영, KimTaeYoung, 포트폴리오, 김태영 포트폴리오, portfolio, TaeYoung's portfolio, 프로젝트, Project, 김 태영, 김 태 영, 태영 김, 태영, rla, xo, dud, xodud, HTML5, CSS3, jQuery, 프로젝트, Portfolio, Project, 반응형웹, 반응형웹 포트폴리오, 학생 포트폴리오"/>
+	<meta name="Description" content="김태영의 포트폴리오 사이트입니다. 방문해 주셔서 감사합니다." />
+	<link rel="stylesheet" href="${contextPath}/subPage/sub01/css/style.css"/>
+	<link rel="shortcut icon" type="image/x-icon" href="${contextPath}/images/index.ico"/>
+	<script src="${contextPath}/subPage/sub01/js/html5div.js"></script>
+	<script src="${contextPath}/subPage/sub01/js/html5shiv.js"></script>
+	<script src="${contextPath}/subPage/sub01/js/jquery-1.9.0.min.js"></script>
+	<script src="${contextPath}/subPage/sub01/js/rollover.js"></script>
+	<script src="${contextPath}/subPage/sub01/js/script.js"></script>
 <script>
 	function backToList(obj){
 		obj.action="${contextPath}/board/listArticles.do";
@@ -30,37 +43,47 @@
 		}
 	}
 </script> 
-<title>답글쓰기 페이지</title>
 </head>
 <body>
-	<h1 style="text-align:center">답글쓰기</h1>
-	<form name="frmReply" method="post" action="${contextPath}/board/addReply.do" enctype="multipart/form-data">
-		<table align="center">
-			<tr>
-				<td align="right"> 글쓴이 : &nbsp;</td>
-				<td><input type="text" size="5" value="lee" disabled /></td>
-			</tr>
-			<tr>
-				<td align="right"> 글제목 : &nbsp;</td>
-				<td><input type="text" size="67" maxlength="100" name="title" /></td>
-			</tr>
-			<tr>
-				<td align="right" valign="top"><br> 글내용 : &nbsp;</td>
-				<td><textarea name="content" rows="10" cols="65" maxlength="4000"></textarea></td>
-			</tr>
-			<tr>
-				<td align="right"> 이미지파일 첨부 : </td>
-				<td><input type="file" name="imageFileName" onchange="readURL(this)" /></td>
-				<td><img id="preview" src="#" width="200" height="200" /></td>
-			</tr>
-			<tr>
-				<td align="right"></td>
-				<td>
-					<input type=submit value="답글반영하기" />
-					<input type=button value="취소"onClick="backToList(this.form)" />
-				</td>
-			</tr>
-		</table>
-	</form>
+	<header id="header" class="cf">
+		<c:choose>
+		<c:when test="${login_id == 'admin'}">
+			<%@ include file="/admin/header_admin.jsp" %>
+		</c:when>
+		<c:when test="${login_id != 'admin'}">
+			<%@ include file="main/header_login.jsp" %>
+		</c:when>
+		</c:choose>
+	</header>
+	<section style="width : 100%; margin-bottom : 50px; color : #333333;">
+		<div style="width : 1420px; margin : 0 auto; font-size : 19px;">
+			<h3 style="font-weight : normal; margin-top: 30px; padding: 22px 20px; border-bottom: solid 2px #333333; font-size: 20px;">일반 게시판 > 답글쓰기</h3>
+			<form name="frmReply" method="post" action="${contextPath}/board/addReply.do" enctype="multipart/form-data">
+				<ul style="font-size : 19px;" class="cf">
+					<li class="cf" style="padding: 25px 40px; border-bottom: solid 1px #dddddd;">
+						<span style="display: block; width: 10%; float : left;">제목 : </span>
+						<span style="display: block; width: 90%; float : left;">
+							<input name="title" type="text" style="width: 100%; height: 35px; line-height: 35px; font-size: 19px; padding: 0px 10px; box-sizing: border-box; border : 1px solid #dddddd; font-family: '맑은 고딕', Verdana, 돋움, Dotum, sans-serif; letter-spacing: -0.063em;" />
+						</span>
+					</li>
+					<li class="cf" style="padding: 25px 40px; border-bottom: solid 1px #dddddd;">
+						<span style="display: block; width: 10%; float : left;">내용 : </span>
+						<span style="display: block; width: 90%; float : left;">
+							<textarea name="content" style="width: 100%; height: 400px; padding: 10px 10px; box-sizing: border-box; font-size: 19px; line-height: 30px; border : 1px solid #dddddd; font-family: '맑은 고딕', Verdana, 돋움, Dotum, sans-serif; letter-spacing: -0.063em;"></textarea>
+						</span>
+					</li>
+					<li class="cf" style="padding: 25px 40px; border-bottom: solid 1px #dddddd;">
+						<span style="display: block; width: 10%; float : left;">첨부파일</span>
+						<span style="display: block; width: 90%; float : left;"><input type="file" name="imageFileName" onchange="readURL(this);" style="width: 100%; height: 35px; line-height: 35px; font-size: 19px; padding: 0px 10px; box-sizing: border-box;" /></span>
+						<span><img id="preview" src="#" style="display : none;" /></span>
+					</li>
+				<ul style="text-align: right; margin: 20px 0 40px 0;">
+					<li style="display: inline-block;"><input style="text-align: center; font-size: 18px; border-radius: 2px; padding: 8px 20px; border: 1px solid #cccccc; background-color: #cccccc; color: #555555; margin-right: 5px; cursor: pointer;" type="button" value="목록보기" onClick="backToList(this.form)" /></li>
+					<li style="display: inline-block;"><input style="text-align: center; font-size: 18px; border-radius: 2px; padding: 8px 20px; border: 1px solid #cccccc; background-color: #3D72FC; color: #ffffff; margin-right: 5px; cursor: pointer;" type="submit" value="작성하기" /></li>
+				</ul>
+			</form>
+		</div>
+	</section>
+	<%@ include file="main/footer.jsp" %>
 </body>
 </html>

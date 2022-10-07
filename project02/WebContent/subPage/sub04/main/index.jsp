@@ -16,7 +16,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="../images/index.ico"/>
 	<script src="../../../js/html5div.js"></script>
 	<script src="../../../js/html5shiv.js"></script>
-	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/jquery-1.9.0.min.js"></script>
 	<script src="../../../js/rollover.js"></script>
 	<script src="../js/script.js"></script>
 	<script src="../js/signScript.js"></script>

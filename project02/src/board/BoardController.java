@@ -58,6 +58,10 @@ public class BoardController extends HttpServlet {
 				articlesList = boardService.listArticles();
 				request.setAttribute("articlesList", articlesList);
 				nextPage = "/subPage/sub01/index.jsp";
+			} else if (action.equals("/listArticlesLogin.do")) {
+				articlesList = boardService.listArticles();
+				request.setAttribute("articlesList", articlesList);
+				nextPage = "/subPage/sub01/main/index.jsp";
 			} else if (action.equals("/articleForm.do")) {
 				nextPage = "/subPage/sub01/articleForm.jsp";
 			} else if (action.equals("/addArticle.do")) {
