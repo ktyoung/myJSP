@@ -51,12 +51,30 @@ public class BoardController extends HttpServlet {
 		try {
 			List<ArticleVO> articlesList = new ArrayList<ArticleVO>();
 			if (action == null) {
-				articlesList = boardService.listArticles();
-				request.setAttribute("articlesList", articlesList);
+				String _section=request.getParameter("section");
+				String _pageNum=request.getParameter("pageNum");
+				int section = Integer.parseInt(((_section==null)? "1":_section) );
+				int pageNum = Integer.parseInt(((_pageNum==null)? "1":_pageNum));
+				Map<String, Integer> pagingMap = new HashMap<String, Integer>();
+				pagingMap.put("section", section);
+				pagingMap.put("pageNum", pageNum);
+				Map articlesMap=boardService.listArticles(pagingMap);
+				articlesMap.put("section", section);
+				articlesMap.put("pageNum", pageNum);
+				request.setAttribute("articlesMap", articlesMap);
 				nextPage = "/subPage/sub01/index.jsp";
 			} else if (action.equals("/listArticles.do")) {
-				articlesList = boardService.listArticles();
-				request.setAttribute("articlesList", articlesList);
+				String _section=request.getParameter("section");
+				String _pageNum=request.getParameter("pageNum");
+				int section = Integer.parseInt(((_section==null)? "1":_section) );
+				int pageNum = Integer.parseInt(((_pageNum==null)? "1":_pageNum));
+				Map pagingMap=new HashMap();
+				pagingMap.put("section", section);
+				pagingMap.put("pageNum", pageNum);
+				Map articlesMap=boardService.listArticles(pagingMap);
+				articlesMap.put("section", section);
+				articlesMap.put("pageNum", pageNum);
+				request.setAttribute("articlesMap", articlesMap);
 				nextPage = "/subPage/sub01/index.jsp";
 			} else if (action.equals("/listArticlesLogin.do")) {
 				articlesList = boardService.listArticles();
@@ -150,7 +168,7 @@ public class BoardController extends HttpServlet {
 				String content = articleMap.get("content");
 				String imageFileName = articleMap.get("imageFileName");
 				articleVO.setParentNO(parentNO);
-				articleVO.setId("lee");
+				articleVO.setId("admin");
 				articleVO.setTitle(title);
 				articleVO.setContent(content);
 				articleVO.setImageFileName(imageFileName);

@@ -38,19 +38,19 @@
 				<h3><span class="blind">저작권</span></h3>
 				<ul class="footerSns">
 					<li class="footerIcon">
-						<a href="subPage/sub01/index.html" tabIndex="157" class="rollover"><img src="images/footer/facebook_off.png" alt="페이스북 아이콘" class="facebook"/></a>
+						<a href="https://www.facebook.com/anyanglove/" target="_blank" tabIndex="157" class="rollover"><img src="images/footer/facebook_off.png" alt="페이스북 아이콘" class="facebook"/></a>
 					</li>
 					<li class="footerIcon">
-						<a href="subPage/sub02/index.html" tabIndex="158" class="rollover"><img src="images/footer/twitter_off.png" alt="트위터 아이콘" class="twitter"/></a>
+						<a href="https://twitter.com/anyanglove" target="_blank" tabIndex="158" class="rollover"><img src="images/footer/twitter_off.png" alt="트위터 아이콘" class="twitter"/></a>
 					</li>
 					<li class="footerIcon">
-						<a href="subPage/sub03/index.html" tabIndex="159" class="rollover"><img src="images/footer/instagram_off.png" alt="인스타그램 아이콘" class="instagram"/></a>
+						<a href="https://www.instagram.com/anyang_city/?hl=ko" target="_blank" tabIndex="159" class="rollover"><img src="images/footer/instagram_off.png" alt="인스타그램 아이콘" class="instagram"/></a>
 					</li>
 					<li class="footerIcon">
-						<a href="subPage/sub01/index.html" tabIndex="160" class="rollover"><img src="images/footer/youtube_off.png" alt="유튜브 아이콘" class="youtube"/></a>
+						<a href="https://www.youtube.com/channel/UC02QEY0SPjAtOM8C4XBaG3g" target="_blank" tabIndex="160" class="rollover"><img src="images/footer/youtube_off.png" alt="유튜브 아이콘" class="youtube"/></a>
 					</li>
 					<li class="footerIcon">
-						<a href="subPage/sub02/index.html" tabIndex="161" class="rollover"><img src="images/footer/blog_off.png" alt="블로그 아이콘" class="blog"/></a>
+						<a href="https://blog.naver.com/PostList.naver?blogId=tvanyanggokr" target="_blank" tabIndex="161" class="rollover"><img src="images/footer/blog_off.png" alt="블로그 아이콘" class="blog"/></a>
 					</li>
 				</ul>
 				<p class="copy">&copy;ANYANG CITY.ALL RIGHTS RESERVED.</p>

@@ -49,7 +49,7 @@ public class MemberController extends HttpServlet {
 			nextPage = "/member/listMembers.do";
 		} else if (action.equals("/memberForm.do")) {
 			nextPage = "/admin/memberForm.jsp";
-		} else if (action.equals("/modMemberForm.do")){
+		} else if (action.equals("/modMemberForm.do")) {
 			String id=request.getParameter("id");
 			MemberVO memInfo = memberDAO.findMember(id);
 			request.setAttribute("memInfo", memInfo);

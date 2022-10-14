@@ -87,21 +87,32 @@
 						<c:when test="${!empty membersList}" >
 							<c:forEach  var="mem" items="${membersList}" >
 								<li style="padding : 10px 10px; display : block; margin : 0 auto; border-bottom: solid 1px #dddddd; background-color: #ffffff;">
-									<span style="width : 100px; text-align : center; display : inline-block; font-size : 14px;">${mem.id}</span>
-									<span style="width : 100px; text-align : center; display : inline-block; font-size : 14px;">${mem.pwd}</span>
-									<span style="width : 100px; text-align : center; display : inline-block; font-size : 14px;">${mem.name}</span>     
-									<span style="width : 116.5px; text-align : center; display : inline-block; font-size : 14px;">${mem.email}</span>     
-									<span style="width : 116.5px; text-align : center; display : inline-block; font-size : 14px;">${mem.joinDate}</span	>
-									<span style="width : 100px; text-align : center; display : inline-block; font-size : 14px;">
+									<span style="line-height : 35px; width : 100px; text-align : center; display : inline-block; font-size : 14px;">${mem.id}</span>
+									<span style="line-height : 35px; width : 100px; text-align : center; display : inline-block; font-size : 14px;">${mem.pwd}</span>
+									<span style="line-height : 35px; width : 100px; text-align : center; display : inline-block; font-size : 14px;">${mem.name}</span>     
+									<span style="line-height : 35px; width : 116.5px; text-align : center; display : inline-block; font-size : 14px;">${mem.email}</span>     
+									<span style="line-height : 35px; width : 116.5px; text-align : center; display : inline-block; font-size : 14px;">${mem.joinDate}</span	>
+									<c:if test="${mem.id == 'admin'}">
+									<span style="line-height : 35px; width : 200px; text-align : center; display : inline-block; font-size : 14px; color:#3D72FC;">
+										관리자 계정은 수정/삭제 불가
+									</span>
+									</c:if>   
+									<c:if test="${mem.id != 'admin'}">
+									<span style="line-height : 35px; width : 100px; text-align : center; display : inline-block; font-size : 14px;">
 										<form method="post" action="${contextPath}/member/modMemberForm.do?id=${mem.id}">
-											<input class="memInput" type="submit" value="수정" onClick="location.reload(true);"/>
+											<c:if test="${mem.id != 'admin'}">
+											<input class="memInput" type="submit" value="수정"/>
+											</c:if>
 										</form>
 									</span>
-									<span style="width : 100px; text-align : center; display : inline-block; font-size : 14px;">
+									<span style="line-height : 35px; width : 100px; text-align : center; display : inline-block; font-size : 14px;">
 										<form method="post" action="${contextPath}/member/delMember.do?id=${mem.id}">
-											<input class="memInput" type="submit" value="삭제" onClick="location.reload(true);"/>
+											<c:if test="${mem.id != 'admin'}">
+											<input class="memInput" type="submit" value="삭제"/>
+											</c:if>
 										</form>
-									</span>       
+									</span>
+									</c:if>       
 								</li>
 							</c:forEach>
 						</c:when>

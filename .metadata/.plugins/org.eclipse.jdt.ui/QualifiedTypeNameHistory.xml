@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.omg.PortableServer.ID_ASSIGNMENT_POLICY_ID"/>
     <fullyQualifiedTypeName name="signIn.DeleteMember"/>
     <fullyQualifiedTypeName name="org.omg.CORBA.PUBLIC_MEMBER"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Member"/>
@@ -55,9 +54,10 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="org.apache.commons.io.FileUtils"/>
-    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
     <fullyQualifiedTypeName name="javax.websocket.Session"/>
     <fullyQualifiedTypeName name="board.ArticleVO"/>
+    <fullyQualifiedTypeName name="com.sun.crypto.provider.RSACipher"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 </qualifiedTypeNameHistroy>

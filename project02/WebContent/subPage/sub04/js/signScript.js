@@ -66,12 +66,12 @@
 	}
 
 	function reset_form(){
-		window.location.href='index.html';
+		window.location.href='index.jsp';
 		return;
 	}
 
 	function check_id(){
-		window.location.href='index.html?id=' + document.memberForm.id.value;
+		window.location.href='index.jsp?id=' + document.memberForm.id.value;
 		
 	}	
 

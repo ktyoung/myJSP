@@ -39,11 +39,11 @@
 					<li><a href="index.jsp?lo=ko">한국어</a></li>
 					<li>&nbsp;&middot;&nbsp;</li>
 					</c:if>
-					<li><a href="${contextPath}/admin/admin_member.jsp" tabIndex="7"><fmt:message key="menu.gnb9"/></a></li>
+					<li><a href="${contextPath}/member/listMembers.do" tabIndex="7"><fmt:message key="menu.gnb9"/></a></li>
 					<li>&nbsp;&middot;&nbsp;</li>
 					<li><a href="${contextPath}/index.jsp" tabIndex="7"><fmt:message key="menu.gnb8"/></a></li>
 					<li>&nbsp;&middot;&nbsp;</li>
-					<li><a href="${contextPath}/admin/admin_member.jsp" tabIndex="6"><%= userId %>(관리자)님</a></li>
+					<li><a href="${contextPath}/member/listMembers.do" tabIndex="6"><%= userId %>(관리자)님</a></li>
 				</ul>
 			</div>
 		</div>		

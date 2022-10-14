@@ -137,24 +137,24 @@
 					<li class="subTitle fl">첨부파일</li>
 					<li class="subText fl" style="height : 100%;">
 						<input class="cont" type= "hidden" name="originalFileName" value="${article.imageFileName}" />
-						<img src="${contextPath}/download.do?articleNO=${article.articleNO}&imageFileName=${article.imageFileName}" id="preview"  /><br>
+						<img src="${contextPath}/download.do?articleNO=${article.articleNO}&imageFileName=${article.imageFileName}" id="preview" style="width : 20%;"  /><br>
 						<input class="cont" type="file" name="imageFileName" id="i_imageFileName" disabled onchange="readURL(this);" />     
 					</li>   
 				</ul>
-				<h4 style="text-align : right; font-weight : normal; margin-top: 30px; padding: 0px 20px; font-size: 16px; color : #3D72FC">※ 게시글 수정 시, 제목과 내용만 수정가능합니다.</h3>
+				<h4 style="text-align : right; font-weight : normal; margin-top: 30px; padding: 0px 20px; font-size: 16px; color : #3D72FC">※ 게시글 수정 시 제목, 내용, 첨부파일만 수정가능합니다.</h3>
 			</c:if>
 				<ul id="tr_btn_modify" style="border : none;">
 					<li class="btns fr">
-						<input style="font-size : 18px; padding : 10px 20px; background : #cccccc;" type=button value="목록" onClick="backToList(frmArticle)">
-						<input style="font-size : 18px; padding : 10px 20px; background : #3D72FC; color : #ffffff;" type=button value="수정완료" onClick="fn_modify_article(frmArticle)"  >
+						<input style="cursor : pointer; font-size : 18px; padding : 10px 20px; background : #cccccc;" type=button value="목록" onClick="backToList(frmArticle)">
+						<input style="cursor : pointer; font-size : 18px; padding : 10px 20px; background : #3D72FC; color : #ffffff;" type=button value="수정완료" onClick="fn_modify_article(frmArticle)"  >
 					</li>
 				</ul>
 				<ul id="tr_btn" style="border : none;">
 					<li class="btns fr">
-						<input style="font-size : 18px; padding : 10px 20px; background : #cccccc;" type=button value="수정" onClick="fn_enable(this.form)">
-						<input style="font-size : 18px; padding : 10px 20px; background : #cccccc;" type=button value="삭제" onClick="fn_remove_article('${contextPath}/board/removeArticle.do', ${article.articleNO})">
-						<input style="font-size : 18px; padding : 10px 20px; background : #cccccc;" type=button value="목록" onClick="backToList(this.form)">
-						<input style="font-size : 18px; padding : 10px 20px; background : #3D72FC; color : #ffffff;" type=button value="답글쓰기"  onClick="fn_reply_form('${contextPath}/board/replyForm.do', ${article.articleNO})">
+						<input style="cursor : pointer; font-size : 18px; padding : 10px 20px; background : #cccccc;" type=button value="수정" onClick="fn_enable(this.form)">
+						<input style="cursor : pointer; font-size : 18px; padding : 10px 20px; background : #cccccc;" type=button value="삭제" onClick="fn_remove_article('${contextPath}/board/removeArticle.do', ${article.articleNO})">
+						<input style="cursor : pointer; font-size : 18px; padding : 10px 20px; background : #cccccc;" type=button value="목록" onClick="backToList(this.form)">
+						<input style="cursor : pointer; font-size : 18px; padding : 10px 20px; background : #3D72FC; color : #ffffff;" type=button value="답글쓰기"  onClick="fn_reply_form('${contextPath}/board/replyForm.do', ${article.articleNO})">
 					</li>
 				</ul>
 			</form>

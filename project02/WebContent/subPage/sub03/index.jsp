@@ -38,7 +38,7 @@
 			
 			if((userId.length==0 || userId=="") || (userPw.length==0 || userPw=="")) {
 				alert("아이디와 비밀번호는 필수입니다.");
-			} else if(userId == "admin" && userPw == "admin1234") {
+			} else if(userId == "admin" && userPw == "ay2111!!") {
 				<%  
 				String userId = (String) session.getAttribute("login_id");
 				session.setAttribute("login_id", "admin");
@@ -101,7 +101,7 @@
 										</div>
 										<div class="inpArea">
 											<label for="userPw"></label>
-											<input type="password" id="userPw" name="userPw" value="admin1234" placeholder="비밀번호"/>
+											<input type="password" id="userPw" name="userPw" value="ay2111!!" placeholder="비밀번호"/>
 										</div>
 									</div>
 									<input type="button" id="loginBtn" title="로그인" value="로그인" onClick="fn_validate()" class="btnLogin themeBtn" />

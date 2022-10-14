@@ -1,6 +1,8 @@
 <!-- 로그인하지 않았을 때 sub04 -->
+<%@page import="signIn.MemberDAO"%>
+<%@page import="signIn.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	import=" java.util.*,memberControl.*"
+	import=" java.util.*,memberControl.*, signIn.*"
 	pageEncoding="UTF-8"
 	isELIgnored="false" 
 %>
@@ -11,6 +13,9 @@
 
 <%
 	request.setCharacterEncoding("UTF-8");
+	MemberVO memberVO = new MemberVO();
+	MemberDAO dao = new MemberDAO();
+	boolean result = dao.isExisted(memberVO);
 %>
 <!DOCTYPE html>
 <html lang="ko">

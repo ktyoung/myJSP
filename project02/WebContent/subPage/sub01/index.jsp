@@ -10,7 +10,11 @@
   request.setCharacterEncoding("UTF-8");
 %>
  
-<c:set var="contextPath" value="${pageContext.request.contextPath}" />
+<c:set var="contextPath"  value="${pageContext.request.contextPath}"  />
+<c:set var="articlesList"  value="${articlesMap.articlesList}" />
+<c:set var="totArticles"  value="${articlesMap.totArticles}" />
+<c:set var="section"  value="${articlesMap.section}" />
+<c:set var="pageNum"  value="${articlesMap.pageNum}" />
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -53,6 +57,12 @@
 		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li.postTitle>a:hover{color : #202e70;}
 		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li.postDept{display : block; width : 140px; height : 75px; margin : 0 auto; float : left; text-align : center; line-height : 75px;}
 		#container>#noticeBoardWrap>#noticeBoard>#postContents>.postInfo>ul>li.postDate{display : block; width : 140px; height : 75px; margin : 0 auto; float : left; text-align : center; line-height : 75px;}
+		
+		.page_Wrap{display: block; width: 1090px; height: 100%; margin: 0 auto; margin-left: auto; float: left; margin-left: 10px; position : relative; margin-top : 20px;}
+		.con_page{display : block; position : absolute; top : 0%; left : 26%;}
+		.no-uline{float : left; border : 1px solid #f4f4f4; width : 45px; height : 45px; margin : 0 auto; text-align : center; line-height : 45px; background-color : #ffffff;}
+		.no-uline:hover{background-color : #F4F4F4;}
+		.sel-page{color : white; text-decoration : underline; cursor : default; float : left; width : 45px; height : 45px; margin : 0 auto; text-align : center; line-height : 45px; background-color : #202e70; border : 1px solid #202e70;}
 	</style>
 </head>
 <body>
@@ -146,16 +156,6 @@
 						</div>
 					</div>
 				</div>
-				<div id="totalPost">
-					<span class="postAll">
-						총게시물 :
-						<em class="black">1,343</em>
-						건
-					</span>
-					&nbsp;[
-					<em class="currentPage">1</em>
-					/135 페이지 ]
-				</div>
 				<div id="postContents">
 					<div class="contentTitle">
 						<ul>
@@ -167,7 +167,7 @@
 					</div>
 					<c:choose>
 							<c:when test="${empty articlesList}">
-								<li style="font-size : 9pt;">등록된 글이 없습니다.</li>
+								<li style="list-style : none; display : block; width : 1090px; height : 75px; margin : 0 auto; float : left;border-bottom : 1px solid #d9d9d9; box-sizing : border-box; background : #ffffff; text-align : center; line-height : 75px;">등록된 글이 없습니다.</li>
 							</c:when>
 							<c:when test="${!empty articlesList}" >
 								<c:forEach  var="article" items="${articlesList}" varStatus="articleNum" >
@@ -194,23 +194,41 @@
 					</c:choose>
 				</div>
 				<a style="float : right; padding : 10px 20px; background : #3d72fc; color : #ffffff; margin-top : 30px;" href="${contextPath}/board/articleForm.do">글쓰기</a>
-				<div id="pagination">
-					<div class="imgPprev"><a href="${contextPath}/subPage/sub04/index.jsp" tabIndex="80">처음페이지</a></div>
-					<div class="imgPrev"><a href="${contextPath}/subPage/sub02/index.jsp" tabIndex="81">이전페이지</a></div>
-					<span class="split"></span>
-					<div class="active"><a href="${contextPath}/subPage/sub03/index.jsp" tabIndex="82" class="active">1</a></div>
-					<div><a href="${contextPath}/subPage/sub04/index.jsp" tabIndex="83">2</a></div>
-					<div><a href="${contextPath}/subPage/sub02/index.jsp" tabIndex="84">3</a></div>
-					<div><a href="${contextPath}/subPage/sub03/index.jsp" tabIndex="85">4</a></div>
-					<div><a href="${contextPath}/subPage/sub04/index.jsp" tabIndex="86">5</a></div>
-					<div><a href="${contextPath}/subPage/sub02/index.jsp" tabIndex="87">6</a></div>
-					<div><a href="${contextPath}/subPage/sub03/index.jsp" tabIndex="88">7</a></div>
-					<div><a href="${contextPath}/subPage/sub04/index.jsp" tabIndex="89">8</a></div>
-					<div><a href="${contextPath}/subPage/sub02/index.jsp" tabIndex="90">9</a></div>
-					<div><a href="${contextPath}/subPage/sub03/index.jsp" tabIndex="91">10</a></div>
-					<span class="split"></span>
-					<div class="imgNext"><a href="${contextPath}/subPage/sub04/index.jsp" tabIndex="92">다음페이지</a></div>
-					<div class="imgNnext"><a href="${contextPath}/subPage/sub02/index.jsp" tabIndex="93">끝페이지</a></div>
+				<div class="page_Wrap">
+					<div class="con_page">
+						<c:if test="${totArticles != null }" >
+						<c:choose>
+						<c:when test="${totArticles >100 }">  <!-- 글 개수가 100 초과인경우 -->
+							<c:forEach var="page" begin="1" end="10" step="1" >
+								<c:if test="${section >1 && page==1 }">
+									<a class="no-uline" href="${contextPath }/board/listArticles.do?section=${section-1}&pageNum=${(section-1)*10 +1 }">&lt;</a>
+								</c:if>
+								<a <% if ("${page}"=="${pageNum}") { %>class="sel-page" <%} else {%>class="no-uline"<%} %> href="${contextPath }/board/listArticles.do?section=${section}&pageNum=${page}">${(section-1)*10 +page } </a>
+								<c:if test="${page == 10 }">
+									<a class="no-uline" href="${contextPath }/board/listArticles.do?section=${section+1}&pageNum=${section*10+1}">&gt;</a>
+								</c:if>
+							</c:forEach>
+						</c:when>
+						<c:when test="${totArticles == 100 }" >  <!--등록된 글 개수가 100개인경우  -->
+							<c:forEach var="page" begin="1" end="10" step="1" >
+								<a class="no-uline"  href="#">${page } </a>
+							</c:forEach>
+						</c:when>
+						<c:when test="${totArticles< 100 }" >   <!--등록된 글 개수가 100개 미만인 경우  -->
+							<c:forEach   var="page" begin="1" end="${totArticles/10 +1}" step="1" >
+								<c:choose>
+									<c:when test="${page==pageNum }">
+										<a class="sel-page"  href="${contextPath }/board/listArticles.do?section=${section}&pageNum=${page}">${page } </a>
+									</c:when>
+									<c:otherwise>
+										<a class="no-uline"  href="${contextPath }/board/listArticles.do?section=${section}&pageNum=${page}">${page } </a>
+									</c:otherwise>
+								</c:choose>
+							</c:forEach>
+						</c:when>
+						</c:choose>
+						</c:if>
+					</div> 
 				</div>
 				<div id="satisfaction">
 					<div class="koglOpen">

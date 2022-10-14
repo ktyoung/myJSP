@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"  /> 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,11 +28,11 @@
 				<p style="font-size : 30px; margin-bottom : 50px; color : #333333;">당신이 찾고 있는 <br> 페이지가 아닙니다.</p>
 				<ul style="list-style : none;">
 					<li style="list-style : none; color : #333333; margin-bottom : 12px;"><p>다음은 도움이 될만한 링크입니다.</p></li>
-					<li style="list-style : none;"><a href="../project02/index.jsp" style="text-decoration : underline;">메인 페이지로 이동</a></li>
+					<li style="list-style : none;"><a href="${contextPath}/index.jsp" style="text-decoration : underline;">메인 페이지로 이동</a></li>
 				</ul>
 			</div>
 			<div class="errorImage" style="width : 600px; height : 500px; float : right; margin-top : 100px; padding-right : 100px;">
-				<img src=images/error_404.png style="width : 100%; display : block;" />
+				<img src="${contextPath}/images/error_404.png" style="width : 100%; display : block;" />
 			</div>
 		</div>
 	</div>
